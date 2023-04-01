@@ -209,3 +209,51 @@ header input[type=text] {
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #D4D0D0;
 }
+
+.tituloproyectos{
+
+    position:sticky;
+    margin-bottom: 500px;
+    width: 977px;
+    height: 172px;
+    left: 513px;
+    top: 227px;
+    
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 88px;
+    
+    color: #000000;
+    
+}
+.form-proyecto{
+
+    width: 420px;
+    background-color: #D9D9D9;
+    padding: 46px;
+    margin: auto;
+    text-align: center;
+}
+
+.form-proyecto .botones{
+    width: 100%;
+    background-color: rgba(238, 225, 108, 0.94);
+    border: none;
+    padding: 1px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.form-proyecto p{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+
+    color: #000000;
+}
