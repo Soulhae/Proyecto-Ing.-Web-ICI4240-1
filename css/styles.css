@@ -26,6 +26,15 @@ header input[type=text] {
     border:1px solid #ccc;
 }
 
+.buscador input{
+    background-color: #383838;
+    color: #D9D9D9;
+    border:none;
+    border: solid 1px #ccc;
+    border-radius: 22px 0px 0px 22px;
+    text-align: center;
+}
+
 .buscador button {
     float: right;
     padding: 6px 10px;
@@ -35,7 +44,7 @@ header input[type=text] {
     font-size: 18.5px;
     border: none;
     cursor: pointer;
-    /* border-radius: 0px 20px 20px 0px; */
+    border-radius: 0px 22px 22px 0px;
 }
 
 .buscador button:hover {
