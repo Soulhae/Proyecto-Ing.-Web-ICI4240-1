@@ -228,6 +228,7 @@ header input[type=text] {
     color: #000000;
     
 }
+
 .form-proyecto{
 
     width: 500px;
@@ -257,8 +258,54 @@ header input[type=text] {
 
     color: #000000;
 }
+
 .form-proyecto div{
     margin: 0;
     display: flex;
     margin-bottom: 20px;
+}
+
+.blue-title{
+    text-align: center;
+    margin-bottom: 3%;
+}  
+
+.blue-title h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 85px;
+    color: #2B3382;
+}
+
+.top-info{
+    max-width: 640px;
+    text-align: left;
+    display:flex;
+    margin-left: 15%;
+    margin-bottom: 2.5%;
+}
+
+.top-info img{
+    max-width: 640px;
+    padding: 1%;
+}
+
+#l2{
+    height: 473.89px;
+}
+
+.bottom-info{
+    display:flex;
+    margin-left: 15%;
+    margin-bottom: 2.5%;
+    max-width: 1300px;
+}
+
+.bottom-info img{
+    width: 230%;
+    height: 100%;
+    padding-left: 0.4em;
+    padding-right: 1em;
 }
