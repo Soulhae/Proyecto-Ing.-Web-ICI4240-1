@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Nuevo proyecto</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Nuestros styles -->
@@ -24,7 +24,7 @@
                 </div>
                 <div class="paginas">
                     <div class="botones-paginas"><a href="./proyecto_realidad.html"><h3>Inicia tu proyecto</h3></a></div>
-                    <div class="botones-paginas"><a href="./proyectos.html"><h3>Proyectos</h3></a></div>   
+                    <div class="botones-paginas"><a href="./proyectos.html"><h3>Proyectos</h3></a></div>
                     <div class="botones-paginas"><a href="./equipo.html"><h3>Nosotros</h3></a></div>
                     <div class="botones-paginas"><a href="./faq.html"><h3>FAQ</h3></a></div>
                 </div>
@@ -38,31 +38,40 @@
             </header>
 
             <main>
-                <h10 class="tituloproyectos">Cuentanos un poco sobre tu proyecto</h10>
-                    <section class="form-proyecto">
-                        <p class="text-proyecto">Nombre del proyecto</p>
-                        <input class="campos-rellenar" type="text" id="project-name" placeholder="Nombre del proyecto">
-                        <p class="text-proyecto">Categorias</p>
-                        <div>
-                            <label for="categorias" required>Seleccionar</label>
-                            <select name="seleccionar" id="categoria">
-                                <option disabled="disabled" selected="selected">Seleccionar</option>
-                                <option value="1era">hola</option>
-                                <option value="2da">hola2</option>
-                                <option value="3era">hola3</option>
-                                <option value="4ta">hola4</option>
-                            </select>
-                            <label for="subcategorias" required> Seleccionar </label>
-                                <select name="seleccionar" id="subcategoria">
-                                <option disabled="disabled" selected="selected"> Seleccionar </option>
-                                <option value="1era">hola</option>
-                                <option value="2da">hola2</option>
-                                <option value="3era">hola3</option>
-                                <option value="4ta">hola4</option>
-                            </select>
-                        </div>
-                            <input class="botones" type="submit" value="Siguiente">
-                    </section>
+                <div>
+                    <h1>Resultados de busqueda:</h1>
+                </div>
+                <div class="tabla-resultados-busqueda">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre del proyecto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Monto recaudado</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
             </main>
     
             <footer>

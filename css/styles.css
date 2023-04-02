@@ -399,10 +399,59 @@ header input[type=text] {
 }
 
 .fotos-abajo img{
-
     width: 550px;
     height: 562px;
     padding-left: 0.4em;
     padding-right: 1em;
 }
 
+.detalle-proyecto{
+    align-items: center;
+}
+
+.detalle-proyecto-superior{
+    display: flex;
+    position: relative;
+}
+
+.detalle-proyecto-box{
+    display: flex;
+}
+
+.detalle-proyecto-texto{
+    margin-left: auto;
+    max-width: 45%;
+}
+
+.detalle-proyecto-texto p{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    color: rgba(58, 63, 107, 0.96);
+    opacity: 0.9;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.detalle-proyecto-superior-izquierda{
+    width: 50vw;
+    
+}
+.detalle-proyecto-superior-derecha{
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.detalle-proyecto-superior-derecha button{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: crimson;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    color: #D4D0D0 !important;
+}
