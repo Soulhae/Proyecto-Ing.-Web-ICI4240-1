@@ -176,6 +176,10 @@ header input[type=text] {
 .form-login a:hover{
     text-decoration: underline;
 }
+#verMas{
+    font-size: 50px;
+    margin-left: 340px;
+}
 
 #forget{
     font-size: 14px;
@@ -381,3 +385,24 @@ header input[type=text] {
     font-size: 24px;
     line-height: 50px;
 }
+
+
+.titulo-proyectos h1{
+
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 85px;
+    color: #000000;
+}
+
+.fotos-abajo img{
+
+    width: 550px;
+    height: 562px;
+    padding-left: 0.4em;
+    padding-right: 1em;
+}
+
