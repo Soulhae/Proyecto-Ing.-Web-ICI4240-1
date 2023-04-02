@@ -309,3 +309,31 @@ header input[type=text] {
     padding-left: 0.4em;
     padding-right: 1em;
 }
+
+.faq{
+    text-align: left;
+    margin: auto;
+    max-width: 50%;
+}
+
+.faq h2{
+    padding-bottom: 2%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 36px;
+
+    color: #000000;
+}
+
+.faq h3{
+    padding-bottom: 2%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #000000;
+}
