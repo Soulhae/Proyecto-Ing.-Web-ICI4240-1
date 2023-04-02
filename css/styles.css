@@ -455,3 +455,7 @@ header input[type=text] {
     cursor: pointer;
     color: #D4D0D0 !important;
 }
+
+.tabla-resultados-busqueda{
+    min-height: 50vh;
+}
