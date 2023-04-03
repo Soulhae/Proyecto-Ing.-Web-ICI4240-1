@@ -60,8 +60,12 @@ header input[type=text] {
     cursor:pointer;
 }
 
+.botones-paginas{
+    padding: 10px;
+
+}
 .botones-paginas:hover{
-    border-radius: 1em;
+    border-radius: 30px;
     background-color:#ededed;
     cursor: pointer;
 }
@@ -70,6 +74,8 @@ header input[type=text] {
     display: flex;
     justify-content: center;
     margin: 0 0.75em 0 0.75em;
+    font-weight: 700;
+    color: #383838;
 }
 
 .paginas{
@@ -81,6 +87,13 @@ header input[type=text] {
     display: flex;
     align-items: center;
     margin-left: auto;
+    padding-right: 40px;
+}
+
+.items-derecha h3{
+    color: #383838;
+    display: flex;
+    text-align: center;
 }
 
 .info-pag{
@@ -176,6 +189,17 @@ header input[type=text] {
 .form-login a:hover{
     text-decoration: underline;
 }
+
+.checkbox{
+    margin-top: 10px;
+    display: flex;
+}
+
+.checkbox input{
+    margin-right: 4px;
+}
+
+
 #verMas{
     font-size: 50px;
     margin-left: 340px;
@@ -416,6 +440,7 @@ header input[type=text] {
 
 .detalle-proyecto-box{
     display: flex;
+    height: 80vh;
 }
 
 .detalle-proyecto-texto{
@@ -427,7 +452,7 @@ header input[type=text] {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     color: rgba(58, 63, 107, 0.96);
     opacity: 0.9;
     text-align: justify;
@@ -435,27 +460,54 @@ header input[type=text] {
 }
 .detalle-proyecto-superior-izquierda{
     width: 50vw;
-    
+    min-width: 300px;
 }
+
+.detalle-proyecto-superior-izquierda h1{
+    padding-bottom: 10px;
+}
+
+.detalle-proyecto-superior-izquierda h4{
+    padding-left: 20px;
+}
+
 .detalle-proyecto-superior-derecha{
     display: flex;
     width: 50vw;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    color: darkslateblue;
 }
 
 .detalle-proyecto-superior-derecha button{
     float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: crimson;
+    padding: 10px;
+    background-color: darkslateblue;
     font-size: 20px;
     border: none;
     cursor: pointer;
-    color: #D4D0D0 !important;
+    min-width: 300px;
+}
+
+.detalle-proyecto-superior-derecha a{
+    text-decoration: none;
+    color:white;
+}
+
+.detalle-proyecto-superior-derecha a:hover{
+    text-decoration: none;
 }
 
 .tabla-resultados-busqueda{
     min-height: 50vh;
 }
+
+.carousel-caption.d-none.d-md-block a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.carousel-caption.d-none.d-md-block a:hover{
+    text-decoration: underline;
+}
+
