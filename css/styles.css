@@ -26,6 +26,14 @@ header input[type=text] {
     border:1px solid #ccc;
 }
 
+footer{
+    padding: 5em;
+}
+
+footer p{
+    margin: auto;
+}
+
 .buscador input{
     background-color: #383838;
     color: #D9D9D9;
