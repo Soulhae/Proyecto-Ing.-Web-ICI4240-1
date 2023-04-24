@@ -3,7 +3,6 @@ $( "#form" ).validate({
         user:{
             required:true,
             maxlength:30,
-            solo_letras:true
         },
         contrasenya:{
             required:true,
