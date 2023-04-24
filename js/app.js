@@ -5,9 +5,9 @@ const contrasenya = document.getElementById('contrasenya');
 const recontrasenya = document.getElementById('recontrasenya');
 
 form.addEventListener('submit', e => {
+    
     e.preventDefault();
 
-    validarInputsLogin();
     validarInputs();
 });
 
