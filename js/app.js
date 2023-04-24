@@ -10,10 +10,12 @@ $( "#form" ).validate({
             minlength: 8
         },
         email:{
-            field: {
             required: true,
             email: true
-            }
+        },
+        recontrasenya: {
+            minlength: 8,
+            equalTo: "#password"
         }
 
     },
@@ -26,21 +28,19 @@ $( "#form" ).validate({
         contrasenya:{
             required:"Por favor ingrese una contraseña",
             minlength:"La contraseña tiene que tener minimo 8 caracteres"
+        },
+        recontrasenya:{
+            minlength:"Ingrese minimo 8 caracteres",
+            equalTo:"Ingrese la misma contraseña"
+        },
+        email:{
+            email:"Ingrese un email valido"
         }
+
     },
 
     submitHandler: function(form) {
         window.alert("Envio exitoso");
         $(form).ajaxSubmit();
     }
-});
-
-jQuery.validator.addMethod("solo_letras", function(value, element) 
-{
-    return /^[a-z," "]+$/i.test(value);
-}, "Debe ingresar solo letras");
-
-jQuery.validator.setDefaults({
-    debug: true,
-    success: "valid"
 });
