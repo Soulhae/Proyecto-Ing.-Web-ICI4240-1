@@ -35,20 +35,8 @@
                         <a href="busqueda.html"><button type="submit"><i class="fa fa-search"></i></button></a>
                     </div>
                     <div class="botones-paginas"> <a href="./login.html"><h3>Iniciar sesión</h3></a></div>
-
-
-
-
-
-                   (a class nav-link) active" aria-current="page" para marcar la current page
-
-
-
-
-
-
                 </div> -->
-                <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="../index.html"><img src="../images/Sin título.png" alt=""></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,25 +44,70 @@
                       </button>
                       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                          <div class="botones-paginas"><a class="nav-link" href="#"><h3>Inicia tu proyecto</h3></a></div>
-                          <div class="botones-paginas"><a class="nav-link" href="#"><h3>Proyectos</h3></a></div>
-                          <div class="botones-paginas"><a class="nav-link" href="#"><h3>Nosotros</h3></a></div>
-                          <div class="botones-paginas"><a class="nav-link" href="#"><h3>FAQ</h3></a></div>
+                          <div class="botones-paginas"><a class="nav-link" href="/pages/proyecto_realidad.html"><h3>Inicia tu proyecto</h3></a></div>
+                          <div class="botones-paginas"><a class="nav-link" href="/pages/proyectos.html"><h3>Proyectos</h3></a></div>
+                          <div class="botones-paginas"><a class="nav-link" href="/pages/equipo.html"><h3>Nosotros</h3></a></div>
+                          <div class="botones-paginas"><a class="nav-link" href="/pages/faq.html"><h3>FAQ</h3></a></div>
                         </div>
                       </div>
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            <button class="btn btn-outline-success" type="submit" formaction="/pages/busqueda.html">Buscar</button>
                         </form>
                         <div class="navbar-nav botones-paginas">
-                            <a class="nav-link" href="#"><h3>Iniciar sesión</h3></a>
+                            <a class="nav-link" href="/pages/login.html"><h3>Iniciar sesión</h3></a>
                         </div>
                     </div>
                 </nav>
             </header>
 
             <main>
-                
+                <div class="container">
+                    <div class="info-pag">
+                        <div class="info-pag-texto"><p>Empieza tu proyecto o ayuda a otros</p></div>
+                        <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="pages/detalle.html"><img src="https://cdn.7tv.app/emote/63b6fe45113639feb45ed7a1/4x.gif" class="d-block w-100" alt="..."></a>
+                                <div class="carousel-caption d-none d-md-block">
+                                <a href="pages/detalle.html"><h5>xqcBOOM</h5></a>
+                                <p>BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="pages/detalle.html"><img src="https://64.media.tumblr.com/b1abd34052fbc1d86130ebda3cd0d98b/97488d3b2d6e7cbc-b8/s400x600/2bec23b78236b179c160e92c415d6a77f6435e6b.png" class="d-block w-100" alt="..."></a>
+                                <div class="carousel-caption d-none d-md-block">
+                                <a href="pages/detalle.html"><h5>Le Sserafim Chaewon</h5></a>
+                                <p>Mi polola y era. <br> (Cuidado con matineke) </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="pages/detalle.html"><img src="https://lh3.googleusercontent.com/0NQcq0KwuH_8A7h9S0GxzjVpUIEEDhQG055Og22-LcF0Fl853N1MsJyMlPEB38vc1RxFcSBwEi-YlJxnTEvXoCLwmd6VB6ZU4QS6RIa-FiLMm5Y=w960-rj-nu-e365" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="pages/detalle.html"><h5>NCT Haechan</h5></a></a>
+                                <p>Mi pololo y era.</p>
+                                </div>
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="info2-pag">
+                        <div class="info2-pag-texto"><p>Fundraising para proyectos en los que estés interesad@ y quieras apoyar monetariamente!</p></div>
+                    </div>
+                </div>  
             </main>
     
             <footer>

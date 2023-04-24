@@ -1,4 +1,4 @@
-header {
+/* header {
   display: flex;
   background-color: white;
 }
@@ -11,7 +11,7 @@ header input[type=text] {
   margin-top: 8px;
   font-size: 17px;
   border: 1px solid #ccc;
-}
+} */
 
 footer {
   display: flex;
