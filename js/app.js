@@ -43,4 +43,4 @@ jQuery.validator.addMethod("solo_letras", function(value, element)
 jQuery.validator.setDefaults({
     debug: true,
     success: "valid"
-  });
+});
