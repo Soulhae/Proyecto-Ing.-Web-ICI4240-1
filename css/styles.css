@@ -152,7 +152,7 @@ footer p{
     color: #000000;
 }
 
-.form-login{
+#form {
     width: 420px;
     background-color: #D9D9D9;
     padding: 46px;
@@ -160,7 +160,7 @@ footer p{
     text-align: center;
 }
 
-.form-login h4{
+#form h4{
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
@@ -181,22 +181,58 @@ footer p{
     padding-left: 30px;
 }
 
-.form-login p{
+#form p{
     height: 20px;
     text-align: left;
     font-size: 16px;
     line-height: 20px;
 }
 
-.form-login a{
+#form a{
     text-decoration: none;
     font-weight: 500;
     color:#091DD0;
 }
 
-.form-login a:hover{
+#form a:hover{
     text-decoration: underline;
 }
+
+
+#form1 {
+    width: 420px;
+    background-color: #D9D9D9;
+    padding: 46px;
+    margin: auto;
+    text-align: center;
+}
+
+#form1 h4{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+    margin-bottom: 16px;
+    margin-top: -16px;
+}
+
+#form1 p{
+    height: 20px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#form1 a{
+    text-decoration: none;
+    font-weight: 500;
+    color:#091DD0;
+}
+
+#form1 a:hover{
+    text-decoration: underline;
+}
+
 
 .checkbox{
     margin-top: 10px;
@@ -222,7 +258,7 @@ footer p{
     font-weight: 500;
 }
 
-.form-login .botones{
+#form .boton-register{
     width: 100%;
     background-color: rgba(238, 225, 108, 0.94);
     border: none;
@@ -232,6 +268,18 @@ footer p{
     font-size: 24px;
     line-height: 50px;
 }
+
+#form1 .boton-login{
+    width: 100%;
+    background-color: rgba(238, 225, 108, 0.94);
+    border: none;
+    padding: 1px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+}
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #D4D0D0;
@@ -519,3 +567,29 @@ footer p{
     text-decoration: underline;
 }
 
+.inputC input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 13px;
+	width: 100%;
+}
+
+.inputC input:focus {
+    outline: 0;
+}
+
+.inputC.success input{
+    border-color: #09c372;
+}
+
+.inputC .error input{
+    border-color: #ff3860;
+}
+
+.inputC .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
