@@ -22,7 +22,7 @@ $color-form: #D9D9D9;
         font-style: normal;
         text-align: center;
         font-weight: 800;
-        font-size: 50px;
+        font-size: 60px;
         line-height: 85px;
         color: $color-titulo-2;
     }
@@ -305,18 +305,9 @@ footer{
 }
 
 .tituloproyectos{
+
+    @include titulo();
     padding: 30px;
-    
-    text-align: center;
-    
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 70px;
-    line-height: 88px;
-    
-    color: $color-titulo-1;
-    
 }
 
 .form-proyecto{
@@ -328,17 +319,10 @@ footer{
 }
 
 .blue-title{
+
+    @include titulo();
     text-align: center;
     margin-bottom: 3%;
-
-    h1{
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 70px;
-        line-height: 85px;
-        color: $color-titulo-2;
-    }
 } 
 
 .top-info{
@@ -377,6 +361,7 @@ footer{
     margin: auto;
     max-width: 50%;
 
+
     h2{
         padding-bottom: 2%;
         font-family: 'Inter';
@@ -385,7 +370,7 @@ footer{
         font-size: 35px;
         line-height: 36px;
     
-        color: #000000;
+        color: $color-texto-1;
     }
 
     h3{
@@ -396,7 +381,7 @@ footer{
         font-size: 30px;
         line-height: 36px;
     
-        color: #000000;
+        color: $color-texto-2;
     }
 }
 
@@ -538,4 +523,163 @@ footer{
 
 .carousel-caption.d-none.d-md-block a:hover{
     text-decoration: underline;
+}
+
+.inputC input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 13px;
+	width: 100%;
+}
+
+.inputC input:focus {
+    outline: 0;
+}
+
+.inputC.success input{
+    border-color: #09c372;
+}
+
+.inputC .error input{
+    border-color: #ff3860;
+}
+
+.inputC .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+#form {
+    width: 420px;
+    background-color: #D9D9D9;
+    padding: 46px;
+    margin: auto;
+    text-align: center;
+}
+
+#form h4{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+    margin-bottom: 16px;
+    margin-top: -16px;
+}
+
+.campos-rellenar{
+    width: 100%;
+    background-color: #FFFFFD;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px;
+    font-family: sans-serif;
+    font-weight: 800;
+    color: #adadad;
+    padding-left: 30px;
+}
+
+#form p{
+    height: 20px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#form a{
+    text-decoration: none;
+    font-weight: 500;
+    color:#091DD0;
+}
+
+#form a:hover{
+    text-decoration: underline;
+}
+
+
+#form1 {
+    width: 420px;
+    background-color: #D9D9D9;
+    padding: 46px;
+    margin: auto;
+    text-align: center;
+}
+
+#form1 h4{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+    margin-bottom: 16px;
+    margin-top: -16px;
+}
+
+#form1 p{
+    height: 20px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#form1 a{
+    text-decoration: none;
+    font-weight: 500;
+    color:#091DD0;
+}
+
+#form1 a:hover{
+    text-decoration: underline;
+}
+
+
+.checkbox{
+    margin-top: 10px;
+    display: flex;
+}
+
+.checkbox input{
+    margin-right: 4px;
+}
+
+
+#verMas{
+    font-size: 50px;
+    margin-left: 340px;
+}
+
+#forget{
+    font-size: 14px;
+}
+
+#nuevo-usuario{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#form .boton-register{
+    width: 100%;
+    background-color: rgba(238, 225, 108, 0.94);
+    border: none;
+    padding: 1px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+#form1 .boton-login{
+    width: 100%;
+    background-color: rgba(238, 225, 108, 0.94);
+    border: none;
+    padding: 1px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+label.error{
+    color: red;
 }
