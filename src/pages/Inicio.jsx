@@ -2,6 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
+import data from "../data/images.json";
 
 function Inicio() {
     return (
@@ -22,63 +23,59 @@ function Inicio() {
                     </h1>
                 </div>
                 <div>
-                    <Carousel fade className="h-20">
-                        <Carousel.Item>
-                            <img
-                                className="d-block"
-                                style={{
-                                    height: "360px",
-                                    width: "640px",
-                                }}
-                                src="https://i.pinimg.com/originals/f7/69/d2/f769d20fbec55e3970d4926b1ed96fdd.jpg"
-                                alt="First slide"
-                            />
-                            <Carousel.Caption>
-                                <h3>Chaweon</h3>
-                                <p>
-                                    Nulla vitae elit libero, a pharetra augue
-                                    mollis interdum.
-                                </p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block"
-                                style={{
-                                    height: "360px",
-                                    width: "640px",
-                                }}
-                                src="https://lh3.googleusercontent.com/WCqC7O-9PKGHN3PqaVCXNI02L8kTOO-8bpXFn17YZCXEOpBP0zZN7xNoyaZOP_6fspgcfL9AThgWwVo9Whjtz2Eo1ajL8O03URsHjTgnMfjN4Q=w960-rj-nu-e365"
-                                alt="Second slide"
-                            />
+                    <Carousel>
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src={data[0].src}
+                        alt={data[0].alt}
+                        style={{
+                            height: "480px",
+                            width: "auto",
+                            maxHeight: "480px",
+                        }}
+                        />
+                        <Carousel.Caption>
+                        <h3>{data[0].caption}</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src={data[1].src}
+                        alt={data[1].alt}
+                        style={{
+                            height: "480px",
+                            width: "auto",
+                            maxHeight: "480px",
+                        }}
+                        />
 
-                            <Carousel.Caption>
-                                <h3>Hanni</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                </p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block"
-                                style={{
-                                    height: "360px",
-                                    width: "640px",
-                                }}
-                                src="https://kpopping.com/documents/44/4/1800/230115-NewJeans-Haerin-OMG-at-Inkigayo-documents-1.jpeg?v=0e47f"
-                                alt="Third slide"
-                            />
+                        <Carousel.Caption>
+                        <h3>{data[1].caption}</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src={data[2].src}
+                        alt={data[2].alt}
+                        style={{
+                            height: "480px",
+                            width: "auto",
+                            maxHeight: "480px",
+                        }}
+                        />
 
-                            <Carousel.Caption>
-                                <h3>Haerin</h3>
-                                <p>
-                                    Praesent commodo cursus magna, vel
-                                    scelerisque nisl consectetur.
-                                </p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
+                        <Carousel.Caption>
+                        <h3>{data[2].caption}</h3>
+                        <p>
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
                     </Carousel>
                 </div>
             </Stack>
@@ -89,7 +86,7 @@ function Inicio() {
                         fontFamily: "Outfit",
                         fontStyle: "normal",
                         fontWeight: 700,
-                        fontSize: "1.5vw",
+                        fontSize: "calc(0.2rem + 1.5vw)",
                     }}
                 >
                     Fundraising para proyectos en los que estés interesad@ y
