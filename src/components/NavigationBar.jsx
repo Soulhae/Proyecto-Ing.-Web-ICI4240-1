@@ -10,7 +10,13 @@ import {
 function NavigationBar() {
     return (
         <Navbar bg="light" expand="lg">
-            <Container fluid>
+            <Container
+                fluid
+                style={{
+                    color: "#363636",
+                    fontWeight: 700,
+                }}
+            >
                 <Navbar.Brand href="#">Nimabe</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -19,32 +25,19 @@ function NavigationBar() {
                         style={{ maxHeight: "100px" }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Inicio</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
-                        <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">
-                                Action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
-                                Something else here
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link href="#" disabled>
-                            Link
-                        </Nav.Link>
+                        <Nav.Link href="#action1">Inicia tu proyecto</Nav.Link>
+                        <Nav.Link href="#action2">Proyectos</Nav.Link>
+                        <Nav.Link href="#action2">Nosotros</Nav.Link>
+                        <Nav.Link href="#action2">FAQ</Nav.Link>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
-                            placeholder="Search"
+                            placeholder="Buscar"
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-success">Buscar</Button>
                     </Form>
                 </Navbar.Collapse>
             </Container>
