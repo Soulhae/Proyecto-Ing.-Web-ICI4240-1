@@ -39,8 +39,11 @@ function NavigationBar() {
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success">Buscar</Button>
+                        <Button variant="outline-secondary">Buscar</Button>
                     </Form>
+                    <Button href="/Login" variant="outline-dark" className="">
+                        Iniciar sesion
+                    </Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
