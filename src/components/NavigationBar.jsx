@@ -2,7 +2,6 @@ import {
     Navbar,
     Nav,
     Form,
-    NavDropdown,
     Button,
     Container,
 } from "react-bootstrap";
@@ -39,8 +38,14 @@ function NavigationBar() {
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success">Buscar</Button>
+                        <Button variant="outline-success" href="/busqueda">Buscar</Button>
                     </Form>
+                    <Nav
+                        style={{ maxHeight: "100px" }}
+                        navbarScroll
+                    >
+                        <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

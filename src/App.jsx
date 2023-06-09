@@ -6,12 +6,13 @@ import "./styles/main.scss";
 import Base from "./layout/Base.jsx";
 import Inicio from "./pages/Inicio.jsx";
 import ProyectoRealidad from "./pages/ProyectoRealidad.jsx";
-import Proyectos from "./pages/Proyectos";
-import FAQ from "./pages/FAQ";
-import Nosotros from "./pages/Nosotros";
-import NuevoProyecto from "./pages/NuevoProyecto";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Proyectos from "./pages/Proyectos.jsx";
+import FAQ from "./pages/FAQ.jsx";
+import Nosotros from "./pages/Nosotros.jsx";
+import NuevoProyecto from "./pages/NuevoProyecto.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import Busqueda from "./pages/Busqueda.jsx";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/nuevo_proyecto" element={<NuevoProyecto />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/busqueda" element={<Busqueda />} />
                 </Route>
             </Routes>
         </div>
