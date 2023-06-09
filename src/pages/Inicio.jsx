@@ -9,14 +9,14 @@ function Inicio() {
                     height: "70vh",
                 }}
             >
-                <div className="col-6 mw-25">
+                <div className="col-6">
                     <h1
                         style={{
                             color: "#afafaf",
                             fontFamily: "Outfit",
                             fontStyle: "normal",
                             fontWeight: 700,
-                            fontSize: "5vw",
+                            fontSize: "4vw",
                             opacity: 0.85,
                         }}
                     >
@@ -27,7 +27,11 @@ function Inicio() {
                     <Carousel fade className="h-20">
                         <Carousel.Item>
                             <img
-                                className="d-block w-100 h-100"
+                                className="d-block"
+                                style={{
+                                    height: "360px",
+                                    width: "640px",
+                                }}
                                 src="https://i.pinimg.com/originals/f7/69/d2/f769d20fbec55e3970d4926b1ed96fdd.jpg"
                                 alt="First slide"
                             />
@@ -41,7 +45,11 @@ function Inicio() {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100 h-100"
+                                className="d-block"
+                                style={{
+                                    height: "360px",
+                                    width: "640px",
+                                }}
                                 src="https://lh3.googleusercontent.com/WCqC7O-9PKGHN3PqaVCXNI02L8kTOO-8bpXFn17YZCXEOpBP0zZN7xNoyaZOP_6fspgcfL9AThgWwVo9Whjtz2Eo1ajL8O03URsHjTgnMfjN4Q=w960-rj-nu-e365"
                                 alt="Second slide"
                             />
@@ -56,7 +64,11 @@ function Inicio() {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100 h-100"
+                                className="d-block"
+                                style={{
+                                    height: "360px",
+                                    width: "640px",
+                                }}
                                 src="https://kpopping.com/documents/44/4/1800/230115-NewJeans-Haerin-OMG-at-Inkigayo-documents-1.jpeg?v=0e47f"
                                 alt="Third slide"
                             />
@@ -79,7 +91,7 @@ function Inicio() {
                         fontFamily: "Outfit",
                         fontStyle: "normal",
                         fontWeight: 700,
-                        fontSize: "2.2vw",
+                        fontSize: "1.5vw",
                     }}
                 >
                     Fundraising para proyectos en los que estés interesad@ y
