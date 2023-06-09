@@ -17,7 +17,7 @@ function NavigationBar() {
                     fontWeight: 700,
                 }}
             >
-                <Navbar.Brand href="#">Nimabe</Navbar.Brand>
+                <Navbar.Brand href="/">Nimabe</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -25,10 +25,12 @@ function NavigationBar() {
                         style={{ maxHeight: "100px" }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Inicia tu proyecto</Nav.Link>
-                        <Nav.Link href="#action2">Proyectos</Nav.Link>
-                        <Nav.Link href="#action2">Nosotros</Nav.Link>
-                        <Nav.Link href="#action2">FAQ</Nav.Link>
+                        <Nav.Link href="/nuevo_proyecto">
+                            Inicia tu proyecto
+                        </Nav.Link>
+                        <Nav.Link href="/proyectos">Proyectos</Nav.Link>
+                        <Nav.Link href="/nosotros">Nosotros</Nav.Link>
+                        <Nav.Link href="/faq">FAQ</Nav.Link>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control

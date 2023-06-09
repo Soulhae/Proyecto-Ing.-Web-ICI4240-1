@@ -1,29 +1,27 @@
 import Carousel from "react-bootstrap/Carousel";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Stack from "react-bootstrap/Stack";
 
 function Inicio() {
     return (
-        <div className="container">
-            <div
-                className="row d-flex align-items-center"
-                style={{
-                    height: "70vh",
-                }}
-            >
-                <div className="col-6">
+        <Container>
+            <Stack direction="horizontal" gap={4}>
+                <div>
                     <h1
                         style={{
                             color: "#afafaf",
                             fontFamily: "Outfit",
                             fontStyle: "normal",
                             fontWeight: 700,
-                            fontSize: "4vw",
+                            fontSize: "50px",
                             opacity: 0.85,
                         }}
                     >
                         Empieza tu proyecto o ayuda a otros
                     </h1>
                 </div>
-                <div className="col-6">
+                <div>
                     <Carousel fade className="h-20">
                         <Carousel.Item>
                             <img
@@ -83,8 +81,8 @@ function Inicio() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-            </div>
-            <div className="row text-center">
+            </Stack>
+            <Row>
                 <p
                     style={{
                         color: "#363636",
@@ -97,8 +95,8 @@ function Inicio() {
                     Fundraising para proyectos en los que estés interesad@ y
                     quieras apoyar monetariamente!
                 </p>
-            </div>
-        </div>
+            </Row>
+        </Container>
     );
 }
 
