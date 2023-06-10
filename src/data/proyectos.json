@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "src": "https://i.pinimg.com/originals/f7/69/d2/f769d20fbec55e3970d4926b1ed96fdd.jpg",
+        "tittle": "Ejemplo 1",
+        "alt": "Chaewon mi novia"
+    },
+    {
+        "id": 2,
+        "src": "https://lh3.googleusercontent.com/WCqC7O-9PKGHN3PqaVCXNI02L8kTOO-8bpXFn17YZCXEOpBP0zZN7xNoyaZOP_6fspgcfL9AThgWwVo9Whjtz2Eo1ajL8O03URsHjTgnMfjN4Q=w960-rj-nu-e365",
+        "tittle": "Ejemplo 2",
+        "alt": "La chimuelita hanni"
+    },
+    {
+        "id": 3,
+        "src": "https://kpopping.com/documents/44/4/1800/230115-NewJeans-Haerin-OMG-at-Inkigayo-documents-1.jpeg?v=0e47f",
+        "tittle": "Ejemplo 3",
+        "alt": "Cat Haerin"
+    }
+]

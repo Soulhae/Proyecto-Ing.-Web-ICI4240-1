@@ -10,14 +10,14 @@ function Inicio() {
     return (
         <main className={`${styles.inicio} `}>
             <section className={styles.grupo1}>
-                <div className={`${styles.izquierda} col`}>
+                <div className={`${styles.izquierda} col-md-4`}>
                     <h2 className={styles.mensaje}>
                         Empieza tu proyecto o ayuda a otros
                     </h2>
                 </div>
-                <div className={`${styles.derecha} col`}>
-                    <Carousel className={styles.carrusel}>
-                        <Carousel.Item>
+                <div className={`${styles.derecha} col-md-8`}>
+                    <Carousel>
+                        <Carousel.Item className={styles.carouselSlide}>
                             <img
                                 className="d-block w-100"
                                 src={data[0].src}
@@ -31,7 +31,7 @@ function Inicio() {
                                 </p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item className={styles.carouselSlide}>
                             <img
                                 className="d-block w-100"
                                 src={data[1].src}
@@ -46,7 +46,7 @@ function Inicio() {
                                 </p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item className={styles.carouselSlide}>
                             <img
                                 className="d-block w-100"
                                 src={data[2].src}
@@ -66,7 +66,7 @@ function Inicio() {
             </section>
             <div
                 className="d-flex justify-content-center align-items-center"
-                style={{ height: "30vh" }}
+                style={{}}
             >
                 <p
                     className="align-self-flex-end"
