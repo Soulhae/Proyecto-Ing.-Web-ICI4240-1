@@ -1,0 +1,42 @@
+@import "../variables";
+
+.inicio {
+    height: calc(100vh - 130px);
+    overflow-x: hidden;
+}
+
+.grupo1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mensaje {
+    color: $color-texto-5;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    opacity: 0.85;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.izquierda {
+    background-color: red;
+}
+
+.carrusel {
+}
+
+@media (max-width: 768px) {
+    .mensaje {
+        font-size: 30px;
+    }
+
+    .grupo1 {
+        flex-direction: column;
+        margin: 20px;
+    }
+}
