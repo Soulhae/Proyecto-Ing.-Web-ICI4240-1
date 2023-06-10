@@ -75,7 +75,6 @@ function Inicio() {
                         fontFamily: "Outfit",
                         fontStyle: "normal",
                         fontWeight: 700,
-                        fontSize: "calc(0.2rem + 1.5vw)",
                     }}
                 >
                     Fundraising para proyectos en los que estés interesad@ y
