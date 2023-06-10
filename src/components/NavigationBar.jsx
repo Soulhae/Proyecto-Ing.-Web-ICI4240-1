@@ -2,7 +2,7 @@ import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
 
 function NavigationBar() {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" className="py-4">
             <Container
                 fluid
                 style={{
