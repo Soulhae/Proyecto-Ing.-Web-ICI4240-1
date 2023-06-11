@@ -6,7 +6,6 @@ import data from "../data/proyectos.json";
 import styles from "../styles/modules/Proyectos.module.scss";
 
 function Proyectos() {
-    console.log(data);
     return (
         <div>
             <main className={`${styles.main} p-5`}>
