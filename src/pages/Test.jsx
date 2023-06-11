@@ -1,15 +1,27 @@
 import React from "react";
 import { useParams } from "react-router";
 import data from "../data/proyectos.json";
+import gif from "../data/gif1.gif";
+
+//BOTONN DE VOLVER FALTA
+//FALTA ESTILO RESPONSIVO
 
 function Test() {
     const params = useParams();
 
     const proyecto = data[params.id];
     if (!proyecto) {
-        return <h1>aweonao</h1>;
+        return (
+            <div className="d-flex flex-column justify-content-center">
+                <h1 className="m-auto">No encontrado</h1>
+                <img
+                    src={gif}
+                    alt=""
+                    style={{ width: "700px", margin: "auto" }}
+                />
+            </div>
+        );
     }
-    console.log(proyecto);
 
     return (
         <>
