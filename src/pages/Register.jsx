@@ -1,6 +1,6 @@
 import styles from "../styles/modules/Register.module.scss"
 import { useFormik } from "formik";
-import { basicSchema } from "../Schemas/Index";
+import { basicSchema } from "../schemas/index";
 const onSubmit = async (values ,actions) => { 
 
   console.log(values);
@@ -26,7 +26,7 @@ const Register = () => {
   console.log(errors);
 
   return (
-    <div>
+    <div className={`${styles.boxL}`}>
       <form onSubmit={handleSubmit} autoComplete="off">
         <label
           htmlFor="email"
