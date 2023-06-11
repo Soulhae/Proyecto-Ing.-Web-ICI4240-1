@@ -1,0 +1,48 @@
+[
+    {
+        "id": 0,
+        "imagenes": [
+            "https://i.pinimg.com/originals/f7/69/d2/f769d20fbec55e3970d4926b1ed96fdd.jpg",
+            "https://i.pinimg.com/originals/f7/69/d"
+        ],
+        "titulo": "kchika",
+        "tipo": "FPS",
+        "autor": "Juan Perez"
+    },
+    {
+        "id": 1,
+        "imagenes": [
+            "https://lh3.googleusercontent.com/WCqC7O-9PKGHN3PqaVCXNI02L8kTOO-8bpXFn17YZCXEOpBP0zZN7xNoyaZOP_6fspgcfL9AThgWwVo9Whjtz2Eo1ajL8O03URsHjTgnMfjN4Q=w960-rj-nu-e365"
+        ],
+        "titulo": "Ejemplo 2",
+        "tipo": "Deportes",
+        "autor": "Juan Perez"
+    },
+    {
+        "id": 2,
+        "imagenes": [
+            "https://kpopping.com/documents/44/4/1800/230115-NewJeans-Haerin-OMG-at-Inkigayo-documents-1.jpeg?v=0e47f"
+        ],
+        "titulo": "Ejemplo 3",
+        "tipo": "Aventura",
+        "autor": "Juan Perez"
+    },
+    {
+        "id": 3,
+        "imagenes": [
+            "https://kpopping.com/documents/44/4/1800/230115-NewJeans-Haerin-OMG-at-Inkigayo-documents-1.jpeg?v=0e47f"
+        ],
+        "titulo": "Ejemplo 3",
+        "tipo": "Aventura",
+        "autor": "Juan Perez"
+    },
+    {
+        "id": 4,
+        "imagenes": [
+            "https://kpopping.com/documents/44/4/1800/230115-NewJeans-Haerin-OMG-at-Inkigayo-documents-1.jpeg?v=0e47f"
+        ],
+        "titulo": "Ejemplo 3",
+        "tipo": "Aventura",
+        "autor": "Juan Perez"
+    }
+]

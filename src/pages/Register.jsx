@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useFormik } from "formik";
 import { basicSchema } from "../Schemas/Index";
 const onSubmit = () => {
@@ -134,5 +135,16 @@ const Register = () => {
     </div>
   );
 };
+=======
+import { Button } from "react-bootstrap";
+
+function Register() {
+    return (
+        <div>
+            <Button>Iniciar sesión</Button>
+        </div>
+    );
+}
+>>>>>>> 4ed7940153ec814765e8b34bcbe16a67a0b192ed
 
 export default Register;

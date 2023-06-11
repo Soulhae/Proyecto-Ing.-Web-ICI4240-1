@@ -1,0 +1,73 @@
+@import "../variables";
+
+.inicio {
+    height: calc(100vh - 130px);
+    overflow-x: hidden;
+}
+
+.grupo1 {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 100px 20px;
+}
+
+.mensaje {
+    color: $color-texto-5;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    opacity: 0.85;
+    //text-align: justify;
+    //text-justify: inter-word;
+}
+
+.izquierda {
+    background-color: red;
+}
+
+.derecha {
+    background-color: orange;
+}
+
+.carouselSlide {
+    width: 100% !important;
+    height: 100% !important;
+
+    img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mensaje {
+        font-size: 30px;
+    }
+
+    .grupo1 {
+        flex-direction: column;
+        padding: 40px 0px 40px 0px;
+    }
+
+    .carouselSlide {
+        width: 100% !important;
+        height: 100% !important;
+
+        img {
+            max-height: 400px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .mensaje {
+        display: none;
+    }
+
+    .grupo1 {
+        height: 50vh;
+    }
+}

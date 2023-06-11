@@ -4,11 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Base = () => {
     return (
-        <div
-            style={{
-                backgroundColor: "#f8ffa9",
-            }}
-        >
+        <div style={{ backgroundColor: "#f8ffa9" }}>
             <Header />
             <Outlet />
             <Footer />
