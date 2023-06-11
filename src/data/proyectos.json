@@ -3,20 +3,24 @@
         "id": 0,
         "imagenes": [
             "https://i.pinimg.com/originals/f7/69/d2/f769d20fbec55e3970d4926b1ed96fdd.jpg",
-            "https://i.pinimg.com/originals/f7/69/d"
+            "https://pbs.twimg.com/media/FSfi9jmVcAMrALx?format=jpg&name=large",
+            "https://64.media.tumblr.com/70bcd2817e8bdec461f4c56bf5073690/176b511894c2097e-c6/s1280x1920/9f40426a09ba745b57ac05ef2a0b0fcf1bca3e19.jpg"
         ],
         "titulo": "kchika",
         "tipo": "FPS",
-        "autor": "Juan Perez"
+        "autor": "Juan Perez",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis, facilis quas reiciendis dolor error. Maiores sunt vero consectetur similique nam cumque quod vel quis distinctio amet. Esse cumque corrupti omnis perferendis qui aliquam aliquid illo quas optio modi quae, consequatur assumenda id. Cum ea et accusamus odit quibusdam tempore!"
     },
     {
         "id": 1,
         "imagenes": [
-            "https://lh3.googleusercontent.com/WCqC7O-9PKGHN3PqaVCXNI02L8kTOO-8bpXFn17YZCXEOpBP0zZN7xNoyaZOP_6fspgcfL9AThgWwVo9Whjtz2Eo1ajL8O03URsHjTgnMfjN4Q=w960-rj-nu-e365"
+            "https://lh3.googleusercontent.com/WCqC7O-9PKGHN3PqaVCXNI02L8kTOO-8bpXFn17YZCXEOpBP0zZN7xNoyaZOP_6fspgcfL9AThgWwVo9Whjtz2Eo1ajL8O03URsHjTgnMfjN4Q=w960-rj-nu-e365",
+            "https://64.media.tumblr.com/45d05d59d621367efe6761cfb2f0fa4b/888509b226421ac7-7e/s1280x1920/742cf1750438270a3d475d9bb89512af8ee1a30a.png"
         ],
         "titulo": "Ejemplo 2",
         "tipo": "Deportes",
-        "autor": "Juan Perez"
+        "autor": "Juan Perez",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis, facilis quas reiciendis dolor error. Maiores sunt vero consectetur similique nam cumque quod vel quis distinctio amet. Esse cumque corrupti omnis perferendis qui aliquam aliquid illo quas optio modi quae, consequatur assumenda id. Cum ea et accusamus odit quibusdam tempore!"
     },
     {
         "id": 2,
@@ -25,7 +29,8 @@
         ],
         "titulo": "Ejemplo 3",
         "tipo": "Aventura",
-        "autor": "Juan Perez"
+        "autor": "Juan Perez",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis, facilis quas reiciendis dolor error. Maiores sunt vero consectetur similique nam cumque quod vel quis distinctio amet. Esse cumque corrupti omnis perferendis qui aliquam aliquid illo quas optio modi quae, consequatur assumenda id. Cum ea et accusamus odit quibusdam tempore!"
     },
     {
         "id": 3,
@@ -34,7 +39,8 @@
         ],
         "titulo": "Ejemplo 3",
         "tipo": "Aventura",
-        "autor": "Juan Perez"
+        "autor": "Juan Perez",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis, facilis quas reiciendis dolor error. Maiores sunt vero consectetur similique nam cumque quod vel quis distinctio amet. Esse cumque corrupti omnis perferendis qui aliquam aliquid illo quas optio modi quae, consequatur assumenda id. Cum ea et accusamus odit quibusdam tempore!"
     },
     {
         "id": 4,
@@ -43,6 +49,7 @@
         ],
         "titulo": "Ejemplo 3",
         "tipo": "Aventura",
-        "autor": "Juan Perez"
+        "autor": "Juan Perez",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis, facilis quas reiciendis dolor error. Maiores sunt vero consectetur similique nam cumque quod vel quis distinctio amet. Esse cumque corrupti omnis perferendis qui aliquam aliquid illo quas optio modi quae, consequatur assumenda id. Cum ea et accusamus odit quibusdam tempore!"
     }
 ]

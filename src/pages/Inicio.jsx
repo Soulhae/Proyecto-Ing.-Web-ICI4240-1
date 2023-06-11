@@ -8,19 +8,15 @@ function Inicio() {
     return (
         <main className={`${styles.inicio} `}>
             <section className={styles.grupo1}>
-                <div className={`${styles.izquierda} col-md-4`}>
+                <div className={`${styles.izquierda} col-md-5`}>
                     <h2 className={styles.mensaje}>
                         Empieza tu proyecto o ayuda a otros
                     </h2>
                 </div>
-                <div className={`${styles.derecha} col-md-8`}>
-                    <Carousel>
+                <div className={`${styles.derecha} col-md-7`}>
+                    <Carousel className="d-block w-100 m-auto">
                         <Carousel.Item className={styles.carouselSlide}>
-                            <img
-                                className="d-block w-100"
-                                src={data[0].src}
-                                alt={data[0].alt}
-                            />
+                            <img src={data[0].src} alt={data[0].alt} />
                             <Carousel.Caption>
                                 <h3>{data[0].caption}</h3>
                                 <p>
@@ -30,11 +26,7 @@ function Inicio() {
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item className={styles.carouselSlide}>
-                            <img
-                                className="d-block w-100"
-                                src={data[1].src}
-                                alt={data[1].alt}
-                            />
+                            <img src={data[1].src} alt={data[1].alt} />
 
                             <Carousel.Caption>
                                 <h3>{data[1].caption}</h3>
@@ -45,11 +37,7 @@ function Inicio() {
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item className={styles.carouselSlide}>
-                            <img
-                                className="d-block w-100"
-                                src={data[2].src}
-                                alt={data[2].alt}
-                            />
+                            <img src={data[2].src} alt={data[2].alt} />
 
                             <Carousel.Caption>
                                 <h3>{data[2].caption}</h3>
@@ -64,7 +52,7 @@ function Inicio() {
             </section>
             <div
                 className="d-flex justify-content-center align-items-center"
-                style={{}}
+                style={{ marginTop: "10vh" }}
             >
                 <p
                     className="align-self-flex-end"
