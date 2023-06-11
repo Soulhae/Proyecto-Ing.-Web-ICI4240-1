@@ -1,11 +1,7 @@
-import { Button } from "react-bootstrap";
+
 
 function Login() {
-    return (
-        <div>
-            <Button href="/register">Registrarse</Button>
-        </div>
-    );
+    return <div>Login</div>;
 }
 
 export default Login;
