@@ -1,7 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Stack from "react-bootstrap/Stack";
+
 import data from "../data/images.json";
 
 import styles from "../styles/modules/Inicio.module.scss";

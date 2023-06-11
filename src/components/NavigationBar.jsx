@@ -2,7 +2,7 @@ import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
 
 function NavigationBar() {
     return (
-        <Navbar bg="light" expand="lg" className="py-4">
+        <Navbar bg="light" expand="lg">
             <Container
                 fluid
                 style={{
@@ -32,11 +32,12 @@ function NavigationBar() {
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success" href="/busqueda">
-                            Buscar
-                        </Button>
+                        <Button variant="outline-success" href="/busqueda">Buscar</Button>
                     </Form>
-                    <Nav style={{ maxHeight: "100px" }} navbarScroll>
+                    <Nav
+                        style={{ maxHeight: "100px" }}
+                        navbarScroll
+                    >
                         <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
