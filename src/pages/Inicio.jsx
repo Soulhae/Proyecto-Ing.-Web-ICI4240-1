@@ -1,5 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-import Container from "react-bootstrap/Container";
 
 import data from "../data/images.json";
 

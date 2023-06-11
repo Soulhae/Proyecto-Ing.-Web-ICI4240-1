@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "../styles/modules/Proyecto.module.scss";
 
@@ -19,7 +20,9 @@ const VistaProyecto = ({ proyecto }) => {
             <div className="card-body">
                 <h5 className="card-title">
                     <div className="d-flex">
-                        <div className="flex-grow-1">{titulo}</div>
+                        <div className="flex-grow-1">
+                            <Link to={`../test/${id}`}>{titulo}</Link>
+                        </div>
                     </div>
                 </h5>
                 <h6 className="card-subtitle mb-3 text-muted">{tipo}</h6>
