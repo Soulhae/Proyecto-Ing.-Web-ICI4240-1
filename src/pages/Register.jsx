@@ -47,8 +47,14 @@ const Register = () => {
           value={values.email}
           onChange={handleChange}
           onBlur={handleBlur}
+<<<<<<< HEAD
           className={errors.email && touched.email? `${styles.inputerror}` : ""}
         ></input>{errors.email && touched.email && <p className={`${styles.errorMsg}`}>{errors.email}</p>}
+=======
+          className={errors.email ? "input-error" : ""}
+
+        ></input>
+>>>>>>> b5864b55ff0bcd6c936a9ce5a98af0276718995e
         <label
           htmlFor="username"
           style={{
@@ -139,6 +145,9 @@ const Register = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> b5864b55ff0bcd6c936a9ce5a98af0276718995e
 
 export default Register;

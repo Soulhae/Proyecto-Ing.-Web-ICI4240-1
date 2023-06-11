@@ -6,10 +6,15 @@ import data from "../data/proyectos.json";
 import styles from "../styles/modules/Proyectos.module.scss";
 
 function Proyectos() {
+    console.log(data);
     return (
         <div>
             <main className={`${styles.main} p-5`}>
-                <h1 className="d-flex justify-content-center">Proyectos</h1>
+                <h1
+                    className={`${styles.titulo} d-flex justify-content-center`}
+                >
+                    Proyectos
+                </h1>
                 <hr className={styles.salto} />
                 <div className={`${styles.caja} album py-5 bg-light`}>
                     <div className="container">
