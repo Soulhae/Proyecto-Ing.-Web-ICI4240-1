@@ -4,6 +4,7 @@ import { basicSchema } from "../schemas/index";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Button, Form } from "react-bootstrap";
 
 const onSubmit = async (values, actions) => {
     console.log(values);
@@ -44,6 +45,7 @@ const Register = () => {
     //console.log(errors);
 
     return (
+
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
                 <form
@@ -52,7 +54,8 @@ const Register = () => {
                     autoComplete="off"
                 >
                     <h1>Registrarse</h1>
-                    <label
+                    <Form.Group>
+                    <Form.Label
                         htmlFor="email"
                         style={{
                             fontsize: "1rem",
@@ -63,8 +66,8 @@ const Register = () => {
                         }}
                     >
                         Email
-                    </label>
-                    <input
+                    </Form.Label>
+                    <Form.Control
                         id="email"
                         type="email"
                         placeholder="Ingrese su email"
@@ -76,11 +79,12 @@ const Register = () => {
                                 ? `${styles.inputerror}`
                                 : ""
                         }
-                    ></input>
+                    ></Form.Control>
+                    </Form.Group>
                     {errors.email && touched.email && (
                         <p className={`${styles.errorMsg}`}>{errors.email}</p>
                     )}
-                    <label
+                    <Form.Label
                         htmlFor="username"
                         style={{
                             fontsize: "1rem",
@@ -91,8 +95,8 @@ const Register = () => {
                         }}
                     >
                         Usuario
-                    </label>
-                    <input
+                    </Form.Label>
+                    <Form.Control
                         id="username"
                         type="username"
                         placeholder="Ingrese un usuario"
@@ -104,13 +108,13 @@ const Register = () => {
                                 ? `${styles.inputerror}`
                                 : ""
                         }
-                    ></input>
+                    ></Form.Control>
                     {errors.username && touched.username && (
                         <p className={`${styles.errorMsg}`}>
                             {errors.username}
                         </p>
                     )}
-                    <label
+                    <Form.Label
                         htmlFor="password"
                         style={{
                             fontsize: "1rem",
@@ -121,8 +125,8 @@ const Register = () => {
                         }}
                     >
                         Contraseña
-                    </label>
-                    <input
+                    </Form.Label>
+                    <Form.Control
                         id="password"
                         type="password"
                         placeholder="Ingrese una contraseña"
@@ -134,13 +138,13 @@ const Register = () => {
                                 ? `${styles.inputerror}`
                                 : ""
                         }
-                    ></input>
+                    ></Form.Control>
                     {errors.password && touched.password && (
                         <p className={`${styles.errorMsg}`}>
                             {errors.password}
                         </p>
                     )}
-                    <label
+                    <Form.Label
                         htmlFor="confirmPassword"
                         style={{
                             fontsize: "1rem",
@@ -151,8 +155,8 @@ const Register = () => {
                         }}
                     >
                         Reingresar contraseña
-                    </label>
-                    <input
+                    </Form.Label>
+                    <Form.Control
                         id="confirmPassword"
                         type="password"
                         placeholder="Reingrese la contraseña"
@@ -164,13 +168,13 @@ const Register = () => {
                                 ? `${styles.inputerror}`
                                 : ""
                         }
-                    ></input>
+                    ></Form.Control>
                     {errors.confirmPassword && touched.confirmPassword && (
                         <p className={`${styles.errorMsg}`}>
                             {errors.confirmPassword}
                         </p>
                     )}
-                    <label
+                    <Form.Label
                         htmlFor="number"
                         style={{
                             fontsize: "1rem",
@@ -181,8 +185,8 @@ const Register = () => {
                         }}
                     >
                         Número telefonico
-                    </label>
-                    <input
+                    </Form.Label>
+                    <Form.Control
                         id="number"
                         type="number"
                         placeholder="Ingrese su número telefonico"
@@ -194,13 +198,15 @@ const Register = () => {
                                 ? `${styles.inputerror}`
                                 : ""
                         }
-                    ></input>
+                    ></Form.Control>
                     {errors.number && touched.number && (
                         <p className={`${styles.errorMsg}`}>{errors.number}</p>
                     )}
-                    <button disabled={isSubmitting} type="submit">
+                    <div className="d-grid gap-2">
+                    <Button variant="primary" size="lg" active disabled={isSubmitting} type="submit">
                         Registrarse
-                    </button>
+                    </Button>
+                    </div>
                     <hr />
                     <p>
                         ¿Ya tienes una cuenta?
