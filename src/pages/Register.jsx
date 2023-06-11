@@ -1,6 +1,6 @@
 import styles from "../styles/modules/Register.module.scss"
 import { useFormik } from "formik";
-import { basicSchema } from "../Schemas/Index";
+import { basicSchema } from "../schemas/index";
 const onSubmit = async (values ,actions) => { 
 
   console.log(values);
@@ -26,7 +26,7 @@ const Register = () => {
   console.log(errors);
 
   return (
-    <div>
+    <div className={`${styles.boxL}`}>
       <form onSubmit={handleSubmit} autoComplete="off">
         <label
           htmlFor="email"
@@ -47,14 +47,8 @@ const Register = () => {
           value={values.email}
           onChange={handleChange}
           onBlur={handleBlur}
-<<<<<<< HEAD
           className={errors.email && touched.email? `${styles.inputerror}` : ""}
         ></input>{errors.email && touched.email && <p className={`${styles.errorMsg}`}>{errors.email}</p>}
-=======
-          className={errors.email ? "input-error" : ""}
-
-        ></input>
->>>>>>> b5864b55ff0bcd6c936a9ce5a98af0276718995e
         <label
           htmlFor="username"
           style={{
@@ -145,9 +139,5 @@ const Register = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> b5864b55ff0bcd6c936a9ce5a98af0276718995e
 
 export default Register;

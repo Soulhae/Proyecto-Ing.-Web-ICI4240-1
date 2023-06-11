@@ -1,6 +1,6 @@
-import styles from "../styles/modules/Register.module.scss"
+import styles from "../styles/modules/Login.module.scss"
 import { useFormik } from "formik";
-import { basicSchema } from "../schemas/indexL";
+import { lSchema } from "../schemas/indexL";
 
 const onSubmit = async (values ,actions) => { 
 
@@ -18,14 +18,14 @@ const Login = () => {
    password:"",
    
     },
-    validationSchema: basicSchema,
+    validationSchema: lSchema,
     onSubmit,
   });
 
   console.log(errors);
 
   return (
-    <div>
+    <div className={`${styles.boxL}`}>
       <form onSubmit={handleSubmit} autoComplete="off">
         <label
           htmlFor="email"
@@ -47,7 +47,7 @@ const Login = () => {
           onChange={handleChange}
           onBlur={handleBlur}
           className={errors.email && touched.email? `${styles.inputerror}` : ""}
-        ></input>
+        ></input>{errors.email && touched.email && <p className={`${styles.errorMsg}`}>{errors.email}</p>}
         <label
           htmlFor="password"
           style={{
@@ -68,7 +68,7 @@ const Login = () => {
           onChange={handleChange}
           onBlur={handleBlur}
           className={errors.password && touched.password? `${styles.inputerror}` : ""}
-        ></input>
+        ></input>{errors.password && touched.password && <p className={`${styles.errorMsg}`}>{errors.password}</p>}
         <button disabled={isSubmitting} type="submit">Iniciar sesion</button>
       </form>
     </div>
