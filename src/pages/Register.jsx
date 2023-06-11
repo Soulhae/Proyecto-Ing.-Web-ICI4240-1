@@ -203,7 +203,7 @@ const Register = () => {
                         <p className={`${styles.errorMsg}`}>{errors.number}</p>
                     )}
                     <div className="d-grid gap-2">
-                    <Button variant="primary" size="lg" active disabled={isSubmitting} type="submit">
+                    <Button className={styles.BotonLogin} size="lg" active disabled={isSubmitting} type="submit">
                         Registrarse
                     </Button>
                     </div>
