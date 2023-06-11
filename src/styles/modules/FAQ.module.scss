@@ -1,0 +1,26 @@
+@import "../variables";
+
+.titulo2{
+    font-family: "Inter";
+    font-style: normal;
+    font-size: calc(1.75rem + 2vw);
+    text-align: center;
+    font-weight: 800;
+    color: $color_titulo_2;
+}
+
+.pregunta{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: calc(1.8rem + 0.7vw);
+    color: $color_texto_1;
+}
+
+.respuesta{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(1.7rem + 0.1vw);
+    color: $color_texto_2;
+}
