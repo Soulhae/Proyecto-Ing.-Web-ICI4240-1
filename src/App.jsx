@@ -32,6 +32,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/busqueda" element={<Busqueda />} />
+                    <Route path="/test/" element={<Proyectos />} />
                     <Route path="/test/:id" element={<Test />} />
                 </Route>
             </Routes>

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import styles from "../styles/modules/Proyecto.module.scss";
-
 const VistaProyecto = ({ proyecto }) => {
     const { id, imagenes, titulo, tipo, autor } = proyecto;
 
