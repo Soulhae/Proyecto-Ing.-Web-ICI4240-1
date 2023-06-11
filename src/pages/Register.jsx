@@ -1,23 +1,23 @@
-<<<<<<< HEAD
+import styles from "../styles/modules/Register.module.scss"
 import { useFormik } from "formik";
 import { basicSchema } from "../Schemas/Index";
-const onSubmit = () => {
+const onSubmit = async (values ,actions) => { 
 
-  console.log("Form submitted");
-
+  console.log(values);
+  console.log(actions);
+  await new Promise((resolve) => setTimeout(resolve,1000));
+  actions.resetForm();
 };
 
 
 const Register = () => {
-  const { values, errors, handleBlur, handleChange, handleSubmit} = useFormik({
+  const { values, errors, touched, isSubmitting,handleBlur, handleChange, handleSubmit} = useFormik({
     initialValues: {
    email:"",
    username:"",
    password:"",
    confirmPassword:"",
    number:"",
-
-
     },
     validationSchema: basicSchema,
     onSubmit,
@@ -47,9 +47,8 @@ const Register = () => {
           value={values.email}
           onChange={handleChange}
           onBlur={handleBlur}
-          classname={errors.email ? "input-error" : ""}
-
-        ></input>
+          className={errors.email && touched.email? `${styles.inputerror}` : ""}
+        ></input>{errors.email && touched.email && <p className={`${styles.errorMsg}`}>{errors.email}</p>}
         <label
           htmlFor="username"
           style={{
@@ -69,7 +68,9 @@ const Register = () => {
           value={values.username}
           onChange={handleChange}
           onBlur={handleBlur}
+          className={errors.username && touched.username? `${styles.inputerror}` : ""}
         ></input>
+        {errors.username && touched.username && <p className={`${styles.errorMsg}`}>{errors.username}</p>}
         <label
           htmlFor="password"
           style={{
@@ -89,7 +90,8 @@ const Register = () => {
           value={values.password}
           onChange={handleChange}
           onBlur={handleBlur}
-        ></input>
+          className={errors.password && touched.password? `${styles.inputerror}` : ""}
+        ></input>{errors.password && touched.password && <p className={`${styles.errorMsg}`}>{errors.password}</p>}
         <label
           htmlFor="confirmPassword"
           style={{
@@ -109,7 +111,8 @@ const Register = () => {
           value={values.confirmPassword}
           onChange={handleChange}
           onBlur={handleBlur}
-        ></input>
+          className={errors.confirmPassword && touched.confirmPassword? `${styles.inputerror}` : ""}
+        ></input>{errors.confirmPassword && touched.confirmPassword && <p className={`${styles.errorMsg}`}>{errors.confirmPassword}</p>}
         <label
           htmlFor="number"
           style={{
@@ -129,22 +132,13 @@ const Register = () => {
           value={values.number}
           onChange={handleChange}
           onBlur={handleBlur}
-        ></input>
-        <button type="submit">Registrar</button>
+          className={errors.number && touched.number? `${styles.inputerror}` : ""}
+        ></input>{errors.number && touched.number && <p className={`${styles.errorMsg}`}>{errors.number}</p>}
+        <button disabled={isSubmitting} type="submit">Registrarse</button>
       </form>
     </div>
   );
 };
-=======
-import { Button } from "react-bootstrap";
 
-function Register() {
-    return (
-        <div>
-            <Button>Iniciar sesión</Button>
-        </div>
-    );
-}
->>>>>>> 4ed7940153ec814765e8b34bcbe16a67a0b192ed
 
 export default Register;

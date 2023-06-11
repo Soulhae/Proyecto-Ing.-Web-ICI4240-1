@@ -1,0 +1,15 @@
+@import "../variables";
+
+
+.inputerror {
+    border-color:#fc8181;
+}
+
+.errorMsg {
+    color:#fc8181;
+    font-size: 5;
+}
+
+button:disabled{
+    opacity: 0.35;
+}
