@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { lSchema } from "../schemas/indexL";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Button, Form } from "react-bootstrap";
 
 const onSubmit = async (values, actions) => {
     console.log(values);
@@ -34,9 +35,11 @@ const Login = () => {
     return (
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
-                <form onSubmit={handleSubmit} autoComplete="off">
+                <form 
+                onSubmit={handleSubmit} 
+                autoComplete="off">
                     <h1>Iniciar sesión</h1>
-                    <label
+                    <Form.Label
                         htmlFor="email"
                         style={{
                             fontsize: "1rem",
@@ -47,8 +50,8 @@ const Login = () => {
                         }}
                     >
                         Email
-                    </label>
-                    <input
+                    </Form.Label>
+                    <Form.Control
                         id="email"
                         type="email"
                         placeholder="Ingrese su email"
@@ -60,11 +63,12 @@ const Login = () => {
                                 ? `${styles.inputerror}`
                                 : ""
                         }
-                    ></input>
+                    ></Form.Control>
+                    
                     {errors.email && touched.email && (
                         <p className={`${styles.errorMsg}`}>{errors.email}</p>
                     )}
-                    <label
+                    <Form.Label
                         htmlFor="password"
                         style={{
                             fontsize: "1rem",
@@ -75,8 +79,8 @@ const Login = () => {
                         }}
                     >
                         Contraseña
-                    </label>
-                    <input
+                    </Form.Label>
+                    <Form.Control
                         id="password"
                         type="password"
                         placeholder="Ingrese una contraseña"
@@ -88,15 +92,17 @@ const Login = () => {
                                 ? `${styles.inputerror}`
                                 : ""
                         }
-                    ></input>
+                    ></Form.Control>
                     {errors.password && touched.password && (
                         <p className={`${styles.errorMsg}`}>
                             {errors.password}
                         </p>
                     )}
-                    <button disabled={isSubmitting} type="submit">
-                        Iniciar sesion
-                    </button>
+                    <div className="d-grid gap-2">
+                    <Button variant="primary" size="lg" active disabled={isSubmitting} type="submit">
+                        Iniciar Sesion
+                    </Button>
+                    </div>
                     <hr />
                     <p>
                         ¿Nuevo usuario? <Link to="/register">¡Registrate!</Link>
