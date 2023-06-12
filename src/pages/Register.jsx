@@ -2,26 +2,31 @@ import styles from "../styles/modules/Register.module.scss";
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas/index";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Button, Form } from "react-bootstrap";
 
-const onSubmit = async (values, actions) => {
-    console.log(values);
-    //console.log(actions);
-    axios
-        .post("http://localhost:3000/usuarios", values)
-        .then((response) => {
-            console.log(response.data);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    actions.resetForm();
-};
-
 const Register = () => {
+
+    const navigate = useNavigate();
+
+    const onSubmit = async (values, actions) => {
+        //console.log(values);
+        //console.log(actions);
+        axios
+            .post("http://localhost:3000/usuarios", values)
+            .then((response) => {
+                //console.log(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        actions.resetForm();
+        alert('Registro exitoso!');
+        navigate('/');
+    };    
+
     const {
         values,
         errors,

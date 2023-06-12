@@ -11,7 +11,7 @@ app.use(cors());
 app.post('/usuarios', (req, res) => {
   const nuevosUsuarios = req.body;
 
-  const filePath = './src/data/usuarios.json';
+  const filePath = './src/data/usuarios.json';  //Al ser local, cambia dependiendo de quien y desde donde se ejecute node .
 
   fs.readFile(filePath, 'utf8' , (err, data) =>{
 

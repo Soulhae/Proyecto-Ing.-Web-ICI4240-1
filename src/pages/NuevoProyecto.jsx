@@ -34,7 +34,7 @@ function NuevoProyecto() {
                                 active
                                 type="submit"
                             >
-                                Registrarse
+                                Comencemos!
                             </Button>
                         </Row>
                     </Col>

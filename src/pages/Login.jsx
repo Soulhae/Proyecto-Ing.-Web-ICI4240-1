@@ -2,17 +2,21 @@ import styles from "../styles/modules/Login.module.scss";
 import { useFormik } from "formik";
 import { lSchema } from "../schemas/indexL";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 
-const onSubmit = async (values, actions) => {
-    console.log(values);
-    console.log(actions);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    actions.resetForm();
-};
-
 const Login = () => {
+
+    const navigate = useNavigate();
+
+    const onSubmit = async (values, actions) => {
+        //console.log(values);
+        //console.log(actions);
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        actions.resetForm();
+        navigate('/'); //Quizá enviar al usuario a su perfil luego de logear
+    };
+
     const {
         values,
         errors,
@@ -30,7 +34,7 @@ const Login = () => {
         onSubmit,
     });
 
-    console.log(errors);
+    //console.log(errors);
 
     return (
         <Container>
