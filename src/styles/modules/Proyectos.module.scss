@@ -1,7 +1,20 @@
 @import "../variables";
 
+@media screen and (min-width: 992px) {
+    .caja {
+        // background-color: red !important;
+        max-width: fit-content;
+        padding: 0 16px 0 16px;
+    }
+}
+
 .titulo {
     color: $color-titulo-2;
     font-weight: 800;
     opacity: 0.85;
+}
+
+.caja {
+    border-radius: 10px;
+    padding: 0 8px 0 8px;
 }

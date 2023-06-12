@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const VistaProyecto = ({ proyecto }) => {
-    const { id, imagenes, titulo, tipo, autor } = proyecto;
+    const { id, portada, imagenes, titulo, tipo, autor, lanzamiento } =
+        proyecto;
 
     return (
-        <div className="card shadow-sm">
+        <div className="card shadow-sm" style={{ minHeight: "390px" }}>
             <div className="bd-placeholder-img card-img-top">
                 <img
-                    src={imagenes[0]}
+                    src={portada}
                     className="card-img-top"
                     width="100%"
                     height="250"
@@ -19,14 +20,12 @@ const VistaProyecto = ({ proyecto }) => {
                 <h5 className="card-title">
                     <div className="d-flex">
                         <div className="flex-grow-1">
-                            <Link to={`../test/${id}`}>{titulo}</Link>
+                            <Link to={`../detalle/${id}`}>{titulo}</Link>
                         </div>
                     </div>
                 </h5>
-                <h6 className="card-subtitle mb-3 text-muted">{tipo}</h6>
-                <div>
-                    <p>{autor}</p>
-                </div>
+                <h6 className="card-subtitle mb-2 text-muted">{tipo}</h6>
+                <p className="mb-0">{autor}</p>
             </div>
         </div>
     );

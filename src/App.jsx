@@ -13,7 +13,7 @@ import NuevoProyecto from "./pages/NuevoProyecto.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Busqueda from "./pages/Busqueda.jsx";
-import Test from "./pages/Test.jsx";
+import Detalle from "./pages/Detalle.jsx";
 
 function App() {
     return (
@@ -32,8 +32,8 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/busqueda" element={<Busqueda />} />
-                    <Route path="/test/" element={<Proyectos />} />
-                    <Route path="/test/:id" element={<Test />} />
+                    <Route path="/detalle/" element={<Proyectos />} />
+                    <Route path="/detalle/:id" element={<Detalle />} />
                 </Route>
             </Routes>
         </div>
