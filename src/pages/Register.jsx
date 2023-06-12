@@ -50,7 +50,6 @@ const Register = () => {
     //console.log(errors);
 
     return (
-
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
                 <form
@@ -60,31 +59,31 @@ const Register = () => {
                 >
                     <h1>Registrarse</h1>
                     <Form.Group>
-                    <Form.Label
-                        htmlFor="email"
-                        style={{
-                            fontsize: "1rem",
-                            fontweight: "bold",
-                            display: "block",
-                            textalign: "left",
-                            margin: "1rem 0 0.2rem",
-                        }}
-                    >
-                        Email
-                    </Form.Label>
-                    <Form.Control
-                        id="email"
-                        type="email"
-                        placeholder="Ingrese su email"
-                        value={values.email}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        className={
-                            errors.email && touched.email
-                                ? `${styles.inputerror}`
-                                : ""
-                        }
-                    ></Form.Control>
+                        <Form.Label
+                            htmlFor="email"
+                            style={{
+                                fontsize: "1rem",
+                                fontweight: "bold",
+                                display: "block",
+                                textalign: "left",
+                                margin: "1rem 0 0.2rem",
+                            }}
+                        >
+                            Email
+                        </Form.Label>
+                        <Form.Control
+                            id="email"
+                            type="email"
+                            placeholder="Ingrese su email"
+                            value={values.email}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className={
+                                errors.email && touched.email
+                                    ? `${styles.inputerror}`
+                                    : ""
+                            }
+                        ></Form.Control>
                     </Form.Group>
                     {errors.email && touched.email && (
                         <p className={`${styles.errorMsg}`}>{errors.email}</p>
@@ -208,13 +207,19 @@ const Register = () => {
                         <p className={`${styles.errorMsg}`}>{errors.number}</p>
                     )}
                     <div className="d-grid gap-2">
-                    <Button className={styles.BotonLogin} size="lg" active disabled={isSubmitting} type="submit">
-                        Registrarse
-                    </Button>
+                        <Button
+                            className={styles.BotonLogin}
+                            size="lg"
+                            active
+                            disabled={isSubmitting}
+                            type="submit"
+                        >
+                            Registrarse
+                        </Button>
                     </div>
                     <hr />
                     <p>
-                        ¿Ya tienes una cuenta?
+                        ¿Ya tienes una cuenta?{" "}
                         <Link to="/login">¡Inicia sesión!</Link>
                     </p>
                 </form>
