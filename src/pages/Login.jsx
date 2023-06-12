@@ -35,9 +35,7 @@ const Login = () => {
     return (
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
-                <form 
-                onSubmit={handleSubmit} 
-                autoComplete="off">
+                <form onSubmit={handleSubmit} autoComplete="off">
                     <h1>Iniciar sesión</h1>
                     <Form.Label
                         htmlFor="email"
@@ -64,7 +62,7 @@ const Login = () => {
                                 : ""
                         }
                     ></Form.Control>
-                    
+
                     {errors.email && touched.email && (
                         <p className={`${styles.errorMsg}`}>{errors.email}</p>
                     )}
@@ -99,9 +97,15 @@ const Login = () => {
                         </p>
                     )}
                     <div className="d-grid gap-2">
-                    <Button className={styles.BotonLogin} size="lg" active disabled={isSubmitting} type="submit">
-                        Iniciar Sesion
-                    </Button>
+                        <Button
+                            className={styles.BotonLogin}
+                            size="lg"
+                            active
+                            disabled={isSubmitting}
+                            type="submit"
+                        >
+                            Iniciar Sesion
+                        </Button>
                     </div>
                     <hr />
                     <p>

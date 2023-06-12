@@ -11,7 +11,10 @@
         "tipo": "Acción",
         "autor": "FromSoftware",
         "lanzamiento": "23 MAY 2018",
-        "descripcion": "Entonces llegó el Fuego. Vuelve a disfrutar del aclamado juego que definió el género con el que empezó todo. Gracias a una magnífica remasterización, podrás regresar a Lordran con unos impresionantes detalles en alta definición y a 60 fps. "
+        "descripcion": "Entonces llegó el Fuego. Vuelve a disfrutar del aclamado juego que definió el género con el que empezó todo. Gracias a una magnífica remasterización, podrás regresar a Lordran con unos impresionantes detalles en alta definición y a 60 fps. ",
+        "patrocinadores": 1236,
+        "objetivo": 3000000,
+        "monto": 2345900
     },
     {
         "id": 1,
@@ -27,7 +30,10 @@
         "tipo": "Rol",
         "autor": "CD PROJEKT RED",
         "lanzamiento": "9 DIC 2020",
-        "descripcion": "Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales."
+        "descripcion": "Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 2,
@@ -43,7 +49,10 @@
         "tipo": "Aventura",
         "autor": "Rockstar Games",
         "lanzamiento": "5 DIC 2019",
-        "descripcion": "Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador compartido de Red Dead Online. "
+        "descripcion": "Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador compartido de Red Dead Online. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 3,
@@ -60,7 +69,10 @@
         "tipo": "Acción",
         "autor": "Rockstar Games",
         "lanzamiento": "14 ABR 2015",
-        "descripcion": "Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo."
+        "descripcion": "Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 4,
@@ -77,7 +89,10 @@
         "tipo": "Deportes",
         "autor": "Electronic Arts",
         "lanzamiento": "29 SEP 2022",
-        "descripcion": "FIFA 23 nos acerca a The World's Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más. "
+        "descripcion": "FIFA 23 nos acerca a The World's Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 5,
@@ -100,7 +115,10 @@
         "tipo": "Acción",
         "autor": "FromSoftware",
         "lanzamiento": "24 FEB 2022",
-        "descripcion": "EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias. "
+        "descripcion": "EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 6,
@@ -116,7 +134,10 @@
         "tipo": "Aventura",
         "autor": "Nintendo",
         "lanzamiento": "3 MAR 2017",
-        "descripcion": "Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste."
+        "descripcion": "Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 7,
@@ -133,7 +154,10 @@
         "tipo": "Estrategia",
         "autor": "Forgotten Empires",
         "lanzamiento": "9 ABR 2013",
-        "descripcion": "Age of Empires II ha entrado al mundo de la alta definición sumando además nuevas funciones y ajustes, mejoras en la inteligencia artificial, cromos de Steam, soporte para Steam Workshop, integración con Steamworks, ¡y más! "
+        "descripcion": "Age of Empires II ha entrado al mundo de la alta definición sumando además nuevas funciones y ajustes, mejoras en la inteligencia artificial, cromos de Steam, soporte para Steam Workshop, integración con Steamworks, ¡y más! ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 8,
@@ -150,7 +174,10 @@
         "tipo": "Acción",
         "autor": "KRAFTON, Inc.",
         "lanzamiento": "21 DIC 2017",
-        "descripcion": "Aterriza en posiciones estratégicas, saquea armas y suministros, y sobrevive para que vuestro equipo sea el único en pie en los distintos y variados campos de batalla. Forma equipo y participa en los campos de batalla para experimentar el Battle Royale original como solo existe en PUBG: BATTLEGROUNDS."
+        "descripcion": "Aterriza en posiciones estratégicas, saquea armas y suministros, y sobrevive para que vuestro equipo sea el único en pie en los distintos y variados campos de batalla. Forma equipo y participa en los campos de batalla para experimentar el Battle Royale original como solo existe en PUBG: BATTLEGROUNDS.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 9,
@@ -168,7 +195,10 @@
         "tipo": "Multijugador masivo",
         "autor": "Bethesda Softworks",
         "lanzamiento": "4 ABR 2014",
-        "descripcion": "Vive una historia en permanente estado de expansión por todo Tamriel con The Elder Scrolls Online, un RPG en línea que ha recibido toda clase de premios y alabanzas. Explora un mundo lleno de vida y sorpresas con tus amigos, o embárcate en una aventura en solitario. Disfruta de un control total sobre el aspecto y la forma de jugar de tu personaje: de las armas que esgrimas a las habilidades que uses, las decisiones que tomes darán forma a tu destino. Te damos la bienvenida a un mundo sin límites."
+        "descripcion": "Vive una historia en permanente estado de expansión por todo Tamriel con The Elder Scrolls Online, un RPG en línea que ha recibido toda clase de premios y alabanzas. Explora un mundo lleno de vida y sorpresas con tus amigos, o embárcate en una aventura en solitario. Disfruta de un control total sobre el aspecto y la forma de jugar de tu personaje: de las armas que esgrimas a las habilidades que uses, las decisiones que tomes darán forma a tu destino. Te damos la bienvenida a un mundo sin límites.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 10,
@@ -189,7 +219,10 @@
         "tipo": "Acción",
         "autor": "Santa Monica Studio",
         "lanzamiento": "14 ENE 2022",
-        "descripcion": "Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de los dioses y monstruos nórdicos. En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también"
+        "descripcion": "Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de los dioses y monstruos nórdicos. En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 11,
@@ -206,7 +239,10 @@
         "tipo": "Deportes",
         "autor": "2K",
         "lanzamiento": "8 SEP 2022",
-        "descripcion": "Ponte a la altura de las circunstancias y desarrolla todo tu potencial en NBA 2K23. Ponte a prueba contra los mejores jugadores del mundo y demuestra tu talento en Mi CARRERA. Combina a las estrellas actuales con leyendas eternas en MyTEAM. Construye tu propia dinastía en Mi GM o lleva la NBA en una nueva dirección con Mi LIGA. Enfréntate a equipos de la NBA o de la WNBA en JUGAR AHORA y experimenta un juego real. ¿Cómo Responderás a la Llamada?"
+        "descripcion": "Ponte a la altura de las circunstancias y desarrolla todo tu potencial en NBA 2K23. Ponte a prueba contra los mejores jugadores del mundo y demuestra tu talento en Mi CARRERA. Combina a las estrellas actuales con leyendas eternas en MyTEAM. Construye tu propia dinastía en Mi GM o lleva la NBA en una nueva dirección con Mi LIGA. Enfréntate a equipos de la NBA o de la WNBA en JUGAR AHORA y experimenta un juego real. ¿Cómo Responderás a la Llamada?",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 12,
@@ -227,7 +263,10 @@
         "tipo": "RPG",
         "autor": "Smilegate RPG",
         "lanzamiento": "11 FEB 2022",
-        "descripcion": "Embárcate en una odisea en el gigantesco y vibrante mundo de Lost Ark: explora lugares desconocidos, busca tesoros perdidos y ponte a prueba con la emocionante acción y combate de este RPG de acción gratuito."
+        "descripcion": "Embárcate en una odisea en el gigantesco y vibrante mundo de Lost Ark: explora lugares desconocidos, busca tesoros perdidos y ponte a prueba con la emocionante acción y combate de este RPG de acción gratuito.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 13,
@@ -246,7 +285,10 @@
         "tipo": "Acción",
         "autor": "Behaviour Interactive Inc.",
         "lanzamiento": "14 JUN 2016",
-        "descripcion": "Dead by Daylight es un juego de horror de multijugador (4 contra 1) en el que un jugador representa el rol del asesino despiadado y los 4 restantes juegan como supervivientes que intentan escapar de él para evitar ser capturados y asesinados. "
+        "descripcion": "Dead by Daylight es un juego de horror de multijugador (4 contra 1) en el que un jugador representa el rol del asesino despiadado y los 4 restantes juegan como supervivientes que intentan escapar de él para evitar ser capturados y asesinados. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     },
     {
         "id": 14,
@@ -269,6 +311,9 @@
         "tipo": "Acción",
         "autor": "CAPCOM Co., Ltd.",
         "lanzamiento": "23 MAR 2023",
-        "descripcion": "Sobrevivir es solo el principio. Con una mecánica de juego modernizada, una historia reimaginada y unos gráficos espectacularmente detallados, Resident Evil 4 supone el renacimiento de un gigante del mundo de los videojuegos."
+        "descripcion": "Sobrevivir es solo el principio. Con una mecánica de juego modernizada, una historia reimaginada y unos gráficos espectacularmente detallados, Resident Evil 4 supone el renacimiento de un gigante del mundo de los videojuegos.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
     }
 ]

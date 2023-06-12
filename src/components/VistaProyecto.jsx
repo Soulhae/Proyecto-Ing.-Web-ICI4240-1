@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "../styles/modules/VistaProyecto.module.scss";
 
 const VistaProyecto = ({ proyecto }) => {
-    const { id, portada, imagenes, titulo, tipo, autor, lanzamiento } =
-        proyecto;
+    const { id, portada, titulo, tipo, autor } = proyecto;
 
     return (
         <>
