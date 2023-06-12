@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../mixins";
 
 .inicio {
     height: calc(100vh - 130px);
@@ -17,22 +17,11 @@
 }
 
 .mensaje {
-    color: $color-texto-5;
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 50px;
-    opacity: 0.85;
-    //text-align: justify;
-    //text-justify: inter-word;
+    @include mixins.subtitulo-2;
 }
 
-.izquierda {
-    // background-color: red;
-}
-
-.derecha {
-    // background-color: orange;
+.texto {
+    @include mixins.texto;
 }
 
 .carouselSlide {

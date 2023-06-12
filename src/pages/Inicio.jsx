@@ -54,15 +54,7 @@ function Inicio() {
                 className="d-flex justify-content-center align-items-center"
                 style={{ marginTop: "10vh" }}
             >
-                <p
-                    className="align-self-flex-end"
-                    style={{
-                        color: "#363636",
-                        fontFamily: "Outfit",
-                        fontStyle: "normal",
-                        fontWeight: 700,
-                    }}
-                >
+                <p className={`${styles.texto} align-self-flex-end`}>
                     Fundraising para proyectos en los que estés interesad@ y
                     quieras apoyar monetariamente!
                 </p>

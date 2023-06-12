@@ -1,0 +1,5 @@
+@use "../mixins";
+
+.caja2 {
+    @include mixins.linkCaja;
+}
