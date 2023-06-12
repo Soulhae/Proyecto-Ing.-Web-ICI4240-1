@@ -16,14 +16,15 @@ const Register = () => {
         axios
             .post("http://localhost:3000/usuarios", values)
             .then((response) => {
-                //console.log(response.data);
+                console.log(response.data);
+                alert('Registro exitoso!');
             })
             .catch((error) => {
                 console.error(error);
+                alert('Registro fallido :(');
             });
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
-        alert('Registro exitoso!');
         navigate('/');
     };    
 
