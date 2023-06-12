@@ -1,0 +1,23 @@
+@use "../mixins";
+
+.main {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+
+    h1 {
+        @include mixins.titulo;
+        opacity: 0.95;
+    }
+
+    h5 {
+        @include mixins.subtitulo-3;
+    }
+
+    h6 {
+        @include mixins.subtitulo-4;
+    }
+
+    p {
+        @include mixins.texto-2;
+    }
+}

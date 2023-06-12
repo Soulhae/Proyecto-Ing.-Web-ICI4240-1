@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import data from "../data/proyectos.json";
 import gif from "../data/gif1.gif";
 
+import styles from "../styles/modules/Detalle.module.scss";
+
 import { Carousel, Container, Row, Col, Button } from "react-bootstrap";
 
 //BOTONN DE VOLVER FALTA
@@ -17,14 +19,21 @@ function Test() {
 
     if (!proyecto) {
         return (
-            <div className="d-flex flex-column justify-content-center">
-                <h1 className="m-auto">No encontrado</h1>
-                <img
-                    src={gif}
-                    alt=""
-                    style={{ width: "700px", margin: "auto" }}
-                />
-            </div>
+            <Container
+                className={`${styles.main} d-flex flex-column `}
+                style={{ height: "88vh" }}
+            >
+                <Row className="m-auto my-4">
+                    <h1 className="m-auto">No encontrado</h1>
+                </Row>
+                <Row>
+                    <img
+                        src={gif}
+                        alt=""
+                        style={{ width: "700px", margin: "auto" }}
+                    />
+                </Row>
+            </Container>
         );
     }
 
@@ -37,13 +46,15 @@ function Test() {
 
 function Detalle({ proyecto }) {
     return (
-        <Container className="my-4">
+        <Container className={`${styles.main} my-4`}>
             <Row className="my-1">
                 <Col className="col-10">
                     <h1>{proyecto.titulo}</h1>
                 </Col>
                 <Col className="col-2 d-flex justify-content-end">
-                    <Link to="/proyectos">Volver</Link>
+                    <Link to="/proyectos">
+                        <Button variant="outline-secondary">Volver</Button>
+                    </Link>
                 </Col>
             </Row>
             <Row className="my-1">
@@ -88,6 +99,7 @@ function Detalle({ proyecto }) {
                             minWidth: "100px",
                             backgroundColor: "darkslateblue",
                             border: "none",
+                            borderRadius: "0",
                         }}
                     >
                         Patrocinar
