@@ -53,7 +53,9 @@ function Detalle({ proyecto }) {
                 </Col>
                 <Col className="col-2 d-flex justify-content-end">
                     <Link to="/proyectos">
-                        <Button variant="outline-secondary">Volver</Button>
+                        <Button className={styles.boton} variant="secondary">
+                            Volver
+                        </Button>
                     </Link>
                 </Col>
             </Row>

@@ -35,6 +35,16 @@
     }
 }
 
+.boton {
+    background-color: rgb(84, 75, 139);
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: rgb(84, 75, 139);
+    }
+}
+
 @media (max-width: 768px) {
     .caja {
         flex-direction: column;

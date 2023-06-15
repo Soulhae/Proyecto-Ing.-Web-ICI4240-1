@@ -11,7 +11,9 @@ function Proyectos() {
     return (
         <Container>
             <main className={`${styles.main} py-4 px-3`}>
-                <h1 className={`${styles.titulo}  mb-3`}>Proyectos</h1>
+                <div className="">
+                    <h1 className={`${styles.titulo}  mb-3`}>Proyectos</h1>
+                </div>
 
                 <div className="d-flex justify-content-center">
                     <div className={`${styles.caja} album py-4 bg-light `}>

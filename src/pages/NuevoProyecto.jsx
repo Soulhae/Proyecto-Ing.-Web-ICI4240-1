@@ -6,20 +6,26 @@ function NuevoProyecto() {
     return (
         <Container>
             <Container className="p-4 py-5">
-                <h1 className={`${styles.titulo2}`}>Inicia tu proyecto</h1>
-                <Row className={`${styles.caja} `}>
+                <h1 className={`${styles.titulo2} mx-3`}>Inicia tu proyecto</h1>
+                <Row className={`${styles.caja} m-auto`}>
                     <Col className="m-auto">
                         <Row>
                             <img
                                 src="https://media.istockphoto.com/id/1212742343/es/foto/grupo-de-trabajadores-de-negocios-de-pie-golpeando-los-pu%C3%B1os-en-la-oficina.jpg?s=612x612&w=0&k=20&c=Ja2V74xBZXJgXJnEK3hsF1BA3CZdBEwJXGdRKEnAUk8="
                                 alt="Puños"
-                                className={`${styles.fotitos}`}
+                                className={`${styles.fotitos} m-auto`}
                             />
                         </Row>
                     </Col>
                     <Col className="m-auto">
                         <Row>
-                            <h3 className={`${styles.ola}`}>
+                            <h3
+                                className={`${styles.ola}`}
+                                style={{
+                                    textAlign: "justify",
+                                    textJustify: "inter-word",
+                                }}
+                            >
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Quae distinctio rerum
                                 laudantium nam! Culpa perspiciatis eum maiores,
