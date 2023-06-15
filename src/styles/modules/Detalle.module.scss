@@ -1,0 +1,47 @@
+@use "../mixins";
+@import "../variables";
+
+.main {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+
+    h1 {
+        @include mixins.titulo;
+        opacity: 0.95;
+    }
+
+    h5 {
+        @include mixins.subtitulo-3;
+    }
+
+    h6 {
+        @include mixins.subtitulo-4;
+    }
+
+    p {
+        @include mixins.texto-2;
+    }
+
+    .caja2 {
+        // background-color: rgb(62, 55, 107);
+
+        p {
+            // color: white;
+        }
+
+        h2 {
+            color: rgb(51, 38, 133);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .caja {
+        flex-direction: column;
+        // padding: 40px 0px 40px 0px;
+    }
+
+    .caja2 {
+        margin-top: 12px;
+    }
+}

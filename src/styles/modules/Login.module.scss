@@ -1,0 +1,36 @@
+@import "../variables";
+
+
+.inputerror {
+    border-color:#fc8181;
+}
+
+.errorMsg {
+    color:#fc8181;
+    font-size: 5;
+}
+
+button:disabled{
+    opacity: 0.35;
+}
+
+.BotonLogin {
+
+    margin-top: 20px;
+    background-color: #f8ffa9;
+    color: red;
+}
+
+.boxL{
+    display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #D9D9D9;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+          max-width: 500px;
+          max-width: 300px;
+          padding: 15px;
+          margin: 30px;
+}

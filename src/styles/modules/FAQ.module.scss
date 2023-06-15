@@ -1,0 +1,13 @@
+@use "../mixins";
+
+.titulo2 {
+    @include mixins.titulo;
+}
+
+.pregunta {
+    @include mixins.subtitulo;
+}
+
+.respuesta {
+    @include mixins.subtitulo-1;
+}

@@ -1,0 +1,21 @@
+@use "../mixins";
+
+.fotitos {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+}
+
+.titulo2 {
+    @include mixins.titulo;
+}
+
+.ola {
+    font-size: calc(1.325rem + 0.1vw);
+    font-family: "Roboto", sans-serif;
+}
+
+.ola2 {
+    font-size: calc(1rem + 0.3vw);
+    font-family: "Roboto", sans-serif;
+}

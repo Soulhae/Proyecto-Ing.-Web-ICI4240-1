@@ -1,0 +1,319 @@
+[
+    {
+        "id": 0,
+        "portada": "https://i.blogs.es/591b5a/280518-darksouls-review/1366_2000.jpg",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.jpg?t=1682652141",
+            "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_626cc310dc9ac7fb146011582c864a35e5f3e381.jpg?t=1682652141",
+            "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_f1617a419eb3b0cd877ec71230c59aa2672b62dc.jpg?t=1682652141"
+        ],
+        "titulo": "DARK SOULS™: REMASTERED",
+        "tipo": "Acción",
+        "autor": "FromSoftware",
+        "lanzamiento": "23 MAY 2018",
+        "descripcion": "Entonces llegó el Fuego. Vuelve a disfrutar del aclamado juego que definió el género con el que empezó todo. Gracias a una magnífica remasterización, podrás regresar a Lordran con unos impresionantes detalles en alta definición y a 60 fps. ",
+        "patrocinadores": 1236,
+        "objetivo": 3000000,
+        "monto": 2345900
+    },
+    {
+        "id": 1,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1680026109",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/1091500/ss_b529b0abc43f55fc23fe8058eddb6e37c9629a6a.jpg?t=1680026109",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1091500/ss_8640d9db74f7cad714f6ecfb0e1aceaa3f887e58.jpg?t=1680026109",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1091500/ss_9284d1c5b248726760233a933dbb83757d7d5d95.jpg?t=1680026109",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1091500/ss_4bda6f67580d94832ed2d5814e41ebe018ba1d9e.jpg?t=1680026109",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1091500/ss_e5a94665dbfa5a30931cff2f45cdc0ebea9fcebb.jpg?t=1680026109"
+        ],
+        "titulo": "Cyberpunk 2077",
+        "tipo": "Rol",
+        "autor": "CD PROJEKT RED",
+        "lanzamiento": "9 DIC 2020",
+        "descripcion": "Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 2,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1671485009",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_66b553f4c209476d3e4ce25fa4714002cc914c4f.jpg?t=1671485009",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_bac60bacbf5da8945103648c08d27d5e202444ca.jpg?t=1671485009",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_668dafe477743f8b50b818d5bbfcec669e9ba93e.jpg?t=1671485009",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_4ce07ae360b166f0f650e9a895a3b4b7bf15e34f.jpg?t=1671485009",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_d1a8f5a69155c3186c65d1da90491fcfd43663d9.jpg?t=1671485009"
+        ],
+        "titulo": "Red Dead Redemption 2",
+        "tipo": "Aventura",
+        "autor": "Rockstar Games",
+        "lanzamiento": "5 DIC 2019",
+        "descripcion": "Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador compartido de Red Dead Online. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 3,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1678296348",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/271590/ss_d1555f147b4667f70fac769985df629cbfda40b8.jpg?t=1678296348",
+            "https://cdn.akamai.steamstatic.com/steam/apps/271590/ss_ea78dfa1d7d81c3781287cab165f64ca70f1f2ea.jpg?t=1678296348",
+            "https://cdn.akamai.steamstatic.com/steam/apps/271590/ss_54a59b51d9a3dbd5cf6b8d8745716b293633a50b.jpg?t=1678296348",
+            "https://cdn.akamai.steamstatic.com/steam/apps/271590/ss_65677665937a9164fb10b3194ff1d89bb1f1d848.jpg?t=1678296348",
+            "https://cdn.akamai.steamstatic.com/steam/apps/271590/ss_4627498ce6ec1516512468eecfb9f90b7fdf438b.jpg?t=1678296348",
+            "https://cdn.akamai.steamstatic.com/steam/apps/271590/ss_680684304e38a9c58a55866cde99469ae8ef510c.jpg?t=1678296348"
+        ],
+        "titulo": "Grand Theft Auto V",
+        "tipo": "Acción",
+        "autor": "Rockstar Games",
+        "lanzamiento": "14 ABR 2015",
+        "descripcion": "Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 4,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1811260/header.jpg?t=1682117049",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_3e2c3c34a0407eb599ccfc0072ee030ee45a6cfc.jpg?t=1682117049",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_cb923eeea4afb2865227625d0512c1a2d956cd43.jpg?t=1682117049",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_b11ed2d9359cfce8e9c693c85c95b5e5ea12bcec.jpg?t=1682117049",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_0b862667df14a47392a8602a643b45fe836274e0.jpg?t=1682117049",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_a69d3435ce31da724e24d30af98b0196ff7e55fd.jpg?t=1682117049",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_a7952f00209d661a0f05899b6567a4ddc4c43deb.jpg?t=1682117049"
+        ],
+        "titulo": "FIFA 23",
+        "tipo": "Deportes",
+        "autor": "Electronic Arts",
+        "lanzamiento": "29 SEP 2022",
+        "descripcion": "FIFA 23 nos acerca a The World's Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 5,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_e87a3e84890ab19f8995566e62762d5f8ed39315.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_e80a907c2c43337e53316c71555c3c3035a1343e.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_75f25974c20b8704fe5ee246f74896b550088d3e.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_3e556415d1bda00d749b2166ced264bec76f06ee.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_abd681cde3402155a35edb82919b7602cc7ec338.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_1e3dfe515c04f4071207f01d62b85a1d6b560ced.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b87601dee58f4dbc36e40a8d803dc6a53ceefe07.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_41e2e8f3b0ad631e929e0c2ec3d1f21de883e98c.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b70e156adf9e40aed24c10fb352b7813586e7290.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_8b58d96262fb0d62a482621b86c6ff85f4f57997.jpg?t=1683618443",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_7523a8fc7775ae65cabd94d092ebecbd963258b6.jpg?t=1683618443"
+        ],
+        "titulo": "ELDEN RING",
+        "tipo": "Acción",
+        "autor": "FromSoftware",
+        "lanzamiento": "24 FEB 2022",
+        "descripcion": "EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 6,
+        "portada": "https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58",
+        "imagenes": [
+            "https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/37559b8fa80cf0708c8dcef23ef4fea9af26d997a7c6f981565bc50eeaa3cc0f",
+            "https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/b478fce889ed0237b252978f046884121f6be959f5b4b62e4fc03970bd617647",
+            "https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/68f832d604ad2a85fa3dda00ae5345232fe271e01df40a48bb1fb2ed291f92f4",
+            "https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/0375d13a121f32ff06ef96aac1919b138f3ebe13e40cc0b2de7d39237b87fb86",
+            "https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/16304df4fdabb5674cc31edcc80ff1260ffe0f98156c300f31ecb490f18b632c"
+        ],
+        "titulo": "The Legend of Zelda™: Breath of the Wild",
+        "tipo": "Aventura",
+        "autor": "Nintendo",
+        "lanzamiento": "3 MAR 2017",
+        "descripcion": "Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 7,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/221380/header.jpg?t=1667261666",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/221380/ss_f196e3b1c70038e09140f12aebcfdf0ef57915b0.jpg?t=1667261666",
+            "https://cdn.akamai.steamstatic.com/steam/apps/221380/ss_78cc1f90aaa7f368a05ceb5f2ea29109696736c4.jpg?t=1667261666",
+            "https://cdn.akamai.steamstatic.com/steam/apps/221380/ss_5723ddcec6da4d9697f73882fab90e6cec99a8ad.jpg?t=1667261666",
+            "https://cdn.akamai.steamstatic.com/steam/apps/221380/ss_9ccf9acb373b3e26f9e42a053147845561b2c224.jpg?t=1667261666",
+            "https://cdn.akamai.steamstatic.com/steam/apps/221380/ss_bfb7d671a8fe0bd20d34bd8f3455bac98e49639e.jpg?t=1667261666",
+            "https://cdn.akamai.steamstatic.com/steam/apps/221380/ss_ea28d966c363726dcee8848b20a634a75d62ee97.jpg?t=1667261666"
+        ],
+        "titulo": "Age of Empires II",
+        "tipo": "Estrategia",
+        "autor": "Forgotten Empires",
+        "lanzamiento": "9 ABR 2013",
+        "descripcion": "Age of Empires II ha entrado al mundo de la alta definición sumando además nuevas funciones y ajustes, mejoras en la inteligencia artificial, cromos de Steam, soporte para Steam Workshop, integración con Steamworks, ¡y más! ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 8,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/578080/header.jpg?t=1684838697",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_29d0709711f3204e84b6f9d69f3be163ebe12486.jpg?t=1684838697",
+            "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_a403a1f4071d36d42bea7a505089b56b570b2569.jpg?t=1684838697",
+            "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_108e2981889423b057b778cd07ae25ac18406cf1.jpg?t=1684838697",
+            "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_f96bc802fb38617ce790c0950b87a7979f096025.jpg?t=1684838697",
+            "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_56d29e4503ba1a74047feb55986c6bf4ca4297f9.jpg?t=1684838697",
+            "https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_52773275afe4c34a84fbf38e9960a598a420b3c2.jpg?t=1684838697"
+        ],
+        "titulo": "PUBG: BATTLEGROUNDS",
+        "tipo": "Acción",
+        "autor": "KRAFTON, Inc.",
+        "lanzamiento": "21 DIC 2017",
+        "descripcion": "Aterriza en posiciones estratégicas, saquea armas y suministros, y sobrevive para que vuestro equipo sea el único en pie en los distintos y variados campos de batalla. Forma equipo y participa en los campos de batalla para experimentar el Battle Royale original como solo existe en PUBG: BATTLEGROUNDS.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 9,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/306130/header.jpg?t=1685974187",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/306130/ss_6ce59dcaa51a89208c643301f6e220d75c001b97.jpg?t=1685974187",
+            "https://cdn.akamai.steamstatic.com/steam/apps/306130/ss_c1cdae9879550709486774eed3a2760d18955349.jpg?t=1685974187",
+            "https://cdn.akamai.steamstatic.com/steam/apps/306130/ss_16688139333e39593af0eccc77342165eacae0d0.jpg?t=1685974187",
+            "https://cdn.akamai.steamstatic.com/steam/apps/306130/ss_da66e194128088e46a5ecad2af455ae2ebe84be0.jpg?t=1685974187",
+            "https://cdn.akamai.steamstatic.com/steam/apps/306130/ss_5e0c14f9b39283bafbcd37fb33a1c79a87757154.jpg?t=1685974187",
+            "https://cdn.akamai.steamstatic.com/steam/apps/306130/ss_48be777780be9babf0ffb6c77766d5b0776adc1f.jpg?t=1685974187",
+            "https://cdn.akamai.steamstatic.com/steam/apps/306130/ss_c839c16d7d8a1488467396ec3854bb405afbc835.jpg?t=1685974187"
+        ],
+        "titulo": "The Elder Scrolls® Online",
+        "tipo": "Multijugador masivo",
+        "autor": "Bethesda Softworks",
+        "lanzamiento": "4 ABR 2014",
+        "descripcion": "Vive una historia en permanente estado de expansión por todo Tamriel con The Elder Scrolls Online, un RPG en línea que ha recibido toda clase de premios y alabanzas. Explora un mundo lleno de vida y sorpresas con tus amigos, o embárcate en una aventura en solitario. Disfruta de un control total sobre el aspecto y la forma de jugar de tu personaje: de las armas que esgrimas a las habilidades que uses, las decisiones que tomes darán forma a tu destino. Te damos la bienvenida a un mundo sin límites.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 10,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1593500/header.jpg?t=1650554420",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_6eccc970b5de2943546d93d319be1b5c0618f21b.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_f1bff24d3967a21d303d95e11ed892e3d9113057.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_3670ba72c7e3e9c3c3225547ef2c1053504e62b8.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_93a3ca63aa2cd8c675bbb6430324ee3f2d44b845.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_1bd99270dcbd4ff9fe9c94b0d9c8ffc50ebb42c7.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_0858b868ea51d53f73bd805ba7382f027dd33dca.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_1351cb512d008f7e47fc50b74197f4f8eb6f3419.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_8db3de5b5d611e50945268848de2889e1ed4ba84.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_190a972a5bd3144d8944dcdfd7759bb1149017c0.jpg?t=1650554420",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1593500/ss_e0edce62c590bc063a90a1296184392d0a9521da.jpg?t=1650554420"
+        ],
+        "titulo": "God of War",
+        "tipo": "Acción",
+        "autor": "Santa Monica Studio",
+        "lanzamiento": "14 ENE 2022",
+        "descripcion": "Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de los dioses y monstruos nórdicos. En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 11,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1919590/header.jpg?t=1677540477",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/1919590/ss_6d2cd663d938ac1c1f55150bd6a922664d9b1b78.jpg?t=1677540477",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1919590/ss_17a92f289bb32a76ac114538e31a7137b15ce576.jpg?t=1677540477",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1919590/ss_69deba1e5680d9eefccf62332aff7554b3a8300e.jpg?t=1677540477",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1919590/ss_967a6e4318040094313e7c0cd02948fa428032a1.jpg?t=1677540477",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1919590/ss_3442b58f34663fb7e548eef0ed1d113d5ac9fb2b.jpg?t=1677540477",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1919590/ss_75b82770a268d1bcf98251e18646b823ea14bd08.jpg?t=1677540477"
+        ],
+        "titulo": "NBA 2K23",
+        "tipo": "Deportes",
+        "autor": "2K",
+        "lanzamiento": "8 SEP 2022",
+        "descripcion": "Ponte a la altura de las circunstancias y desarrolla todo tu potencial en NBA 2K23. Ponte a prueba contra los mejores jugadores del mundo y demuestra tu talento en Mi CARRERA. Combina a las estrellas actuales con leyendas eternas en MyTEAM. Construye tu propia dinastía en Mi GM o lleva la NBA en una nueva dirección con Mi LIGA. Enfréntate a equipos de la NBA o de la WNBA en JUGAR AHORA y experimenta un juego real. ¿Cómo Responderás a la Llamada?",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 12,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1599340/header.jpg?t=1678222947",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_f86c68e6fe904392d8a08231121f860814125f62.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_489519a55f1fcef124413a36232598017429a8d2.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_fd839dd6657095e6e61c45bcaea0fabbf1434096.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_c4789527b9087517504af18aeec0e2df769a54db.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_59b4b089b53a3459797ce9b0f21d6e4ff85f15c6.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_10fb9cd7c9be78e1ca7822a433003f28d8a14926.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_4e7802861ea7a1cb72e75a2003bf8769d47f6c4a.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_0835a9016d0c453675994ec218a3dd70a73529ea.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_b9c562ad66414ec37cf448f2f9d19d70009129ef.jpg?t=1678222947",
+            "https://cdn.akamai.steamstatic.com/steam/apps/1599340/ss_ad65376ee41e614c8e28993168c294cb600e4777.jpg?t=1678222947"
+        ],
+        "titulo": "Lost Ark",
+        "tipo": "RPG",
+        "autor": "Smilegate RPG",
+        "lanzamiento": "11 FEB 2022",
+        "descripcion": "Embárcate en una odisea en el gigantesco y vibrante mundo de Lost Ark: explora lugares desconocidos, busca tesoros perdidos y ponte a prueba con la emocionante acción y combate de este RPG de acción gratuito.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 13,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/381210/header.jpg?t=1685645607",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_42f2866b00cf92cbe84bc8bb32c1fe65911c074c.jpg?t=1685645607",
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_b20e7868e4a80f619fb2e4ef69f7228048a68e99.jpg?t=1685645607",
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_6f14934aaec5f564c8092c85dca236e04935db9d.jpg?t=1685645607",
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_969a7841466e12f063c2d9a72520cce1c3b2f331.jpg?t=1685645607",
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_430577c364a68dbe24e8a1d895bd678ea04b87d5.jpg?t=1685645607",
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_b142095e4f9e5d9db978270ea09e8b9149db9f18.jpg?t=1685645607",
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_d3778cc9576bf3457f4ba896a443a114c0455753.jpg?t=1685645607",
+            "https://cdn.akamai.steamstatic.com/steam/apps/381210/ss_4075aac79adfe1a5b71665d2cc5ff7d52122650b.jpg?t=1685645607"
+        ],
+        "titulo": "Dead by Daylight",
+        "tipo": "Acción",
+        "autor": "Behaviour Interactive Inc.",
+        "lanzamiento": "14 JUN 2016",
+        "descripcion": "Dead by Daylight es un juego de horror de multijugador (4 contra 1) en el que un jugador representa el rol del asesino despiadado y los 4 restantes juegan como supervivientes que intentan escapar de él para evitar ser capturados y asesinados. ",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    },
+    {
+        "id": 14,
+        "portada": "https://cdn.akamai.steamstatic.com/steam/apps/2050650/header.jpg?t=1684904145",
+        "imagenes": [
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_59d1b19964cc532213df92c8287b75a0bffeb33c.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_ab807f8ad9e968a620777caf483cb6020367b9ee.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_69810f4cd155912fdfdd21da70181df7d454c874.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_0596bac955340495562f3ff2538756ebd9a7f073.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_0554b945aafc847d55f780f7968de00aafa968a3.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_29ffb23060c862bcbe1d1434e83d41ab10484d8e.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_22d21ef8c4e54cc5f8418f9b233178bf7869ee01.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_5a4297e594297a13f1f4c665966eb3d88d37b58d.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_440756cbcb0231dd325991d38b85d3b60d976b95.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_98d9687b6acf5feff600b483d9f30e52079091e9.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_82cef99075c8e19ec71d2aae8b0a19815695c5a7.jpg?t=1684904145",
+            "https://cdn.akamai.steamstatic.com/steam/apps/2050650/ss_2f026b10ab2facd11820737453512b3b88c5a863.jpg?t=1684904145"
+        ],
+        "titulo": "Resident Evil 4",
+        "tipo": "Acción",
+        "autor": "CAPCOM Co., Ltd.",
+        "lanzamiento": "23 MAR 2023",
+        "descripcion": "Sobrevivir es solo el principio. Con una mecánica de juego modernizada, una historia reimaginada y unos gráficos espectacularmente detallados, Resident Evil 4 supone el renacimiento de un gigante del mundo de los videojuegos.",
+        "patrocinadores": 0,
+        "objetivo": 1000000,
+        "monto": 0
+    }
+]
