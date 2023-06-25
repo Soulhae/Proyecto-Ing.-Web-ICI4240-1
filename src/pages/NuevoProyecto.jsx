@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/modules/NuevoProyecto.module.scss";
 import { Container, Button, Col, Row } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
 function NuevoProyecto() {
     return (
@@ -35,13 +36,16 @@ function NuevoProyecto() {
                                 quisquam nam aperiam, quas possimus soluta iure
                                 alias quidem quia distinctio deserunt voluptas!
                             </h3>
+                            <Link to="/nuevopform">
                             <Button
                                 className={`${styles.boton1} m-auto my-3`}
                                 active
                                 type="submit"
                             >
                                 Comencemos!
+                                
                             </Button>
+                          </Link>
                         </Row>
                     </Col>
                 </Row>
