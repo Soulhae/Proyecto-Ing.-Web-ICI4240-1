@@ -100,22 +100,8 @@ app.post("/imagen", (req, res) => {
 });
 
 app.get("/proyectos", jsonParser, (req, res) => {
-    connection.query(`SELECT * from proyectos`, (error, results) => {
-        if (error) {
-            console.error(error);
-            res.status(500).send("error en el server :c");
-        } else {
-            res.status(200).json(results);
-        }
-    });
-});
-
-app.post("/detalle_proyecto", jsonParser, (req, res) => {
-    let id = req.body.id;
-    // console.log(id);
-
     connection.query(
-        `SELECT * from proyectos where proyectos.id=${id}`,
+        `SELECT * from proyectos order by titulo `,
         (error, results) => {
             if (error) {
                 console.error(error);
@@ -127,18 +113,37 @@ app.post("/detalle_proyecto", jsonParser, (req, res) => {
     );
 });
 
-app.get("/imagenes", (req, res) => {
+app.post("/detalle_vista", jsonParser, (req, res) => {
     let id = req.body.id;
-    console.log(String(req.body));
+    // console.log(id);
 
     connection.query(
-        `SELECT imagen from imagenes where id_proyecto=${id}`,
+        `SELECT * from proyectos where proyectos.id=${id}`,
         (error, results) => {
             if (error) {
                 console.error(error);
                 res.status(500).send("error en el server :c");
             } else {
                 res.status(200).json(results);
+                // console.log(results);
+            }
+        }
+    );
+});
+
+app.post("/detalle_proyecto", jsonParser, (req, res) => {
+    let id = req.body.id;
+    // console.log(id);
+
+    connection.query(
+        `SELECT proyectos.*, usuarios.username, imagenes.imagen from proyectos left join usuarios on proyectos.id_usuario = usuarios.id right join imagenes on proyectos.id = imagenes.id_proyecto where proyectos.id=${id}`,
+        (error, results) => {
+            if (error) {
+                console.error(error);
+                res.status(500).send("error en el server :c");
+            } else {
+                res.status(200).json(results);
+                // console.log(results);
             }
         }
     );

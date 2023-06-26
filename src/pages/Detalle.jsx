@@ -1,8 +1,8 @@
-import React from "react";
 import { useParams } from "react-router";
+import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import data from "../data/proyectos.json";
+// import data from "../data/proyectos.json";
 import gif from "../data/gif1.gif";
 
 import styles from "../styles/modules/Detalle.module.scss";
@@ -14,10 +14,66 @@ import { Carousel, Container, Row, Col, Button } from "react-bootstrap";
 
 function VistaDetalle() {
     const params = useParams();
+    // console.log(params);
 
-    const proyecto = data[params.id];
+    const [proyecto, setProyecto] = useState([]);
 
-    if (!proyecto) {
+    useEffect(() => {
+        // Promise.all([
+        //     fetch("http://localhost:3000/detalle_proyecto", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(params),
+        //     }),
+        //     fetch("http://localhost:3000/imagenes", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(params),
+        //     }),
+        // ])
+        //     .then(function (responses) {
+        //         return Promise.all(
+        //             responses.map(function (response) {
+        //                 return response.json();
+        //             })
+        //         );
+        //     })
+        //     .then(function (data) {
+        //         // console.log(data);
+        //         setProyecto(data);
+        //     })
+        //     .catch(function (err) {
+        //         console.log(err);
+        //     });
+    }, []);
+
+    useEffect(() => {
+        const fetchProyecto = async () => {
+            const result = await fetch(
+                "http://localhost:3000/detalle_proyecto",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(params),
+                }
+            );
+            const jsonResult = await result.json();
+            // console.log(jsonResult);
+
+            setProyecto(jsonResult);
+        };
+
+        fetchProyecto();
+        // console.log(proyecto);
+    }, []);
+
+    if (proyecto.length === 0) {
         return (
             <Container
                 className={`${styles.main} d-flex flex-column `}
@@ -38,18 +94,10 @@ function VistaDetalle() {
     }
 
     return (
-        <>
-            <Detalle proyecto={proyecto} />
-        </>
-    );
-}
-
-function Detalle({ proyecto }) {
-    return (
         <Container className={`${styles.main} my-4`}>
             <Row className="my-1">
                 <Col className="col-10">
-                    <h1>{proyecto.titulo}</h1>
+                    <h1>{proyecto[0].titulo}</h1>
                 </Col>
                 <Col className="col-2 d-flex justify-content-end">
                     <Link to="/proyectos">
@@ -60,21 +108,24 @@ function Detalle({ proyecto }) {
                 </Col>
             </Row>
             <Row className="my-1">
-                <h5>Autor: {proyecto.autor}</h5>
+                <h5>Autor: {proyecto[0].username}</h5>
             </Row>
             <Row className="my-1">
-                <h6>Fecha de lanzamiento: {proyecto.lanzamiento}</h6>
+                <h6>Fecha de lanzamiento: {proyecto[0].fecha_lanzamiento}</h6>
             </Row>
             <Row className="my-1">
-                <h6>Tipo: {proyecto.tipo}</h6>
+                <h6>Categoria: {proyecto[0].categoria}</h6>
+            </Row>
+            <Row className="my-1">
+                <h6>Tipo: {proyecto[0].subcategoria}</h6>
             </Row>
             <Row className={`${styles.caja} my-1 `}>
                 <Col className="col-md-8 ">
                     <Carousel className="d-block w-100">
-                        {proyecto.imagenes.map((imagen, index) => (
+                        {proyecto.map((value, index) => (
                             <Carousel.Item key={index}>
                                 <img
-                                    src={`${imagen}`}
+                                    src={value.imagen}
                                     alt=""
                                     style={{ width: "100%", height: "50vh" }}
                                 />
@@ -91,23 +142,20 @@ function Detalle({ proyecto }) {
                                     textJustify: "inter-word",
                                 }}
                             >
-                                {proyecto.descripcion}
+                                {proyecto[0].descripcion}
                             </p>
                         </Row>
                         <Row className="flex-column mb-2">
                             <Col>
-                                <h2>${proyecto.monto} </h2>
+                                <h2>${proyecto[0].monto} </h2>
                             </Col>
                             <Col>
-                                <h6>recaudado de ${proyecto.objetivo}</h6>
+                                <h6>recaudado de ${proyecto[0].objetivo}</h6>
                             </Col>
                         </Row>
 
                         <Row>
-                            <p>
-                                gracias a {proyecto.patrocinadores}{" "}
-                                patrocinadores!
-                            </p>
+                            <p>gracias a patrocinadores!</p>
                         </Row>
 
                         <Row className="d-flex justify-content-center my-2">

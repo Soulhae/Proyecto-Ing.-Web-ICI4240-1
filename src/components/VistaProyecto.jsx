@@ -15,16 +15,13 @@ const VistaProyecto = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch(
-                "http://localhost:3000/detalle_proyecto",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
-                }
-            );
+            const result = await fetch("http://localhost:3000/detalle_vista", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
             const jsonResult = await result.json();
 
             setProyecto(jsonResult[0]);
