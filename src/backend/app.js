@@ -42,11 +42,12 @@ app.post("/registro", (req, res) => {
     let email = req.body.email;
     let username = req.body.username;
     let password = encriptar(req.body.password, "salado");
+    let telefono = req.body.number;
     let rol = 2;
 
     connection.query(
-        "INSERT INTO usuarios (email, username, password, id_rol) VALUES (?, ?, ?, ?)",
-        [email, username, password, rol],
+        "INSERT INTO usuarios (email, username, password, telefono, id_rol) VALUES (?, ?, ?, ?, ?)",
+        [email, username, password, telefono, rol],
         function (error, results, fields) {
             if (error) throw error;
             res.send(JSON.stringify({ mensaje: true, resultado: results }));

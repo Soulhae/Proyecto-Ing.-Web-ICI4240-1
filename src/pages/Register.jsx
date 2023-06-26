@@ -1,32 +1,30 @@
 import styles from "../styles/modules/Register.module.scss";
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas/index";
-import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Container } from "react-bootstrap";
 
 const Register = () => {
-
     const navigate = useNavigate();
 
     const onSubmit = async (values, actions) => {
-        //console.log(values);
-        //console.log(actions);
+        console.log(values);
+        // console.log(actions);
         axios
-            .post("http://localhost:3000/usuarios", values)
+            .post("http://localhost:3000/registro", values)
             .then((response) => {
                 console.log(response.data);
-                alert('Registro exitoso!');
+                alert("Registro exitoso!");
             })
             .catch((error) => {
                 console.error(error);
-                alert('Registro fallido :(');
+                alert("Registro fallido :(");
             });
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
-        navigate('/');
-    };    
+        navigate("/");
+    };
 
     const {
         values,
@@ -48,12 +46,13 @@ const Register = () => {
         onSubmit,
     });
 
-    //console.log(errors);
+    // console.log(errors);
+    // console.log(values);
 
     return (
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
-                <form
+                <Form
                     id="formulario"
                     onSubmit={handleSubmit}
                     autoComplete="off"
@@ -99,7 +98,7 @@ const Register = () => {
                             margin: "1rem 0 0.2rem",
                         }}
                     >
-                        Usuario
+                        Nombre de Usuario
                     </Form.Label>
                     <Form.Control
                         id="username"
@@ -193,7 +192,7 @@ const Register = () => {
                     </Form.Label>
                     <Form.Control
                         id="number"
-                        type="number"
+                        type="text"
                         placeholder="Ingrese su número telefonico"
                         value={values.number}
                         onChange={handleChange}
@@ -223,7 +222,7 @@ const Register = () => {
                         ¿Ya tienes una cuenta?{" "}
                         <Link to="/login">¡Inicia sesión!</Link>
                     </p>
-                </form>
+                </Form>
             </div>
         </Container>
     );
