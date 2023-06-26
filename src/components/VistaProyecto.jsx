@@ -1,10 +1,38 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { React, useEffect, useState } from "react";
 
 import styles from "../styles/modules/VistaProyecto.module.scss";
 
-const VistaProyecto = ({ proyecto }) => {
-    const { id, portada, titulo, tipo, autor } = proyecto;
+const VistaProyecto = (props) => {
+    const id = props.id;
+    // console.log(id);
+
+    const [proyecto, setProyecto] = useState([]);
+
+    const data = {
+        id: id,
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch(
+                "http://localhost:3000/detalle_proyecto",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                }
+            );
+            const jsonResult = await result.json();
+
+            setProyecto(jsonResult[0]);
+        };
+
+        fetchData();
+        // console.log(proyecto);
+    }, []);
 
     return (
         <>
@@ -15,57 +43,34 @@ const VistaProyecto = ({ proyecto }) => {
                 >
                     <div className="bd-placeholder-img card-img-top">
                         <img
-                            src={portada}
+                            src={proyecto.portada}
                             className="card-img-top"
                             width="100%"
                             height="250"
-                            alt={titulo}
+                            alt={proyecto.titulo}
                         />
                     </div>
                     <div className={`${styles.body} card-body`}>
                         <div className="d-flex mb-3">
                             <div className="flex-grow-1">
-                                <h5 className="card-title">{titulo}</h5>
+                                <h5 className="card-title">
+                                    {proyecto.titulo}
+                                </h5>
                             </div>
                         </div>
                         <div
                             className="my-2"
                             style={{ position: "absolute", bottom: 0 }}
                         >
-                            <h6 className="card-subtitle mb-2">{tipo}</h6>
-                            <p className="mb-0">{autor}</p>
+                            <h6 className="card-subtitle mb-2">
+                                {proyecto.categoria}
+                            </h6>
+                            <p className="mb-0">{proyecto.subcategoria}</p>
                         </div>
                     </div>
                 </div>
             </Link>
         </>
-        // <div className="card shadow-sm" style={{ minHeight: "390px" }}>
-        //     <div className="bd-placeholder-img card-img-top">
-        //         <img
-        //             src={portada}
-        //             className="card-img-top"
-        //             width="100%"
-        //             height="250"
-        //             alt={titulo}
-        //         />
-        //     </div>
-        //     <div className="card-body">
-        //         <h5 className="card-title">
-        //             <div className="d-flex">
-        //                 <div className="flex-grow-1">
-        //                     <Link
-        //                         className={styles.titulo}
-        //                         to={`../detalle/${id}`}
-        //                     >
-        //                         {titulo}
-        //                     </Link>
-        //                 </div>
-        //             </div>
-        //         </h5>
-        //         <h6 className="card-subtitle mb-2 text-muted">{tipo}</h6>
-        //         <p className="mb-0">{autor}</p>
-        //     </div>
-        // </div>
     );
 };
 

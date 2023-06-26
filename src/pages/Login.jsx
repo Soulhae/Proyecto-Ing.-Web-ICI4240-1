@@ -1,12 +1,10 @@
 import styles from "../styles/modules/Login.module.scss";
 import { useFormik } from "formik";
 import { lSchema } from "../schemas/indexL";
-import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { Button, Form } from "react-bootstrap";
+import { Container, Button, Form } from "react-bootstrap";
 
 const Login = () => {
-
     const navigate = useNavigate();
 
     const onSubmit = async (values, actions) => {
@@ -14,7 +12,7 @@ const Login = () => {
         //console.log(actions);
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
-        navigate('/'); //Quizá enviar al usuario a su perfil luego de logear
+        navigate("/"); //Quizá enviar al usuario a su perfil luego de logear
     };
 
     const {
