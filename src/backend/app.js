@@ -6,8 +6,6 @@ const cripto = require("crypto");
 const bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 
-// const fs = require('fs');
-
 const app = express();
 
 app.use(cors());
@@ -44,7 +42,7 @@ app.post("/registro", (req, res) => {
     let email = req.body.email;
     let username = req.body.username;
     let password = encriptar(req.body.password, "salado");
-    let rol = req.body.rol;
+    let rol = 2;
 
     connection.query(
         "INSERT INTO usuarios (email, username, password, id_rol) VALUES (?, ?, ?, ?)",
@@ -118,7 +116,7 @@ app.post("/detalle_vista", jsonParser, (req, res) => {
     // console.log(id);
 
     connection.query(
-        `SELECT * from proyectos where proyectos.id=${id}`,
+        `SELECT proyectos.*, usuarios.username from proyectos left join usuarios on proyectos.id_usuario = usuarios.id where proyectos.id=${id}`,
         (error, results) => {
             if (error) {
                 console.error(error);

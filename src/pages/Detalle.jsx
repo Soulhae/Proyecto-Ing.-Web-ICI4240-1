@@ -19,39 +19,6 @@ function VistaDetalle() {
     const [proyecto, setProyecto] = useState([]);
 
     useEffect(() => {
-        // Promise.all([
-        //     fetch("http://localhost:3000/detalle_proyecto", {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(params),
-        //     }),
-        //     fetch("http://localhost:3000/imagenes", {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(params),
-        //     }),
-        // ])
-        //     .then(function (responses) {
-        //         return Promise.all(
-        //             responses.map(function (response) {
-        //                 return response.json();
-        //             })
-        //         );
-        //     })
-        //     .then(function (data) {
-        //         // console.log(data);
-        //         setProyecto(data);
-        //     })
-        //     .catch(function (err) {
-        //         console.log(err);
-        //     });
-    }, []);
-
-    useEffect(() => {
         const fetchProyecto = async () => {
             const result = await fetch(
                 "http://localhost:3000/detalle_proyecto",

@@ -19,10 +19,7 @@ function Inicio() {
                             <img src={data[0].src} alt={data[0].alt} />
                             <Carousel.Caption>
                                 <h3>{data[0].caption}</h3>
-                                <p>
-                                    Nulla vitae elit libero, a pharetra augue
-                                    mollis interdum.
-                                </p>
+                                <p>{data[0].alt}</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item className={styles.carouselSlide}>
@@ -30,10 +27,7 @@ function Inicio() {
 
                             <Carousel.Caption>
                                 <h3>{data[1].caption}</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                </p>
+                                <p>{data[1].alt}</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item className={styles.carouselSlide}>
@@ -41,10 +35,7 @@ function Inicio() {
 
                             <Carousel.Caption>
                                 <h3>{data[2].caption}</h3>
-                                <p>
-                                    Praesent commodo cursus magna, vel
-                                    scelerisque nisl consectetur.
-                                </p>
+                                <p>{data[2].alt}</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
