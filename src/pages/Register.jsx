@@ -11,7 +11,7 @@ const Register = () => {
     const navigate = useNavigate();
 
     const onSubmit = async (values, actions) => {
-        //console.log(values);
+        console.log(values);
         //console.log(actions);
         axios
             .post("http://localhost:3000/usuarios", values)
@@ -48,7 +48,7 @@ const Register = () => {
         onSubmit,
     });
 
-    //console.log(errors);
+    console.log(errors);
 
     return (
         <Container>
