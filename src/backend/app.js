@@ -62,16 +62,16 @@ app.post("/nuevo_proyecto", (req, res) => {
     let portada = req.body.portada;
     let categoria = req.body.categoria;
     let subcategoria = req.body.subcategoria;
-    let fecha = req.body.fecha;
     let descripcion = req.body.descripcion;
+    let fecha = req.body.fecha;
     let objetivo = req.body.objetivo;
 
     connection.query(
-        "INSERT INTO proyectos (id_usuario, titulo, portada, categoria, subcategoria, fecha_lanzamiento, descripcion, objetivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO proyectos (id_usuario, portada, titulo, categoria, subcategoria, fecha_lanzamiento, descripcion, objetivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
         [
             id_usuario,
-            titulo,
             portada,
+            titulo,
             categoria,
             subcategoria,
             fecha,
