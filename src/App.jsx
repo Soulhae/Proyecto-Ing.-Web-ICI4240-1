@@ -5,7 +5,6 @@ import "./styles/main.scss";
 //Componentes
 import Base from "./layout/Base.jsx";
 import Inicio from "./pages/Inicio.jsx";
-import ProyectoRealidad from "./pages/ProyectoRealidad.jsx";
 import Proyectos from "./pages/Proyectos.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Nosotros from "./pages/Nosotros.jsx";
@@ -15,7 +14,6 @@ import Register from "./pages/Register.jsx";
 import Busqueda from "./pages/Busqueda.jsx";
 import Detalle from "./pages/Detalle.jsx";
 import NuevoPForm from "./pages/NuevoPForm";
-import FormProyecto from "./pages/FormProyecto";
 
 function App() {
     return (
@@ -23,10 +21,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Base />}>
                     <Route index element={<Inicio />} />
-                    <Route
-                        path="/proyecto_realidad"
-                        element={<ProyectoRealidad />}
-                    />
                     <Route path="/proyectos" element={<Proyectos />} />
                     <Route path="/nosotros" element={<Nosotros />} />
                     <Route path="/faq" element={<FAQ />} />
@@ -37,7 +31,6 @@ function App() {
                     <Route path="/detalle/" element={<Proyectos />} />
                     <Route path="/detalle/:id" element={<Detalle />} />
                     <Route path="/nuevopform" element={<NuevoPForm />} />
-                    <Route path="/form_proyecto" element={<FormProyecto />} />
                 </Route>
             </Routes>
         </div>

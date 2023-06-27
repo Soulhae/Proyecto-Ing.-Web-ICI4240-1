@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-06-2023 a las 09:45:53
+-- Tiempo de generación: 27-06-2023 a las 03:56:13
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -146,6 +146,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `telefono` varchar(50) NOT NULL,
   `id_rol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -153,18 +154,19 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `email`, `username`, `password`, `id_rol`) VALUES
-(6, 'mati@gmail.com', 'matineke', '31635623d67680133f416eb892379d3dd6e7b4cce66d54cec6f61b1e300074c0495cc926d73c21c125a821bd445e942564b9', 1),
-(7, 'benja@gmail.com', 'Soul', 'b98cbe3b5bde05258b30cf566c3029cece8814d2c5e4367140c55827270e086a46afa316ab778631fd254fb31b7160068e74', 1),
-(8, 'price@gmail.com', 'kchika', '076c07bb4757ceaf3705fb0f18e707962b02b6b23d13b516267ed6892112944c9a7d0ff377132897e58176783c4f77447a9e', 2),
-(9, 'nico@gmail.com', 'nikobinho', '31635623d67680133f416eb892379d3dd6e7b4cce66d54cec6f61b1e300074c0495cc926d73c21c125a821bd445e942564b9', 1),
-(10, 'admin@gmail.com', 'admin', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 1),
-(11, 'user@gmail.com', 'user', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 2),
-(12, 'fromsoft@gmail.com', 'FromSoftware', '39daf3a1c46f1ac4e69a689589cde669bf90f9f2f62e4f13596394f75890855fd65ee725eaee277a44eb3f63c985b2dd52e3', 2),
-(13, 'rockstar@gmail.com', 'Rockstar Games', '61739f0b67c046d36a2c317a176b19a4ab6d934824941034b9ca841dd1c24e033eb465b1d2c50b755a8b97e09046562eda77', 2),
-(14, 'cdprojeckt@gmail.com', 'CD PROJEKT RED', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 2),
-(15, 'ea@gmail.com', 'Electronic Arts', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 2),
-(16, 'nintendo@gmail.com', 'Nintendo', 'd87c41df090f7ed7b71c6b5d9a13b2b1e1038f7d7fbaa917d433ca69e24938e056a6a9980ec6648ef81ebdf9e2a4fa9ab96c', 2);
+INSERT INTO `usuarios` (`id`, `email`, `username`, `password`, `telefono`, `id_rol`) VALUES
+(6, 'mati@gmail.com', 'matineke', '31635623d67680133f416eb892379d3dd6e7b4cce66d54cec6f61b1e300074c0495cc926d73c21c125a821bd445e942564b9', '', 1),
+(7, 'benja@gmail.com', 'Soul', 'b98cbe3b5bde05258b30cf566c3029cece8814d2c5e4367140c55827270e086a46afa316ab778631fd254fb31b7160068e74', '', 1),
+(8, 'price@gmail.com', 'kchika', '076c07bb4757ceaf3705fb0f18e707962b02b6b23d13b516267ed6892112944c9a7d0ff377132897e58176783c4f77447a9e', '', 2),
+(9, 'nico@gmail.com', 'nikobinho', '31635623d67680133f416eb892379d3dd6e7b4cce66d54cec6f61b1e300074c0495cc926d73c21c125a821bd445e942564b9', '', 1),
+(10, 'admin@gmail.com', 'admin', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', '', 1),
+(11, 'user@gmail.com', 'user', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', '', 2),
+(12, 'fromsoft@gmail.com', 'FromSoftware', '39daf3a1c46f1ac4e69a689589cde669bf90f9f2f62e4f13596394f75890855fd65ee725eaee277a44eb3f63c985b2dd52e3', '', 2),
+(13, 'rockstar@gmail.com', 'Rockstar Games', '61739f0b67c046d36a2c317a176b19a4ab6d934824941034b9ca841dd1c24e033eb465b1d2c50b755a8b97e09046562eda77', '', 2),
+(14, 'cdprojeckt@gmail.com', 'CD PROJEKT RED', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', '', 2),
+(15, 'ea@gmail.com', 'Electronic Arts', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', '', 2),
+(16, 'nintendo@gmail.com', 'Nintendo', 'd87c41df090f7ed7b71c6b5d9a13b2b1e1038f7d7fbaa917d433ca69e24938e056a6a9980ec6648ef81ebdf9e2a4fa9ab96c', '', 2),
+(19, 'test@test', 'test', '29bdd7d8bcc95ced03fe3334383faaec872e6425a1dcdd5a85ddd078473ccf6c9bf36048c7c7aeacbf55892cbe6392fe43ea', '234234324', 2);
 
 --
 -- Índices para tablas volcadas
@@ -237,7 +239,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas
