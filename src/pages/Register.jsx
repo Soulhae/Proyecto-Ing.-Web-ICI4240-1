@@ -3,28 +3,45 @@ import { useFormik } from "formik";
 import { basicSchema } from "../schemas/index";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useState, useRef } from "react";
 import { Button, Form, Container } from "react-bootstrap";
 
 const Register = () => {
     const navigate = useNavigate();
 
+    const [recaptchaResponse, setRecaptchaResponse] = useState(null);
+
+    const captcha = useRef(null);
+
+    const captchaChange = () =>{
+        if(captcha.current.getValue()){
+            setRecaptchaResponse(true);
+        }
+    }
+
     const onSubmit = async (values, actions) => {
-        console.log(values);
-        // console.log(actions);
-        axios
-            .post("http://localhost:3000/registro", values)
-            .then((response) => {
-                console.log(response.data);
-                alert("Registro exitoso!");
-            })
-            .catch((error) => {
-                console.error(error);
-                alert("Registro fallido :(");
-            });
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        actions.resetForm();
-        navigate("/");
-    };
+        //console.log(values);
+        //console.log(actions);
+        if(captcha.current.getValue()){
+            setRecaptchaResponse(true);
+            axios
+                .post("http://localhost:3000/registro", values)
+                .then((response) =>{
+                    console.log(response.data);
+                    alert('Registro exitoso!');
+                })
+                .catch((error) => {
+                    console.error(error);
+                    alert('Registro fallido :(');
+                });
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            actions.resetForm();
+            navigate('/');
+        }else{
+            setRecaptchaResponse(false);
+        }
+    };    
 
     const {
         values,
@@ -223,6 +240,18 @@ const Register = () => {
                         <Link to="/login">¡Inicia sesión!</Link>
                     </p>
                 </Form>
+                <div className={styles.recaptcha}>
+                    <ReCAPTCHA 
+                        ref={captcha}
+                        sitekey="6Lcvj9EmAAAAAER-Go8gLZlvOhz7rl8croewTEYm"
+                        onChange={captchaChange}
+                    />
+                </div>
+                {recaptchaResponse === false &&
+                <div className="mt-3">
+                    <p className={styles.errorMsg}>Por favor, acepta el captcha</p>
+                </div>
+                }
             </div>
         </Container>
     );
