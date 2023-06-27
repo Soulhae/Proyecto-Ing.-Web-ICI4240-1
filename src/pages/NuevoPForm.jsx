@@ -18,11 +18,11 @@ const NuevoPForm = () => {
             .post("http://localhost:3000/nuevo_proyecto", values)
             .then((response) => {
                 console.log(response.data);
-                alert("Registro exitoso!");
+                alert("Proyecto agregado exitosamente!");
             })
             .catch((error) => {
                 console.error(error);
-                alert("Registro fallido :(");
+                alert(`Proyecto no fue agregado :( ${error.message}`);
             });
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
@@ -39,7 +39,14 @@ const NuevoPForm = () => {
         handleSubmit,
     } = useFormik({
         initialValues: {
-            name: "",
+            id_usuario: "",
+            titulo: "",
+            portada: "",
+            categoria: "",
+            subcategoria: "",
+            descripcion: "",
+            fecha: "",
+            objetivo: "",
         },
         validationSchema: pSchema,
         onSubmit,
@@ -82,27 +89,26 @@ const NuevoPForm = () => {
                             Título del proyecto
                         </Form.Label>
                         <Form.Control
-                            id="name"
+                            id="titulo"
                             type="string"
                             placeholder="Ingrese el título del proyecto"
-                            value={values.name}
+                            value={values.titulo}
                             onChange={handleChange}
                             onBlur={handleBlur}
                             className={
-                                errors.name && touched.name
+                                errors.titulo && touched.titulo
                                     ? `${styles.inputerror}`
                                     : ""
                             }
                         ></Form.Control>
                     </Form.Group>
 
-                    {errors.name && touched.name && (
-                        <p className={`${styles.errorMsg}`}>{errors.name}</p>
+                    {errors.titulo && touched.titulo && (
+                        <p className={`${styles.errorMsg}`}>{errors.titulo}</p>
                     )}
 
                     <Form.Group type="text" className="mb-3">
                         <Form.Label
-                            htmlFor="username"
                             style={{
                                 fontsize: "2rem",
                                 fontweight: "bold",
@@ -114,16 +120,27 @@ const NuevoPForm = () => {
                             Imagen portada
                         </Form.Label>
                         <Form.Control
+                            id="portada"
                             type="text"
                             placeholder="Ingrese el link de la imagen para la portada"
+                            value={values.portada}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className={
+                                errors.portada && touched.portada
+                                    ? `${styles.inputerror}`
+                                    : ""
+                            }
                         />
                     </Form.Group>
+                    {errors.portada && touched.portada && (
+                        <p className={`${styles.errorMsg}`}>{errors.portada}</p>
+                    )}
 
-                    {/* <Row>
+                    <Row>
                         <Col>
                             <Form.Group>
                                 <Form.Label
-                                    htmlFor="username"
                                     style={{
                                         fontsize: "2rem",
                                         fontweight: "bold",
@@ -135,7 +152,16 @@ const NuevoPForm = () => {
                                     Categoría
                                 </Form.Label>
                                 <Form.Select
-                                    htmlFor="username"
+                                    id="categoria"
+                                    type="select"
+                                    value={values.categoria}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    className={
+                                        errors.categoria && touched.categoria
+                                            ? `${styles.inputerror}`
+                                            : ""
+                                    }
                                     style={{
                                         fontsize: "1rem",
                                         fontweight: "bold",
@@ -156,12 +182,16 @@ const NuevoPForm = () => {
                                     <option>Arte</option>
                                 </Form.Select>
                             </Form.Group>
+                            {errors.categoria && touched.categoria && (
+                                <p className={`${styles.errorMsg}`}>
+                                    {errors.categoria}
+                                </p>
+                            )}
                         </Col>
 
                         <Col>
                             <Form.Group>
                                 <Form.Label
-                                    htmlFor="username"
                                     style={{
                                         fontsize: "2rem",
                                         fontweight: "bold",
@@ -173,7 +203,17 @@ const NuevoPForm = () => {
                                     Subcategoría
                                 </Form.Label>
                                 <Form.Select
-                                    htmlFor="subarea"
+                                    id="subcategoria"
+                                    type="select"
+                                    value={values.subcategoria}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    className={
+                                        errors.subcategoria &&
+                                        touched.subcategoria
+                                            ? `${styles.inputerror}`
+                                            : ""
+                                    }
                                     style={{
                                         fontsize: "1rem",
                                         fontweight: "bold",
@@ -194,28 +234,12 @@ const NuevoPForm = () => {
                                     <option>Arte</option>
                                 </Form.Select>
                             </Form.Group>
-                        </Col>
-                    </Row> */}
-                    <Row>
-                        <div>
-                            <CategoryDropdown
-                                onCategoryChange={handleCategoryChange}
-                            />
-                            {selectedCategory && (
-                                <SubcategoryDropdown
-                                    category={selectedCategory}
-                                    onSubcategoryChange={
-                                        handleSubcategoryChange
-                                    }
-                                />
-                            )}
-                            {selectedSubcategory && (
-                                <p>
-                                    You have selected subcategory{" "}
-                                    {selectedSubcategory}.
+                            {errors.subcategoria && touched.subcategoria && (
+                                <p className={`${styles.errorMsg}`}>
+                                    {errors.subcategoria}
                                 </p>
                             )}
-                        </div>
+                        </Col>
                     </Row>
 
                     <Form.Group
@@ -224,27 +248,67 @@ const NuevoPForm = () => {
                     >
                         <Form.Label>Descripción</Form.Label>
                         <Form.Control
-                            as="textarea"
-                            rows={3}
+                            id="descripcion"
+                            type="textarea"
+                            value={values.descripcion}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            rows={4}
                             placeholder="Ingrese una descripción de su proyecto"
+                            className={
+                                errors.descripcion && touched.descripcion
+                                    ? `${styles.inputerror}`
+                                    : ""
+                            }
                         />
                     </Form.Group>
+                    {errors.descripcion && touched.descripcion && (
+                        <p className={`${styles.errorMsg}`}>
+                            {errors.descripcion}
+                        </p>
+                    )}
 
                     <Form.Group>
                         <Form.Label>Fecha</Form.Label>
                         <Form.Control
+                            id="fecha"
                             type="text"
+                            value={values.fecha}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
                             placeholder="Indique cuando planea terminar el proyecto"
+                            className={
+                                errors.fecha && touched.fecha
+                                    ? `${styles.inputerror}`
+                                    : ""
+                            }
                         />
                     </Form.Group>
+                    {errors.fecha && touched.fecha && (
+                        <p className={`${styles.errorMsg}`}>{errors.fecha}</p>
+                    )}
 
                     <Form.Group>
                         <Form.Label>Monto</Form.Label>
                         <Form.Control
+                            id="objetivo"
                             type="text"
+                            value={values.objetivo}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
                             placeholder="Indique el monto que necesita para realizar su proyecto"
+                            className={
+                                errors.objetivo && touched.objetivo
+                                    ? `${styles.inputerror}`
+                                    : ""
+                            }
                         />
                     </Form.Group>
+                    {errors.objetivo && touched.objetivo && (
+                        <p className={`${styles.errorMsg}`}>
+                            {errors.objetivo}
+                        </p>
+                    )}
 
                     <div className="d-grid gap-2">
                         <Button
