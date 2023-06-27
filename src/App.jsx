@@ -15,6 +15,7 @@ import Register from "./pages/Register.jsx";
 import Busqueda from "./pages/Busqueda.jsx";
 import Detalle from "./pages/Detalle.jsx";
 import NuevoPForm from "./pages/NuevoPForm";
+import FormProyecto from "./pages/FormProyecto";
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/detalle/" element={<Proyectos />} />
                     <Route path="/detalle/:id" element={<Detalle />} />
                     <Route path="/nuevopform" element={<NuevoPForm />} />
+                    <Route path="/form_proyecto" element={<FormProyecto />} />
                 </Route>
             </Routes>
         </div>

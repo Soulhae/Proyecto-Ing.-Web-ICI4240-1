@@ -37,15 +37,14 @@ function NuevoProyecto() {
                                 alias quidem quia distinctio deserunt voluptas!
                             </h3>
                             <Link to="/nuevopform">
-                            <Button
-                                className={`${styles.boton1} m-auto my-3`}
-                                active
-                                type="submit"
-                            >
-                                Comencemos!
-                                
-                            </Button>
-                          </Link>
+                                <Button
+                                    className={`${styles.boton1} m-auto my-3`}
+                                    active
+                                    type="submit"
+                                >
+                                    Comencemos!
+                                </Button>
+                            </Link>
                         </Row>
                     </Col>
                 </Row>

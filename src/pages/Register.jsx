@@ -1,15 +1,13 @@
 import styles from "../styles/modules/Register.module.scss";
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas/index";
-import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Button, Form } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState, useRef } from "react";
+import { Button, Form, Container } from "react-bootstrap";
 
 const Register = () => {
-
     const navigate = useNavigate();
 
     const [recaptchaResponse, setRecaptchaResponse] = useState(null);
@@ -65,12 +63,13 @@ const Register = () => {
         onSubmit,
     });
 
-    //console.log(errors);
+    // console.log(errors);
+    // console.log(values);
 
     return (
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
-                <form
+                <Form
                     id="formulario"
                     onSubmit={handleSubmit}
                     autoComplete="off"
@@ -116,7 +115,7 @@ const Register = () => {
                             margin: "1rem 0 0.2rem",
                         }}
                     >
-                        Usuario
+                        Nombre de Usuario
                     </Form.Label>
                     <Form.Control
                         id="username"
@@ -210,7 +209,7 @@ const Register = () => {
                     </Form.Label>
                     <Form.Control
                         id="number"
-                        type="number"
+                        type="text"
                         placeholder="Ingrese su número telefonico"
                         value={values.number}
                         onChange={handleChange}
@@ -240,7 +239,7 @@ const Register = () => {
                         ¿Ya tienes una cuenta?{" "}
                         <Link to="/login">¡Inicia sesión!</Link>
                     </p>
-                </form>
+                </Form>
                 <div className={styles.recaptcha}>
                     <ReCAPTCHA 
                         ref={captcha}

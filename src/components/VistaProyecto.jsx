@@ -15,16 +15,13 @@ const VistaProyecto = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch(
-                "http://localhost:3000/detalle_proyecto",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
-                }
-            );
+            const result = await fetch("http://localhost:3000/detalle_vista", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
             const jsonResult = await result.json();
 
             setProyecto(jsonResult[0]);
@@ -50,22 +47,34 @@ const VistaProyecto = (props) => {
                             alt={proyecto.titulo}
                         />
                     </div>
-                    <div className={`${styles.body} card-body`}>
-                        <div className="d-flex mb-3">
+                    <div
+                        className={`${styles.body} card-body`}
+                        style={{ position: "relative" }}
+                    >
+                        <div className="d-flex mb-2">
                             <div className="flex-grow-1">
                                 <h5 className="card-title">
                                     {proyecto.titulo}
                                 </h5>
                             </div>
                         </div>
+
                         <div
-                            className="my-2"
-                            style={{ position: "absolute", bottom: 0 }}
+                            className=""
+                            style={{
+                                position: "absolute",
+                                bottom: 0,
+                                width: "100%",
+                            }}
                         >
                             <h6 className="card-subtitle mb-2">
-                                {proyecto.categoria}
+                                {/* {proyecto.categoria} */}
+                                {proyecto.username}
                             </h6>
-                            <p className="mb-0">{proyecto.subcategoria}</p>
+                            <div className="row d-flex">
+                                <p className="col-6">{proyecto.categoria}</p>
+                                <p className="col-6">{proyecto.subcategoria}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-06-2023 a las 04:27:16
+-- Tiempo de generación: 26-06-2023 a las 09:45:53
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -45,7 +45,31 @@ INSERT INTO `imagenes` (`id`, `id_proyecto`, `imagen`) VALUES
 (10, 2, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_bac60bacbf5da8945103648c08d27d5e202444ca.jpg?t=1671485009'),
 (11, 2, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_668dafe477743f8b50b818d5bbfcec669e9ba93e.jpg?t=1671485009'),
 (12, 2, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_4ce07ae360b166f0f650e9a895a3b4b7bf15e34f.jpg?t=1671485009'),
-(13, 2, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_d1a8f5a69155c3186c65d1da90491fcfd43663d9.jpg?t=1671485009');
+(13, 2, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_d1a8f5a69155c3186c65d1da90491fcfd43663d9.jpg?t=1671485009'),
+(14, 3, 'https://cdn.akamai.steamstatic.com/steam/apps/1091500/ss_b529b0abc43f55fc23fe8058eddb6e37c9629a6a.jpg?t=1680026109'),
+(15, 4, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/ss_66b553f4c209476d3e4ce25fa4714002cc914c4f.jpg?t=1671485009'),
+(16, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_3e2c3c34a0407eb599ccfc0072ee030ee45a6cfc.jpg?t=1682117049'),
+(17, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_cb923eeea4afb2865227625d0512c1a2d956cd43.jpg?t=1682117049'),
+(18, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_b11ed2d9359cfce8e9c693c85c95b5e5ea12bcec.jpg?t=1682117049'),
+(19, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_0b862667df14a47392a8602a643b45fe836274e0.jpg?t=1682117049'),
+(20, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_a69d3435ce31da724e24d30af98b0196ff7e55fd.jpg?t=1682117049'),
+(21, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_a7952f00209d661a0f05899b6567a4ddc4c43deb.jpg?t=1682117049'),
+(22, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.jpg?t=1683618443'),
+(23, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_e87a3e84890ab19f8995566e62762d5f8ed39315.jpg?t=1683618443'),
+(24, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_75f25974c20b8704fe5ee246f74896b550088d3e.jpg?t=1683618443'),
+(25, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_3e556415d1bda00d749b2166ced264bec76f06ee.jpg?t=1683618443'),
+(26, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_abd681cde3402155a35edb82919b7602cc7ec338.jpg?t=1683618443'),
+(27, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_1e3dfe515c04f4071207f01d62b85a1d6b560ced.jpg?t=1683618443'),
+(28, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b87601dee58f4dbc36e40a8d803dc6a53ceefe07.jpg?t=1683618443'),
+(29, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_41e2e8f3b0ad631e929e0c2ec3d1f21de883e98c.jpg?t=1683618443'),
+(30, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b70e156adf9e40aed24c10fb352b7813586e7290.jpg?t=1683618443'),
+(31, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_8b58d96262fb0d62a482621b86c6ff85f4f57997.jpg?t=1683618443'),
+(32, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_7523a8fc7775ae65cabd94d092ebecbd963258b6.jpg?t=1683618443'),
+(34, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/37559b8fa80cf0708c8dcef23ef4fea9af26d997a7c6f981565bc50eeaa3cc0f'),
+(35, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/b478fce889ed0237b252978f046884121f6be959f5b4b62e4fc03970bd617647'),
+(36, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/68f832d604ad2a85fa3dda00ae5345232fe271e01df40a48bb1fb2ed291f92f4'),
+(37, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/0375d13a121f32ff06ef96aac1919b138f3ebe13e40cc0b2de7d39237b87fb86'),
+(38, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/16304df4fdabb5674cc31edcc80ff1260ffe0f98156c300f31ecb490f18b632c');
 
 -- --------------------------------------------------------
 
@@ -84,8 +108,13 @@ CREATE TABLE `proyectos` (
 --
 
 INSERT INTO `proyectos` (`id`, `id_usuario`, `portada`, `titulo`, `categoria`, `subcategoria`, `fecha_lanzamiento`, `descripcion`, `objetivo`, `monto`) VALUES
-(1, 11, 'https://i.blogs.es/591b5a/280518-darksouls-review/1366_2000.jpg', 'DARK SOULS™: REMASTERED', 'Juegos', 'Acción', 'Enero 2024', 'Entonces llegó el Fuego. Vuelve a disfrutar del aclamado juego que definió el género con el que empezó todo. Gracias a una magnífica remasterización, podrás regresar a Lordran con unos impresionantes detalles en alta definición y a 60 fps. ', 10000000, 0),
-(2, 11, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1671485009', 'Red Dead Redemption 2', 'Juegos', 'Aventura', 'Junio 2025', 'Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador compartido de Red Dead Online. ', 25000000, 0);
+(1, 12, 'https://i.blogs.es/591b5a/280518-darksouls-review/1366_2000.jpg', 'DARK SOULS™: REMASTERED', 'Juegos', 'Acción', 'Enero 2024', 'Entonces llegó el Fuego. Vuelve a disfrutar del aclamado juego que definió el género con el que empezó todo. Gracias a una magnífica remasterización, podrás regresar a Lordran con unos impresionantes detalles en alta definición y a 60 fps. ', 10000000, 0),
+(2, 13, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1671485009', 'Red Dead Redemption 2', 'Juegos', 'Aventura', 'Junio 2025', 'Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador compartido de Red Dead Online. ', 25000000, 0),
+(3, 14, 'https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1680026109', 'Cyberpunk 2077', 'Juegos', 'Rol', 'Junio 2025', 'Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.', 10000000, 0),
+(4, 13, 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1678296348', 'Grand Theft Auto V', 'Juegos', 'Acción', 'Abril 2025', 'Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.', 1000000, 0),
+(6, 15, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/header.jpg?t=1682117049', 'FIFA 23', 'Juegos', 'Deportes', 'Noviembre 2023', 'FIFA 23 nos acerca a The World\'s Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más. ', 100000, 0),
+(7, 12, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443', 'ELDEN RING', 'Juegos', 'Acción', 'Febrero 2022', 'EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias. ', 99999999, 0),
+(8, 16, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58', 'The Legend of Zelda™: Breath of the Wild', 'Juegos', 'Aventura', 'Enero 2024', 'Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.', 99999999, 0);
 
 -- --------------------------------------------------------
 
@@ -130,7 +159,12 @@ INSERT INTO `usuarios` (`id`, `email`, `username`, `password`, `id_rol`) VALUES
 (8, 'price@gmail.com', 'kchika', '076c07bb4757ceaf3705fb0f18e707962b02b6b23d13b516267ed6892112944c9a7d0ff377132897e58176783c4f77447a9e', 2),
 (9, 'nico@gmail.com', 'nikobinho', '31635623d67680133f416eb892379d3dd6e7b4cce66d54cec6f61b1e300074c0495cc926d73c21c125a821bd445e942564b9', 1),
 (10, 'admin@gmail.com', 'admin', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 1),
-(11, 'user@gmail.com', 'user', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 2);
+(11, 'user@gmail.com', 'user', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 2),
+(12, 'fromsoft@gmail.com', 'FromSoftware', '39daf3a1c46f1ac4e69a689589cde669bf90f9f2f62e4f13596394f75890855fd65ee725eaee277a44eb3f63c985b2dd52e3', 2),
+(13, 'rockstar@gmail.com', 'Rockstar Games', '61739f0b67c046d36a2c317a176b19a4ab6d934824941034b9ca841dd1c24e033eb465b1d2c50b755a8b97e09046562eda77', 2),
+(14, 'cdprojeckt@gmail.com', 'CD PROJEKT RED', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 2),
+(15, 'ea@gmail.com', 'Electronic Arts', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', 2),
+(16, 'nintendo@gmail.com', 'Nintendo', 'd87c41df090f7ed7b71c6b5d9a13b2b1e1038f7d7fbaa917d433ca69e24938e056a6a9980ec6648ef81ebdf9e2a4fa9ab96c', 2);
 
 --
 -- Índices para tablas volcadas
@@ -179,7 +213,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `patrocinio`
@@ -191,7 +225,7 @@ ALTER TABLE `patrocinio`
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -203,7 +237,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import Vista from "../components/VistaProyecto";
-import data from "../data/proyectos.json";
 
 import styles from "../styles/modules/Proyectos.module.scss";
 
