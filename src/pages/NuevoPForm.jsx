@@ -1,10 +1,12 @@
 import styles from "../styles/modules/NuevoPForm.module.scss";
 import { useFormik } from "formik";
 import { pSchema } from "../schemas/indexP";
-import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Button, Form, Row, Col } from "react-bootstrap";
+import { Container, Button, Form, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import CategoryDropdown from "../components/CategoryDropdown";
+import SubcategoryDropdown from "../components/SubCategoryDropdown";
 
 const NuevoPForm = () => {
     const navigate = useNavigate();
@@ -44,6 +46,17 @@ const NuevoPForm = () => {
     });
 
     //console.log(errors);
+    const [selectedCategory, setSelectedCategory] = useState("");
+    const [selectedSubcategory, setSelectedSubcategory] = useState("");
+
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+        setSelectedSubcategory("");
+    };
+
+    const handleSubcategoryChange = (subcategory) => {
+        setSelectedSubcategory(subcategory);
+    };
 
     return (
         <Container>
@@ -106,7 +119,7 @@ const NuevoPForm = () => {
                         />
                     </Form.Group>
 
-                    <Row>
+                    {/* <Row>
                         <Col>
                             <Form.Group>
                                 <Form.Label
@@ -182,6 +195,27 @@ const NuevoPForm = () => {
                                 </Form.Select>
                             </Form.Group>
                         </Col>
+                    </Row> */}
+                    <Row>
+                        <div>
+                            <CategoryDropdown
+                                onCategoryChange={handleCategoryChange}
+                            />
+                            {selectedCategory && (
+                                <SubcategoryDropdown
+                                    category={selectedCategory}
+                                    onSubcategoryChange={
+                                        handleSubcategoryChange
+                                    }
+                                />
+                            )}
+                            {selectedSubcategory && (
+                                <p>
+                                    You have selected subcategory{" "}
+                                    {selectedSubcategory}.
+                                </p>
+                            )}
+                        </div>
                     </Row>
 
                     <Form.Group

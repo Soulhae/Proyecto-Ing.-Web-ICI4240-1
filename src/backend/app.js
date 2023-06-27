@@ -64,7 +64,7 @@ app.post("/nuevo_proyecto", (req, res) => {
     let subcategoria = req.body.subcategoria;
     let fecha = req.body.fecha;
     let descripcion = req.body.descripcion;
-    let objetivo = req.body.objetivo;
+    let objetivo = parseInt(req.body.objetivo);
 
     connection.query(
         "INSERT INTO proyectos (id_usuario, titulo, portada, categoria, subcategoria, fecha_lanzamiento, descripcion, objetivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
@@ -137,6 +137,24 @@ app.post("/detalle_proyecto", jsonParser, (req, res) => {
 
     connection.query(
         `SELECT proyectos.*, usuarios.username, imagenes.imagen from proyectos left join usuarios on proyectos.id_usuario = usuarios.id right join imagenes on proyectos.id = imagenes.id_proyecto where proyectos.id=${id}`,
+        (error, results) => {
+            if (error) {
+                console.error(error);
+                res.status(500).send("error en el server :c");
+            } else {
+                res.status(200).json(results);
+                // console.log(results);
+            }
+        }
+    );
+});
+
+app.post("/subcategorias", (req, res) => {
+    let categoria = req.body.categoria;
+    // console.log(categoria);
+
+    connection.query(
+        `select * from ${categoria} order by subcategoria`,
         (error, results) => {
             if (error) {
                 console.error(error);
