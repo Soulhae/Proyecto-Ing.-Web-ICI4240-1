@@ -13,7 +13,7 @@ const NuevoPForm = () => {
         console.log(values);
         //console.log(actions);
         axios
-            .post("http://localhost:3000/usuarios", values)
+            .post("http://localhost:3000/nuevo_proyecto", values)
             .then((response) => {
                 console.log(response.data);
                 alert("Registro exitoso!");

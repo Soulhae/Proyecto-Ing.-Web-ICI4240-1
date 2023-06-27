@@ -56,7 +56,8 @@ app.post("/registro", (req, res) => {
 });
 
 app.post("/nuevo_proyecto", (req, res) => {
-    let id_usuario = req.body.id_usuario;
+    // let id_usuario = req.body.id_usuario;
+    let id_usuario = 11;
     let titulo = req.body.titulo;
     let portada = req.body.portada;
     let categoria = req.body.categoria;
