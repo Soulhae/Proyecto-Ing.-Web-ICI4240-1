@@ -16,6 +16,7 @@ import Detalle from "./pages/Detalle.jsx";
 import NuevoPForm from "./pages/NuevoPForm";
 import BorrarProyecto from "./pages/BorrarProyecto.jsx";
 import PerfilUsuario from "./pages/PerfilUsuario.jsx";
+import ImagesForm from "./pages/ImagesForm";
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/nuevopform" element={<NuevoPForm />} />
                     <Route path="/funcionadmin" element={<BorrarProyecto />} />
                     <Route path="/perfilusuario" element={<PerfilUsuario />} />
+                    <Route path="/imagesform" element={<ImagesForm />} />
                 </Route>
             </Routes>
         </div>

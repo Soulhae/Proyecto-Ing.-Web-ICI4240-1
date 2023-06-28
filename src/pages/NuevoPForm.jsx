@@ -1,31 +1,33 @@
 import styles from "../styles/modules/NuevoPForm.module.scss";
 import { useFormik } from "formik";
 import { pSchema } from "../schemas/indexP";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
-import React, { useState } from "react";
 import Header from "../components/Header.jsx"
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const NuevoPForm = () => {
     const navigate = useNavigate();
 
     const onSubmit = async (values, actions) => {
-        console.log(values);
-        //console.log(actions);
-        axios
-            .post("http://localhost:3000/nuevo_proyecto", values)
-            .then((response) => {
-                console.log(response.data);
-                alert("Proyecto agregado exitosamente!");
-            })
-            .catch((error) => {
-                console.error(error);
-                alert(`Proyecto no fue agregado :( ${error.message}`);
-            });
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        actions.resetForm();
-        navigate("/");
+        try {
+            await pSchema.validate(values);
+            axios
+                .post("http://localhost:3000/nuevo_proyecto", values)
+                .then((response) => {
+                    console.log(response.data);
+                    alert("Proyecto agregado exitosamente!");
+                })
+                .catch((error) => {
+                    console.error(error);
+                    alert(`Proyecto no fue agregado :( ${error.message}`);
+                });
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            actions.resetForm();
+            navigate("/imagesform"); // Utiliza navigate en lugar de history.push
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     const {
@@ -65,21 +67,12 @@ const NuevoPForm = () => {
                     <h1>Crea tu proyecto</h1>
 
                     <Form.Group>
-                        <Form.Label
-                            htmlFor="username"
-                            style={{
-                                fontsize: "2rem",
-                                fontweight: "bold",
-                                display: "block",
-                                textalign: "left",
-                                margin: "1rem 0 0.2rem",
-                            }}
-                        >
+                        <Form.Label htmlFor="titulo">
                             Título del proyecto
                         </Form.Label>
                         <Form.Control
                             id="titulo"
-                            type="string"
+                            type="text"
                             placeholder="Ingrese el título del proyecto"
                             value={values.titulo}
                             onChange={handleChange}
@@ -89,12 +82,13 @@ const NuevoPForm = () => {
                                     ? `${styles.inputerror}`
                                     : ""
                             }
-                        ></Form.Control>
+                        />
+                        {errors.titulo && touched.titulo && (
+                            <p className={`${styles.errorMsg}`}>
+                                {errors.titulo}
+                            </p>
+                        )}
                     </Form.Group>
-
-                    {errors.titulo && touched.titulo && (
-                        <p className={`${styles.errorMsg}`}>{errors.titulo}</p>
-                    )}
 
                     <Form.Group type="text" className="mb-3">
                         <Form.Label
@@ -162,13 +156,9 @@ const NuevoPForm = () => {
                                     <option value="" disabled selected>
                                         -Seleccione una categoría-
                                     </option>
-                                    <option>Videojuegos</option>
-                                    <option>Deportes</option>
-                                    <option>Entretenimiento</option>
-                                    <option>Tecnologia</option>
-                                    <option>Comidas</option>
-                                    <option>Musica</option>
                                     <option>Arte</option>
+                                    <option>Tecnologia</option>
+                                    <option>Videojuegos</option>
                                 </Form.Select>
                             </Form.Group>
                             {errors.categoria && touched.categoria && (
@@ -214,13 +204,47 @@ const NuevoPForm = () => {
                                     <option value="" disabled selected>
                                         -Seleccione una subcategoría-
                                     </option>
-                                    <option>Videojuegos</option>
-                                    <option>Deportes</option>
-                                    <option>Entretenimiento</option>
-                                    <option>Tecnologia</option>
-                                    <option>Comidas</option>
-                                    <option>Musica</option>
-                                    <option>Arte</option>
+                                    <option disabled>Arte</option>
+                                    <option value="Arquitectura">
+                                        Arquitectura
+                                    </option>
+                                    <option value="Cine">Cine</option>
+                                    <option value="Danza">Danza</option>
+                                    <option value="Escultura">Escultura</option>
+                                    <option value="Literatura">
+                                        Literatura
+                                    </option>
+                                    <option value="Música">Música</option>
+                                    <option value="Pintura">Pintura</option>
+                                    <option value="Teatro">Teatro</option>
+                                    <option disabled>Tecnología</option>
+                                    <option value="Ciberseguridad">
+                                        Ciberseguridad
+                                    </option>
+                                    <option value="Informática">
+                                        Informática
+                                    </option>
+                                    <option value="Inteligencia Artificial">
+                                        Inteligencia Artificial
+                                    </option>
+                                    <option value="Realidad Virtual">
+                                        Realidad Virtual
+                                    </option>
+                                    <option value="Robótica">Robótica</option>
+                                    <option disabled>Videojuegos</option>
+                                    <option value="Acción">Acción</option>
+                                    <option value="Arcade">Arcade</option>
+                                    <option value="Aventura">Aventura</option>
+                                    <option value="Carreras">Carreras</option>
+                                    <option value="Deportes">Deportes</option>
+                                    <option value="Disparos">Disparos</option>
+                                    <option value="Estrategía">
+                                        Estrategía
+                                    </option>
+                                    <option value="Rol">Rol</option>
+                                    <option value="Simulación">
+                                        Simulación
+                                    </option>
                                 </Form.Select>
                             </Form.Group>
                             {errors.subcategoria && touched.subcategoria && (
@@ -231,10 +255,7 @@ const NuevoPForm = () => {
                         </Col>
                     </Row>
 
-                    <Form.Group
-                        className="mb-3"
-                        controlId="exampleForm.ControlTextarea1"
-                    >
+                    <Form.Group className="mb-3">
                         <Form.Label>Descripción</Form.Label>
                         <Form.Control
                             id="descripcion"
@@ -280,23 +301,21 @@ const NuevoPForm = () => {
                     <Form.Group>
                         <Form.Label>Monto</Form.Label>
                         <Form.Control
-                            id="objetivo"
+                            id="monto"
                             type="text"
-                            value={values.objetivo}
+                            value={values.monto}
                             onChange={handleChange}
                             onBlur={handleBlur}
                             placeholder="Indique el monto que necesita para realizar su proyecto"
                             className={
-                                errors.objetivo && touched.objetivo
+                                errors.monto && touched.monto
                                     ? `${styles.inputerror}`
                                     : ""
                             }
                         />
                     </Form.Group>
-                    {errors.objetivo && touched.objetivo && (
-                        <p className={`${styles.errorMsg}`}>
-                            {errors.objetivo}
-                        </p>
+                    {errors.monto && touched.monto && (
+                        <p className={`${styles.errorMsg}`}>{errors.monto}</p>
                     )}
 
                     <div className="d-grid gap-2">
