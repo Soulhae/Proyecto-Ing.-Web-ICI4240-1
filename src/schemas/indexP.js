@@ -9,5 +9,5 @@ export const pSchema = yup.object().shape({
     subcategoria: yup.string().required("Subcategoria es requerida"),
     descripcion: yup.string().min(20,"Se requiere una descripcion más amplia").max(1000,"Sea un poco mas breve").required("Descripcion es requerida"),
     fecha : yup.string().required("Ingrese una fecha"),
-    objetivo : yup.string().required("Ingrese un monto"),
+    monto : yup.string().required("Ingrese un monto"),
 });
