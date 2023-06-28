@@ -3,7 +3,7 @@ import styles from "../styles/modules/Footer.module.scss";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <p>© 2023 - 2023 Nimabe</p>
+            <div className={styles.texto}>© 2023 - 2023 Nimabe</div>
         </footer>
     );
 };

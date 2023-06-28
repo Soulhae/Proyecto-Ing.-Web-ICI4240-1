@@ -30,28 +30,29 @@ const NuevoPForm = () => {
     }
   };
 
-  const {
-    values,
-    errors,
-    touched,
-    isSubmitting,
-    handleBlur,
-    handleChange,
-    handleSubmit,
-  } = useFormik({
-    initialValues: {
-      id_usuario: "",
-      titulo: "",
-      portada: "",
-      categoria: "",
-      subcategoria: "",
-      descripcion: "",
-      fecha: "",
-      objetivo: "",
-    },
-    validationSchema: pSchema,
-    onSubmit,
-  });
+    const {
+        values,
+        errors,
+        touched,
+        isSubmitting,
+        handleBlur,
+        handleChange,
+        handleSubmit,
+    } = useFormik({
+        initialValues: {
+            id_usuario: "",
+            titulo: "",
+            portada: "",
+            categoria: "",
+            subcategoria: "",
+            descripcion: "",
+            fecha: "",
+            objetivo: "",
+            monto: "",
+        },
+        validationSchema: pSchema,
+        onSubmit,
+    });
 
   return (
     <Container>
@@ -249,19 +250,19 @@ const NuevoPForm = () => {
             <Form.Control
               id="objetivo"
               type="text"
-              value={values.objetivo}
+              value={values.monto}
               onChange={handleChange}
               onBlur={handleBlur}
               placeholder="Indique el monto que necesita para realizar su proyecto"
               className={
-                errors.objetivo && touched.objetivo
+                errors.monto && touched.monto
                   ? `${styles.inputerror}`
                   : ""
               }
             />
           </Form.Group>
-          {errors.objetivo && touched.objetivo && (
-            <p className={`${styles.errorMsg}`}>{errors.objetivo}</p>
+          {errors.monto && touched.monto && (
+            <p className={`${styles.errorMsg}`}>{errors.monto}</p>
           )}
 
           <div className="d-grid gap-2">

@@ -1,3 +1,5 @@
+require('dotenv').config({ path: require('find-config')('.env') });
+
 const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2");
@@ -12,11 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    port: 3306,
-    database: "nimabe",
+    host: process.env.HOST_BD,
+    user: process.env.USER_BD,
+    password: process.env.PASSWORD_BD,
+    port: process.env.PORT_BD,
+    database: process.env.NAME_BD,
 });
 
 connection.connect(function (err) {
@@ -27,13 +29,22 @@ connection.connect(function (err) {
     console.log("Conexión establecida" + connection.threadId);
 });
 
-app.get("/usuarios", function (req, res) {
-    connection.query("select * from usuarios", (error, results) => {
+app.post("/inicio-sesion", function (req, res) {
+    let email = req.body.email;
+    let password = encriptar(req.body.password, "salado");
+
+    //console.log(email, password);
+
+    connection.query("SELECT id_rol FROM usuarios WHERE email = ? AND password = ?",
+    [email, password], (error, results) => {
         if (error) {
             console.error(error);
             res.status(500).send("error en el server :c");
-        } else {
-            res.status(200).json(results);
+        } else if (results.length === 0) {
+            res.status(401).send("Su usuario no se encuentra registrado");
+        } else{
+            res.status(200).json({ message: true, role: results[0]});
+            //console.log(results[0].id_rol);
         }
     });
 });
@@ -65,9 +76,10 @@ app.post("/nuevo_proyecto", (req, res) => {
     let descripcion = req.body.descripcion;
     let fecha = req.body.fecha;
     let objetivo = req.body.objetivo;
+    let monto = req.body.monto;
 
     connection.query(
-        "INSERT INTO proyectos (id_usuario, portada, titulo, categoria, subcategoria, fecha_lanzamiento, descripcion, objetivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO proyectos (id_usuario, portada, titulo, categoria, subcategoria, fecha_lanzamiento, descripcion, objetivo, monto) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
         [
             id_usuario,
             portada,
@@ -77,6 +89,7 @@ app.post("/nuevo_proyecto", (req, res) => {
             fecha,
             descripcion,
             objetivo,
+            monto,
         ],
         function (error, results, fields) {
             if (error) throw error;
@@ -90,7 +103,7 @@ app.post("/imagen", (req, res) => {
     let url = req.body.url;
 
     connection.query(
-        "INSERT into imagenes (id_proyecto, imagen) VALUES (?, ?)",
+        "INSERT INTO imagenes (id_proyecto, imagen) VALUES (?, ?)",
         [id, url],
         function (error, results, fields) {
             if (error) throw error;
@@ -172,7 +185,7 @@ app.post("/busqueda", jsonParser, (req, res) => {
     // console.log(buscado);
 
     connection.query(
-        `SELECT * from proyectos where titulo LIKE '%${buscado}%'`,
+        `SELECT * from proyectos where titulo LIKE '%${buscado}%' or categoria LIKE '%${buscado}%' or subcategoria LIKE '%${buscado}%'`,
         (error, results) => {
             if (error) {
                 console.error(error);
@@ -181,6 +194,42 @@ app.post("/busqueda", jsonParser, (req, res) => {
                 res.status(200).json(results);
                 // console.log(results);
             }
+        }
+    );
+});
+
+app.put("/patrocinio", (req, res) => {
+    const { monto, idUsuario, idProyecto } = req.body;
+
+    connection.query(
+        "INSERT INTO patrocinio (monto, id_usuario, id_proyecto) VALUES (?, ?, ?)",
+        [monto, idUsuario, idProyecto],
+        (error, results) => {
+            if (error) {
+                console.error(error);
+                return res
+                    .status(500)
+                    .json({ message: "Error al crear el patrocinio" });
+            }
+
+            connection.query(
+                "UPDATE proyectos SET monto = monto + ? WHERE id = ?",
+                [monto, idProyecto],
+                (error, results) => {
+                    if (error) {
+                        console.error(error);
+                        return res.status(500).json({
+                            message:
+                                "Error al actualizar el monto del proyecto",
+                        });
+                    }
+
+                    return res.status(200).json({
+                        message:
+                            "Patrocinio creado y monto del proyecto actualizado",
+                    });
+                }
+            );
         }
     );
 });

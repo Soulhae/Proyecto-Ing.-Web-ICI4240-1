@@ -33,7 +33,7 @@ const Register = () => {
                 })
                 .catch((error) => {
                     console.error(error);
-                    alert('Registro fallido :(');
+                    alert(`Registro fallido :( ${error}`);
                 });
             await new Promise((resolve) => setTimeout(resolve, 1000));
             actions.resetForm();

@@ -1,0 +1,13 @@
+@use "../mixins";
+@import "../variables";
+
+.baseContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $color_principal;
+}
+
+.contentContainer {
+    flex-grow: 1;
+}
