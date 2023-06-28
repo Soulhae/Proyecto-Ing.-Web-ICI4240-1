@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import gif from "../data/gif1.gif";
 
@@ -11,6 +11,10 @@ import { Carousel, Container, Row, Col, Button } from "react-bootstrap";
 function VistaDetalle() {
     const params = useParams();
     // console.log(params);
+    const location = useLocation();
+    const handleVolver = () => {
+        window.history.back();
+    };
 
     const [proyecto, setProyecto] = useState([]);
 
@@ -63,11 +67,25 @@ function VistaDetalle() {
                     <h1>{proyecto[0].titulo}</h1>
                 </Col>
                 <Col className="col-2 d-flex justify-content-end">
-                    <Link to="/proyectos">
-                        <Button className={styles.boton} variant="secondary">
+                    {location.state && location.state.from && (
+                        <Link to={location.state.from}>
+                            <Button
+                                className={styles.boton}
+                                variant="secondary"
+                            >
+                                Volver
+                            </Button>
+                        </Link>
+                    )}
+                    {!location.state && (
+                        <Button
+                            className={styles.boton}
+                            variant="secondary"
+                            onClick={handleVolver}
+                        >
                             Volver
                         </Button>
-                    </Link>
+                    )}
                 </Col>
             </Row>
             <Row className="my-1">
@@ -140,7 +158,7 @@ function VistaDetalle() {
                         </Row>
                     </Row>
                 </Col>
-                <Row className="my-4" style={{ height: "400px" }}>
+                <Row className="my-4">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Possimus est quo inventore porro reprehenderit in,
