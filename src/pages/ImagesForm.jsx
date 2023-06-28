@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { IFSchema } from "../schemas/indexIF";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Container, Button, Form, } from "react-bootstrap";
+import { Container, Button, Form } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
@@ -17,31 +17,31 @@ function ImagesForm() {
 
     const onSubmit = async (values, actions) => {
         const newValues = {
-          ...values,
-          id: params.id,
-          url: values.imagen,
+            ...values,
+            id: params.id,
+            url: values.imagen,
         };
-      
+
         axios
-          .post("http://localhost:3000/imagen", newValues)
-          .then((response) => {
-            console.log(response.data);
-            alert("Imagen/es agregadas exitosamente!");
-            setIsFormSubmitted(true);
-          })
-          .catch((error) => {
-            console.error(error);
-            alert(`Imagen/es no fueron agregadas :( ${error.message}`);
-          });
-      
+            .post("http://localhost:3000/imagen", newValues)
+            .then((response) => {
+                console.log(response.data);
+                alert("Imagen/es agregadas exitosamente!");
+                setIsFormSubmitted(true);
+            })
+            .catch((error) => {
+                console.error(error);
+                alert(`Imagen/es no fueron agregadas :( ${error.message}`);
+            });
+
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
-      };
+    };
 
     const handleImageChange = (event) => {
         const { name, value } = event.target;
         setIsUrlEntered(value.trim() !== "");
-        handleChange(event); 
+        handleChange(event);
     };
 
     const {
@@ -71,6 +71,12 @@ function ImagesForm() {
             resetForm();
         }
     }, [isFormSubmitted, resetForm]);
+
+    const [mostrarSegundoBoton, setMostrarSegundoBoton] = useState(false);
+
+    const handleClickPrimerBoton = () => {
+        setMostrarSegundoBoton(true);
+    };
 
     return (
         <Container>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-06-2023 a las 18:11:37
+-- Tiempo de generación: 28-06-2023 a las 18:40:17
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -58,7 +58,27 @@ INSERT INTO `imagenes` (`id`, `id_proyecto`, `imagen`) VALUES
 (35, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/b478fce889ed0237b252978f046884121f6be959f5b4b62e4fc03970bd617647'),
 (36, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/68f832d604ad2a85fa3dda00ae5345232fe271e01df40a48bb1fb2ed291f92f4'),
 (37, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/0375d13a121f32ff06ef96aac1919b138f3ebe13e40cc0b2de7d39237b87fb86'),
-(38, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/16304df4fdabb5674cc31edcc80ff1260ffe0f98156c300f31ecb490f18b632c');
+(38, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/16304df4fdabb5674cc31edcc80ff1260ffe0f98156c300f31ecb490f18b632c'),
+(44, 30, 'https://hips.hearstapps.com/hmg-prod/images/memento-pelicula-polaroid-1532823991.jpg'),
+(45, 30, 'https://annehowell.com.au/wp-content/uploads/2022/05/memento-1024x808.png'),
+(46, 30, 'https://i.blogs.es/daa8b6/memento-2000-critica/450_1000.jpg'),
+(47, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.jpg?t=1683618443'),
+(48, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_e87a3e84890ab19f8995566e62762d5f8ed39315.jpg?t=1683618443'),
+(49, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_e80a907c2c43337e53316c71555c3c3035a1343e.jpg?t=1683618443'),
+(50, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_75f25974c20b8704fe5ee246f74896b550088d3e.jpg?t=1683618443'),
+(51, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_3e556415d1bda00d749b2166ced264bec76f06ee.jpg?t=1683618443'),
+(52, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_abd681cde3402155a35edb82919b7602cc7ec338.jpg?t=1683618443'),
+(53, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_1e3dfe515c04f4071207f01d62b85a1d6b560ced.jpg?t=1683618443'),
+(54, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b87601dee58f4dbc36e40a8d803dc6a53ceefe07.jpg?t=1683618443'),
+(55, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_41e2e8f3b0ad631e929e0c2ec3d1f21de883e98c.jpg?t=1683618443'),
+(56, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b70e156adf9e40aed24c10fb352b7813586e7290.jpg?t=1683618443'),
+(57, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_8b58d96262fb0d62a482621b86c6ff85f4f57997.jpg?t=1683618443'),
+(58, 31, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_7523a8fc7775ae65cabd94d092ebecbd963258b6.jpg?t=1683618443'),
+(59, 32, 'https://images.adsttc.com/media/images/53fc/f415/c07a/8009/6200/08a9/large_jpg/Portada.jpg?1409086478'),
+(60, 32, 'https://i.blogs.es/97c09b/robocop/840_560.jpg'),
+(61, 33, 'https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg'),
+(62, 33, 'https://cdn.britannica.com/78/69678-050-491A5ED8/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889.jpg'),
+(63, 33, 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/640px-Irises-Vincent_van_Gogh.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,7 +103,9 @@ INSERT INTO `patrocinio` (`id`, `id_usuario`, `id_proyecto`, `monto`) VALUES
 (3, 11, 3, 1235),
 (4, 11, 3, 1235),
 (5, 11, 3, 564564654),
-(6, 11, 3, 523123);
+(6, 11, 3, 523123),
+(8, 11, 30, 10),
+(9, 11, 31, 100);
 
 -- --------------------------------------------------------
 
@@ -114,7 +136,11 @@ INSERT INTO `proyectos` (`id`, `id_usuario`, `portada`, `titulo`, `categoria`, `
 (3, 14, 'https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1680026109', 'Cyberpunk 2077', 'Juegos', 'Rol', 'Junio 2025', 'Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.', 10000000, 565653836),
 (4, 13, 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1678296348', 'Grand Theft Auto V', 'Juegos', 'Acción', 'Abril 2025', 'Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.', 1000000, 0),
 (6, 15, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/header.jpg?t=1682117049', 'FIFA 23', 'Juegos', 'Deportes', 'Noviembre 2023', 'FIFA 23 nos acerca a The World\'s Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más. ', 100000, 0),
-(8, 16, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58', 'The Legend of Zelda™: Breath of the Wild', 'Juegos', 'Aventura', 'Enero 2024', 'Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.', 99999999, 0);
+(8, 16, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58', 'The Legend of Zelda™: Breath of the Wild', 'Juegos', 'Aventura', 'Enero 2024', 'Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.', 99999999, 0),
+(30, 29, 'https://pics.filmaffinity.com/Memento-230609861-large.jpg', 'Memento', 'Arte', 'Cine', 'Dic 2023', 'La memoria de Leonard, un investigador de una agencia de seguros, está irreversiblemente dañada debido a un golpe sufrido en la cabeza cuando intentaba evitar el asesinato de su mujer: éste es el último hecho que recuerda del pasado. La memoria reciente la ha perdido: los hechos cotidianos desaparecen de su mente en unos minutos. Así pues, para investigar e intentar vengar el asesinato de su esposa tiene que recurrir a la ayuda de una cámara instantánea y a las notas tatuadas en su cuerpo.', 9000000, 10),
+(31, 12, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443', 'ELDEN RING', 'Videojuegos', 'Acción', '2024', 'EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias.', 100000000, 100),
+(32, 29, 'https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2023/04/robocop.jpg?fit=1920%2C1280&quality=50&strip=all&ssl=1', 'Robocop', 'Tecnologia', 'Robótica', '2030', 'Roboto policial para combatir el mal!', 45000000, 0),
+(33, 29, 'https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2016/10/31/1477929930-822.jpg?_=1477929930', 'Van Gogh', 'Arte', 'Pintura', '1888', 'Apoya la carrera de este artista emergente', 300, 0);
 
 -- --------------------------------------------------------
 
@@ -175,7 +201,8 @@ INSERT INTO `usuarios` (`id`, `email`, `username`, `password`, `telefono`, `id_r
 (25, 'testpassnuevo@asd', 'asdad', '24f1c80a3415b7399557ba990835bc7c22a3c9c9ec377df00cf6cd8f6ddf57e5cbfa1d5c112229e95638177cf59e5e72553f3f32425069d44c93888eee4780a0', '561646548976', 2),
 (26, 'testing@asd', 'asdadad', 'f231f69f245d7e93bafd89ed532e42744e3164bbd7d6d7e72932b0731f0971cbdb8b553d51183c522d2f7e0374379a00ee20982bcbe30c5267f0e771ecea775a', '123', 2),
 (27, 'soyeladmin@nimabe.cl', 'adminpulento', '826e0aed17eb83bb9c30a2d996614d2e1319049d149d49efea4fe77eaa2b184ca9fd10065163ddb28249ef5f488e8a635e07cd645d75de82687dc6b38f031509', '123456789', 1),
-(28, 'soyunusuario@gmail.com', 'usuariogenerico', 'fafc6963cae9b608be28af048486fa78393ace89b5ba271eda3efe9d4ffbc00b403343a96a07bbd8da1e9eb409d4f6cd97001d6888ecb5f76f8a4bbe16eb08da', '66565485432', 2);
+(28, 'soyunusuario@gmail.com', 'usuariogenerico', 'fafc6963cae9b608be28af048486fa78393ace89b5ba271eda3efe9d4ffbc00b403343a96a07bbd8da1e9eb409d4f6cd97001d6888ecb5f76f8a4bbe16eb08da', '66565485432', 2),
+(29, 'mati@gmail.com', 'Matías Burgos', 'fafc6963cae9b608be28af048486fa78393ace89b5ba271eda3efe9d4ffbc00b403343a96a07bbd8da1e9eb409d4f6cd97001d6888ecb5f76f8a4bbe16eb08da', '9999999', 2);
 
 --
 -- Índices para tablas volcadas
@@ -224,19 +251,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT de la tabla `patrocinio`
 --
 ALTER TABLE `patrocinio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -248,7 +275,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Restricciones para tablas volcadas

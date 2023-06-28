@@ -52,45 +52,52 @@ function Busqueda() {
     // }
     return (
         <>
-        <Header />
-        <Container className="p-4 py-4">
-            <h1 className={`p-2 md:p-4 ${styles.titulo2}`}>
-                Resultados para: {params.buscado}
-            </h1>
-            <Table responsive="md" className={styles.tabla}>
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Título</th>
-                        <th scope="col">Categoría</th>
-                        <th scope="col">Subategoría</th>
-                        <th scope="col">Monto recaudado</th>
-                    </tr>
-                </thead>
-                {buscados.map((proyecto, index) => (
-                    <tbody key={proyecto.id}>
+            <Header />
+            <Container className="p-4 py-4">
+                <h1 className={`p-2 md:p-4 ${styles.titulo2}`}>
+                    Resultados para: {params.buscado}
+                </h1>
+                <Table responsive="md" className={styles.tabla}>
+                    <thead>
                         <tr>
-                            <th scope="row">{index + 1}</th>
-                            <td style={{ width: "400px", minWidth: "150px" }}>
-                                <Link
-                                    to={`../detalle/${proyecto.id}`}
-                                    className={styles.titulo}
-                                >
-                                    {proyecto.titulo}
-                                </Link>
-                            </td>
-                            <td className={styles.otro}>
-                                {proyecto.categoria}
-                            </td>
-                            <td className={styles.otro}>
-                                {proyecto.subcategoria}
-                            </td>
-                            <td className={styles.otro}>$ {proyecto.monto}</td>
+                            <th scope="col">#</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Subcategoría</th>
+                            <th scope="col">Monto recaudado</th>
                         </tr>
-                    </tbody>
-                ))}
-            </Table>
-        </Container>
+                    </thead>
+                    {buscados.map((proyecto, index) => (
+                        <tbody key={proyecto.id}>
+                            <tr>
+                                <th scope="row">{index + 1}</th>
+                                <td
+                                    style={{
+                                        width: "400px",
+                                        minWidth: "150px",
+                                    }}
+                                >
+                                    <Link
+                                        to={`../detalle/${proyecto.id}`}
+                                        className={styles.titulo}
+                                    >
+                                        {proyecto.titulo}
+                                    </Link>
+                                </td>
+                                <td className={styles.otro}>
+                                    {proyecto.categoria}
+                                </td>
+                                <td className={styles.otro}>
+                                    {proyecto.subcategoria}
+                                </td>
+                                <td className={styles.otro}>
+                                    $ {proyecto.monto}
+                                </td>
+                            </tr>
+                        </tbody>
+                    ))}
+                </Table>
+            </Container>
         </>
     );
 }
