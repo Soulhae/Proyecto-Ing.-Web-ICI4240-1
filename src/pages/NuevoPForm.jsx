@@ -248,7 +248,7 @@ const NuevoPForm = () => {
           <Form.Group>
             <Form.Label>Monto</Form.Label>
             <Form.Control
-              id="objetivo"
+              id="monto"
               type="text"
               value={values.monto}
               onChange={handleChange}
