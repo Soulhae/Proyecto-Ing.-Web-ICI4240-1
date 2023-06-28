@@ -20,8 +20,8 @@ function VistaDetalle() {
     const [aporte, setAporte] = useState("");
 
     const inputHandler = (e) => {
-        var input = parseInt(e.target.value, 10);
-        // console.log(input);
+        var input = Math.abs(parseInt(e.target.value, 10));
+        //console.log(input);
 
         if (input >= 0) {
             setAporte(input);
@@ -86,44 +86,47 @@ function VistaDetalle() {
 
     if (proyecto.length === 0) {
         return (
-            <Container
-                className={`${styles.main} d-flex flex-column `}
-                style={{ height: "88vh", maxWidth: "600px" }}
-            >
-                <Row className="my-4">
-                    <Col className="col-10 ">
-                        <h1>No encontrado</h1>
-                    </Col>
-                    <Col className="col-2 d-flex justify-content-end">
-                        {location.state && location.state.from && (
-                            <Link to={location.state.from}>
+            <>
+                <Header />
+                <Container
+                    className={`${styles.main} d-flex flex-column `}
+                    style={{ height: "88vh", maxWidth: "600px" }}
+                >
+                    <Row className="my-4">
+                        <Col className="col-10 ">
+                            <h1>No encontrado</h1>
+                        </Col>
+                        <Col className="col-2 d-flex justify-content-end">
+                            {location.state && location.state.from && (
+                                <Link to={location.state.from}>
+                                    <Button
+                                        className={styles.boton}
+                                        variant="secondary"
+                                    >
+                                        Volver
+                                    </Button>
+                                </Link>
+                            )}
+                            {!location.state && (
                                 <Button
                                     className={styles.boton}
                                     variant="secondary"
+                                    onClick={handleVolver}
                                 >
                                     Volver
                                 </Button>
-                            </Link>
-                        )}
-                        {!location.state && (
-                            <Button
-                                className={styles.boton}
-                                variant="secondary"
-                                onClick={handleVolver}
-                            >
-                                Volver
-                            </Button>
-                        )}
-                    </Col>
-                </Row>
-                <Row>
-                    <img
-                        src={gif}
-                        alt=""
-                        style={{ width: "700px", margin: "auto" }}
-                    />
-                </Row>
-            </Container>
+                            )}
+                        </Col>
+                    </Row>
+                    <Row>
+                        <img
+                            src={gif}
+                            alt=""
+                            style={{ width: "700px", margin: "auto" }}
+                        />
+                    </Row>
+                </Container>
+            </>
         );
     }
 
