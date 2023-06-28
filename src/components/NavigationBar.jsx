@@ -61,6 +61,7 @@ function NavigationBar() {
                                 <Nav.Link href="/proyectos">Proyectos</Nav.Link>
                                 <Nav.Link href="/nosotros">Nosotros</Nav.Link>
                                 <Nav.Link href="/faq">FAQ</Nav.Link>
+                                <Nav.Link href="/perfilusuario">Perfil Usuario</Nav.Link>
                                 <Nav.Link href="/funcionadmin">Admin Panel</Nav.Link>
                             </Nav>
                             <Form className="d-flex">

@@ -50,11 +50,11 @@ function VistaDetalle() {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    // Aquí puedes realizar acciones adicionales después de que se complete el patrocinio
                     console.log(data);
+                    alert('Gracias por el aporte!!');
+                    window.location.reload();
                 })
                 .catch((error) => {
-                    // Manejar cualquier error de la solicitud
                     console.error(error);
                 });
         }
