@@ -41,7 +41,7 @@ app.post("/inicio-sesion", function (req, res) {
             console.error(error);
             res.status(500).send("error en el server :c");
         } else if (results.length === 0) {
-            res.status(401).json({ message: false});
+            res.status(401).send("Su usuario no se encuentra registrado");
         } else{
             res.status(200).json({ message: true, role: results[0]});
             //console.log(results[0].id_rol);

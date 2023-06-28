@@ -20,15 +20,16 @@ const Login = () => {
             })
             .catch((error) =>{
                 console.error(error);
-                alert(`aa ola ${error}`);
+                alert(`Su usuario no se encuentra registrado`);
+                navigate("/register");
             });
 
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
         //si es admin mandar a perfilAdmin, si es usuario a perfil (if get)
-        if(test.role.id_rol === 1){
+        if(test.role.id_rol && test.role.id_rol === 1){
             navigate("/faq");
-        }else if(test.role.id_rol === 2){
+        }else if(test.role.id_rol && test.role.id_rol === 2){
             navigate("/nosotros");
         }else{
             navigate("/register");
