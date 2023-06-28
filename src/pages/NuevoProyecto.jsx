@@ -2,9 +2,12 @@ import { useState } from "react";
 import styles from "../styles/modules/NuevoProyecto.module.scss";
 import { Container, Button, Col, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../components/Header.jsx";
 
 function NuevoProyecto() {
     return (
+        <>
+        <Header />
         <Container>
             <Container className="p-4 py-5">
                 <h1 className={`${styles.titulo2} mx-3`}>Inicia tu proyecto</h1>
@@ -53,6 +56,7 @@ function NuevoProyecto() {
                 </Row>
             </Container>
         </Container>
+        </>
     );
 }
 

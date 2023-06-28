@@ -35,7 +35,7 @@ app.post("/inicio-sesion", function (req, res) {
 
     //console.log(email, password);
 
-    connection.query("SELECT id_rol FROM usuarios WHERE email = ? AND password = ?",
+    connection.query("SELECT id_rol, id FROM usuarios WHERE email = ? AND password = ?",
     [email, password], (error, results) => {
         if (error) {
             console.error(error);
@@ -43,11 +43,28 @@ app.post("/inicio-sesion", function (req, res) {
         } else if (results.length === 0) {
             res.status(401).send("Su usuario no se encuentra registrado");
         } else{
-            res.status(200).json({ message: true, role: results[0]});
+            res.status(200).json({ message: true, datos: results[0]});
             //console.log(results[0].id_rol);
         }
     });
 });
+
+app.get("/usuario/:id", (req, res) =>{
+    const { id } = req.params;
+    //console.log(id);
+
+    connection.query(
+        `SELECT * FROM usuarios WHERE id = ?`,[id],
+        (error, results) => {
+            if (error) {
+                console.error(error);
+                res.status(500).send("error en el server :c");
+            } else {
+                res.status(200).json({ message: true, datos: results[0]});
+            }
+        }
+    );
+})
 
 app.post("/registro", (req, res) => {
     let email = req.body.email;

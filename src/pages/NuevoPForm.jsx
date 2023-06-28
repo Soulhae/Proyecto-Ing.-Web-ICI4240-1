@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
 import React, { useState } from "react";
+import Header from "../components/Header.jsx"
 
 const NuevoPForm = () => {
     const navigate = useNavigate();
@@ -52,6 +53,8 @@ const NuevoPForm = () => {
     });
 
     return (
+        <>
+        <Header />
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
                 <form
@@ -311,6 +314,7 @@ const NuevoPForm = () => {
                 </form>
             </div>
         </Container>
+        </>
     );
 };
 

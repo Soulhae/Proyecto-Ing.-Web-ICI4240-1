@@ -1,4 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
+import Header from "../components/Header.jsx";
 
 // import proyectos from "../proyectos/images.json";
 import { useEffect, useState } from "react";
@@ -36,6 +37,8 @@ function Inicio() {
     }, []);
 
     return (
+        <>
+        <Header/>
         <main className={`${styles.inicio} `}>
             <section className={styles.grupo1}>
                 <div className={`${styles.izquierda} col-md-5`}>
@@ -88,6 +91,7 @@ function Inicio() {
                 </p>
             </div>
         </main>
+        </>
     );
 }
 

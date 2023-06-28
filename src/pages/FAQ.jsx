@@ -1,8 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "../styles/modules/FAQ.module.scss";
+import Header from "../components/Header";
 
 function FAQ() {
     return (
+        <>
+        <Header />
         <Container className="p-4 py-2">
             <h1 className={`p-4 ${styles.titulo2}`}>Preguntas frecuentes</h1>
             <Row>
@@ -176,6 +179,7 @@ function FAQ() {
                 </Col>
             </Row>
         </Container>
+        </>
     );
 }
 

@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Header from "../components/Header.jsx";
 
 import gif from "../data/gif1.gif";
 
@@ -61,6 +62,8 @@ function VistaDetalle() {
     }
 
     return (
+        <>
+        <Header />
         <Container className={`${styles.main} my-4`}>
             <Row className="my-1">
                 <Col className="col-10">
@@ -179,6 +182,7 @@ function VistaDetalle() {
                 </Row>
             </Row>
         </Container>
+        </>
     );
 }
 

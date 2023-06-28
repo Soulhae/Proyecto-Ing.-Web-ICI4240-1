@@ -6,6 +6,7 @@ import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState, useRef } from "react";
 import { Button, Form, Container } from "react-bootstrap";
+import Header from "../components/Header.jsx";
 
 const Register = () => {
     const navigate = useNavigate();
@@ -67,6 +68,8 @@ const Register = () => {
     // console.log(values);
 
     return (
+        <>
+        <Header />
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
                 <Form
@@ -254,6 +257,7 @@ const Register = () => {
                 }
             </div>
         </Container>
+        </>
     );
 };
 

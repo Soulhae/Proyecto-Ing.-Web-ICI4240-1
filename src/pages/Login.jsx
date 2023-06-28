@@ -4,9 +4,13 @@ import { lSchema } from "../schemas/indexL";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Button, Form } from "react-bootstrap";
 import axios from "axios";
+import { AppContext } from "../components/AppContext.jsx";
+import { useContext } from "react";
+import Header from "../components/Header.jsx";
 
 const Login = () => {
     const navigate = useNavigate();
+    const { updateUserInfo } = useContext(AppContext);
 
     const onSubmit = async (values, actions) => {
         //console.log(values);
@@ -17,9 +21,13 @@ const Login = () => {
             .then((response) =>{
                 //console.log(response.data);
                 test = response.data;
+                // console.log(test.datos.id + "id");
+                // console.log(test.datos.id_rol + "id_rol");
+                updateUserInfo(test.datos.id_rol, test.datos.id);
             })
             .catch((error) =>{
                 console.error(error);
+                updateUserInfo(null, null);
                 alert(`Su usuario no se encuentra registrado`);
                 navigate("/register");
             });
@@ -27,10 +35,10 @@ const Login = () => {
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
         //si es admin mandar a perfilAdmin, si es usuario a perfil (if get)
-        if(test.role.id_rol && test.role.id_rol === 1){
-            navigate("/faq");
-        }else if(test.role.id_rol && test.role.id_rol === 2){
-            navigate("/nosotros");
+        if(test.datos.id_rol && test.datos.id_rol === 1){
+            navigate("/funcionadmin");
+        }else if(test.datos.id_rol && test.datos.id_rol === 2){
+            navigate("/perfilusuario");
         }else{
             navigate("/register");
             alert('Su usuario no se encuentra registrado');
@@ -57,6 +65,8 @@ const Login = () => {
     //console.log(errors);
 
     return (
+        <>
+        <Header />
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
                 <form onSubmit={handleSubmit} autoComplete="off">
@@ -138,6 +148,7 @@ const Login = () => {
                 </form>
             </div>
         </Container>
+        </>
     );
 };
 

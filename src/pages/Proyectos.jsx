@@ -5,6 +5,7 @@ import Vista from "../components/VistaProyecto";
 import styles from "../styles/modules/Proyectos.module.scss";
 
 import Container from "react-bootstrap/Container";
+import Header from "../components/Header.jsx";
 
 function Proyectos() {
     const [proyectos, setProyectos] = useState([]);
@@ -21,6 +22,8 @@ function Proyectos() {
     }, []);
 
     return (
+        <>
+        <Header />
         <Container>
             <main className={`${styles.main} py-4 px-3`}>
                 <div className="">
@@ -42,6 +45,7 @@ function Proyectos() {
                 </div>
             </main>
         </Container>
+        </>
     );
 }
 

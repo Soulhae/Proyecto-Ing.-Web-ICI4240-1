@@ -1,8 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "../styles/modules/Nosotros.module.scss";
+import Header from "../components/Header.jsx";
 
 function Nosotros() {
     return (
+        <>
+        <Header />
         <Container>
             <h1 className={`p-4 ${styles.titulo2}`}>¿Quiénes Somos?</h1>
             <Row className="m-1 my-4">
@@ -48,6 +51,7 @@ function Nosotros() {
                 </Col>
             </Row>
         </Container>
+        </>
     );
 }
 

@@ -4,6 +4,7 @@ import styles from "../styles/modules/Busqueda.module.scss";
 import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/Header.jsx";
 
 function Busqueda() {
     const params = useParams();
@@ -50,6 +51,8 @@ function Busqueda() {
     //     );
     // }
     return (
+        <>
+        <Header />
         <Container className="p-4 py-4">
             <h1 className={`p-2 md:p-4 ${styles.titulo2}`}>
                 Resultados para: {params.buscado}
@@ -88,6 +91,7 @@ function Busqueda() {
                 ))}
             </Table>
         </Container>
+        </>
     );
 }
 
