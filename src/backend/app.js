@@ -1,4 +1,4 @@
-require('dotenv').config({ path: require('find-config')('.env') });
+require("dotenv").config({ path: require("find-config")(".env") });
 
 const express = require("express");
 const cors = require("cors");
@@ -35,18 +35,21 @@ app.post("/inicio-sesion", function (req, res) {
 
     //console.log(email, password);
 
-    connection.query("SELECT id_rol FROM usuarios WHERE email = ? AND password = ?",
-    [email, password], (error, results) => {
-        if (error) {
-            console.error(error);
-            res.status(500).send("error en el server :c");
-        } else if (results.length === 0) {
-            res.status(401).send("Su usuario no se encuentra registrado");
-        } else{
-            res.status(200).json({ message: true, role: results[0]});
-            //console.log(results[0].id_rol);
+    connection.query(
+        "SELECT id_rol FROM usuarios WHERE email = ? AND password = ?",
+        [email, password],
+        (error, results) => {
+            if (error) {
+                console.error(error);
+                res.status(500).send("error en el server :c");
+            } else if (results.length === 0) {
+                res.status(401).send("Su usuario no se encuentra registrado");
+            } else {
+                res.status(200).json({ message: true, role: results[0] });
+                //console.log(results[0].id_rol);
+            }
         }
-    });
+    );
 });
 
 app.post("/registro", (req, res) => {
@@ -75,11 +78,10 @@ app.post("/nuevo_proyecto", (req, res) => {
     let subcategoria = req.body.subcategoria;
     let descripcion = req.body.descripcion;
     let fecha = req.body.fecha;
-    let objetivo = req.body.objetivo;
-    let monto = req.body.monto;
+    let objetivo = req.body.monto;
 
     connection.query(
-        "INSERT INTO proyectos (id_usuario, portada, titulo, categoria, subcategoria, fecha_lanzamiento, descripcion, objetivo, monto) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO proyectos (id_usuario, portada, titulo, categoria, subcategoria, fecha_lanzamiento, descripcion, objetivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
         [
             id_usuario,
             portada,
@@ -89,7 +91,6 @@ app.post("/nuevo_proyecto", (req, res) => {
             fecha,
             descripcion,
             objetivo,
-            monto,
         ],
         function (error, results, fields) {
             if (error) throw error;
