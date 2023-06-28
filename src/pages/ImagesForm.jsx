@@ -78,6 +78,10 @@ function ImagesForm() {
         setMostrarSegundoBoton(true);
     };
 
+    const handleTerminar = () => {
+        navigate(`/detalle/${params.id}`);
+    };
+
     return (
         <Container>
             <div className={`m-auto my-5 ${styles.boxL}`}>
@@ -126,10 +130,22 @@ function ImagesForm() {
                             active
                             disabled={isSubmitting || isFormSubmitted}
                             type="submit"
+                            onClick={handleClickPrimerBoton}
                         >
                             Agregar
                         </Button>
-                        <Button
+                        {mostrarSegundoBoton && (
+                            <Button
+                                className={styles.BotonLogin}
+                                size="lg"
+                                active
+                                // disabled={!isFormSubmitted}
+                                onClick={handleTerminar}
+                            >
+                                Terminar
+                            </Button>
+                        )}
+                        {/* <Button
                             className={styles.BotonLogin}
                             size="lg"
                             active
@@ -137,7 +153,7 @@ function ImagesForm() {
                             onClick={() => resetForm()}
                         >
                             Terminar
-                        </Button>
+                        </Button> */}
                     </div>
                     <hr />
                 </form>
