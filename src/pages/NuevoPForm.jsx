@@ -11,7 +11,11 @@ const NuevoPForm = () => {
     const navigate = useNavigate();
     const [id, setId] = useState("");
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        if (id != "") {
+            navigate(`/imagesform/${id}`);
+        }
+    }, [id, navigate]);
 
     const onSubmit = async (values, actions) => {
         try {
@@ -22,17 +26,12 @@ const NuevoPForm = () => {
                     const data = response.data.resultado.insertId;
                     // console.log(data);
                     setId(data);
-                    alert("Proyecto agregado exitosamente!");
+                    // alert("Proyecto agregado exitosamente!");
                 })
                 .catch((error) => {
                     console.error(error);
                     alert(`Proyecto no fue agregado :( ${error.message}`);
                 });
-            // await new Promise((resolve) => setTimeout(resolve, 1000));
-            // actions.resetForm();
-            if (id != "") {
-                navigate(`/imagesform/${id}`);
-            }
         } catch (error) {
             console.error(error);
         }
