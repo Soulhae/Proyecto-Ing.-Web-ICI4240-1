@@ -1,6 +1,5 @@
 import { Container, Table, Row } from "react-bootstrap";
 import styles from "../styles/modules/Busqueda.module.scss";
-import gif from "../data/gif1.gif";
 
 import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
@@ -51,14 +50,11 @@ function Busqueda() {
     //     );
     // }
     return (
-        <Container className="p-4 py-5">
-            <h1 className={`p-4 ${styles.titulo2}`}>
-                Resultados de la busqueda para: {params.buscado}
+        <Container className="p-4 py-4">
+            <h1 className={`p-2 md:p-4 ${styles.titulo2}`}>
+                Resultados para: {params.buscado}
             </h1>
-            <Table
-                responsive="md"
-                style={{ fontFamily: "Roboto", fontSize: "bold" }}
-            >
+            <Table responsive="md" className={styles.tabla}>
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -72,17 +68,21 @@ function Busqueda() {
                     <tbody key={proyecto.id}>
                         <tr>
                             <th scope="row">{index + 1}</th>
-                            <td>
+                            <td style={{ width: "400px", minWidth: "150px" }}>
                                 <Link
                                     to={`../detalle/${proyecto.id}`}
-                                    style={{ textDecoration: "none" }}
+                                    className={styles.titulo}
                                 >
                                     {proyecto.titulo}
                                 </Link>
                             </td>
-                            <td>{proyecto.categoria}</td>
-                            <td>{proyecto.subcategoria}</td>
-                            <td>$ {proyecto.monto}</td>
+                            <td className={styles.otro}>
+                                {proyecto.categoria}
+                            </td>
+                            <td className={styles.otro}>
+                                {proyecto.subcategoria}
+                            </td>
+                            <td className={styles.otro}>$ {proyecto.monto}</td>
                         </tr>
                     </tbody>
                 ))}

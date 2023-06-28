@@ -8,3 +8,28 @@
     font-weight: 800;
     color: $color_titulo_2;
 }
+
+.tabla {
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+
+    thead {
+        background-color: rgb(212, 212, 212);
+    }
+}
+
+.titulo {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+
+    &:hover {
+        color: darkslateblue;
+        font-weight: 800;
+    }
+}
+
+.otro {
+    font-style: oblique;
+    font-weight: 400;
+}

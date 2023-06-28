@@ -158,7 +158,7 @@ function VistaDetalle() {
                         </Row>
                     </Row>
                 </Col>
-                <Row className="my-4" style={{ height: "400px" }}>
+                <Row className="my-4">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Possimus est quo inventore porro reprehenderit in,
