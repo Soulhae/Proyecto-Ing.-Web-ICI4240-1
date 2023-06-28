@@ -27,7 +27,8 @@ function App() {
                     <Route path="/nuevo_proyecto" element={<NuevoProyecto />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/busqueda" element={<Busqueda />} />
+                    <Route path="/busqueda/" element={<Busqueda />} />
+                    <Route path="/busqueda/:buscado" element={<Busqueda />} />
                     <Route path="/detalle/" element={<Proyectos />} />
                     <Route path="/detalle/:id" element={<Detalle />} />
                     <Route path="/nuevopform" element={<NuevoPForm />} />

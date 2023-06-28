@@ -2,15 +2,11 @@ import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// import data from "../data/proyectos.json";
 import gif from "../data/gif1.gif";
 
 import styles from "../styles/modules/Detalle.module.scss";
 
 import { Carousel, Container, Row, Col, Button } from "react-bootstrap";
-
-//BOTONN DE VOLVER FALTA
-//FALTA ESTILO RESPONSIVO
 
 function VistaDetalle() {
     const params = useParams();
