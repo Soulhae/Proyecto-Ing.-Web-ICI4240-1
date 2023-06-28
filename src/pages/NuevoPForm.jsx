@@ -47,6 +47,7 @@ const NuevoPForm = () => {
             descripcion: "",
             fecha: "",
             objetivo: "",
+            monto: "",
         },
         validationSchema: pSchema,
         onSubmit,
