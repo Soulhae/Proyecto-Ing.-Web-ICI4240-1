@@ -5,8 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
 import React, { useState } from "react";
-import CategoryDropdown from "../components/CategoryDropdown";
-import SubcategoryDropdown from "../components/SubCategoryDropdown";
 
 const NuevoPForm = () => {
     const navigate = useNavigate();
@@ -52,19 +50,6 @@ const NuevoPForm = () => {
         validationSchema: pSchema,
         onSubmit,
     });
-
-    //console.log(errors);
-    const [selectedCategory, setSelectedCategory] = useState("");
-    const [selectedSubcategory, setSelectedSubcategory] = useState("");
-
-    const handleCategoryChange = (category) => {
-        setSelectedCategory(category);
-        setSelectedSubcategory("");
-    };
-
-    const handleSubcategoryChange = (subcategory) => {
-        setSelectedSubcategory(subcategory);
-    };
 
     return (
         <Container>

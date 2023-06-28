@@ -169,6 +169,24 @@ app.post("/subcategorias", (req, res) => {
     );
 });
 
+app.post("/busqueda", jsonParser, (req, res) => {
+    let buscado = req.body.buscado;
+    // console.log(buscado);
+
+    connection.query(
+        `SELECT * from proyectos where titulo LIKE '%${buscado}%'`,
+        (error, results) => {
+            if (error) {
+                console.error(error);
+                res.status(500).send("error en el server :c");
+            } else {
+                res.status(200).json(results);
+                // console.log(results);
+            }
+        }
+    );
+});
+
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });

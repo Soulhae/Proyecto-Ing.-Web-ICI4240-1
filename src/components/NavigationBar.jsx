@@ -1,6 +1,24 @@
 import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
+import { React, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function NavigationBar() {
+    const [input, setInput] = useState("");
+    const navigate = useNavigate();
+
+    const inputHandler = (e) => {
+        var buscado = e.target.value.toLowerCase();
+        setInput(buscado);
+    };
+
+    const handleBusqueda = () => {
+        if (input != "") {
+            navigate(`/busqueda/${input}`);
+            // Recarga la página actual para volver a realizar la búsqueda
+            window.location.reload();
+        }
+    };
+
     return (
         <Navbar bg="light" expand="lg">
             <Container
@@ -31,13 +49,16 @@ function NavigationBar() {
                             placeholder="Buscar"
                             className="me-2"
                             aria-label="Search"
+                            onChange={inputHandler}
                         />
-                        <Button variant="outline-success" href="/busqueda">Buscar</Button>
+                        <Button
+                            variant="outline-success"
+                            onClick={handleBusqueda}
+                        >
+                            Buscar
+                        </Button>
                     </Form>
-                    <Nav
-                        style={{ maxHeight: "100px" }}
-                        navbarScroll
-                    >
+                    <Nav style={{ maxHeight: "100px" }} navbarScroll>
                         <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
