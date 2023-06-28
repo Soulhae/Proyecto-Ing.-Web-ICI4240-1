@@ -19,9 +19,12 @@ function VistaDetalle() {
     const [aporte, setAporte] = useState("");
 
     const inputHandler = (e) => {
-        var input = parseInt(e.target.value);
+        var input = parseInt(e.target.value, 10);
         // console.log(input);
-        setAporte(input);
+
+        if (input >= 0) {
+            setAporte(input);
+        }
     };
 
     const handleKeyPress = (event) => {
@@ -222,7 +225,7 @@ function VistaDetalle() {
                                 <Form.Control
                                     type="number"
                                     placeholder="Ingresa el monto a aportar"
-                                    className="me-2"
+                                    className={`me-2 ${styles.formNumber}`}
                                     aria-label="Patrocinar"
                                     onChange={inputHandler}
                                     onKeyDown={handleKeyPress}

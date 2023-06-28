@@ -35,6 +35,18 @@
     }
 }
 
+.formNumber {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+.formNumber::-webkit-inner-spin-button,
+.formNumber::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .boton {
     background-color: rgb(84, 75, 139);
     color: white;
