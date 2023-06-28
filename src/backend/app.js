@@ -1,3 +1,5 @@
+require('dotenv').config({ path: require('find-config')('.env') });
+
 const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2");
@@ -12,11 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    port: 3306,
-    database: "nimabe",
+    host: process.env.HOST_BD,
+    user: process.env.USER_BD,
+    password: process.env.PASSWORD_BD,
+    port: process.env.PORT_BD,
+    database: process.env.NAME_BD,
 });
 
 connection.connect(function (err) {
@@ -27,13 +29,22 @@ connection.connect(function (err) {
     console.log("Conexión establecida" + connection.threadId);
 });
 
-app.get("/usuarios", function (req, res) {
-    connection.query("select * from usuarios", (error, results) => {
+app.post("/inicio-sesion", function (req, res) {
+    let email = req.body.email;
+    let password = encriptar(req.body.password, "salado");
+
+    //console.log(email, password);
+
+    connection.query("SELECT id_rol FROM usuarios WHERE email = ? AND password = ?",
+    [email, password], (error, results) => {
         if (error) {
             console.error(error);
             res.status(500).send("error en el server :c");
-        } else {
-            res.status(200).json(results);
+        } else if (results.length === 0) {
+            res.status(401).send("Su usuario no se encuentra registrado");
+        } else{
+            res.status(200).json({ message: true, role: results[0]});
+            //console.log(results[0].id_rol);
         }
     });
 });
@@ -92,7 +103,7 @@ app.post("/imagen", (req, res) => {
     let url = req.body.url;
 
     connection.query(
-        "INSERT into imagenes (id_proyecto, imagen) VALUES (?, ?)",
+        "INSERT INTO imagenes (id_proyecto, imagen) VALUES (?, ?)",
         [id, url],
         function (error, results, fields) {
             if (error) throw error;

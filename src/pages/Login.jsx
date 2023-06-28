@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { lSchema } from "../schemas/indexL";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Button, Form } from "react-bootstrap";
+import axios from "axios";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -10,9 +11,30 @@ const Login = () => {
     const onSubmit = async (values, actions) => {
         //console.log(values);
         //console.log(actions);
+        let test = [];
+        axios
+            .post("http://localhost:3000/inicio-sesion", values)
+            .then((response) =>{
+                //console.log(response.data);
+                test = response.data;
+            })
+            .catch((error) =>{
+                console.error(error);
+                alert(`Su usuario no se encuentra registrado`);
+                navigate("/register");
+            });
+
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
-        navigate("/"); //Quizá enviar al usuario a su perfil luego de logear
+        //si es admin mandar a perfilAdmin, si es usuario a perfil (if get)
+        if(test.role.id_rol && test.role.id_rol === 1){
+            navigate("/faq");
+        }else if(test.role.id_rol && test.role.id_rol === 2){
+            navigate("/nosotros");
+        }else{
+            navigate("/register");
+            alert('Su usuario no se encuentra registrado');
+        }
     };
 
     const {
