@@ -16,7 +16,7 @@ const NuevoPForm = () => {
                 .post("http://localhost:3000/nuevo_proyecto", values)
                 .then((response) => {
                     console.log(response.data);
-                    alert("Proyecto agregado exitosamente!");
+                    //alert("Proyecto agregado exitosamente!");
                 })
                 .catch((error) => {
                     console.error(error);
@@ -24,7 +24,7 @@ const NuevoPForm = () => {
                 });
             await new Promise((resolve) => setTimeout(resolve, 1000));
             actions.resetForm();
-            navigate("/imagesform"); // Utiliza navigate en lugar de history.push
+            navigate("/imagesform");
         } catch (error) {
             console.error(error);
         }
