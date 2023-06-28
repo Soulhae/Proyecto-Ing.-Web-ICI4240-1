@@ -99,15 +99,21 @@ const VistaProyectoAdmin = (props) => {
             </Link>
             {userInfo.role == 1 ? (
                 <>
-                    <button onClick={eliminarProyecto}>Eliminar</button>
+                    <div className="text-center">
+                        <button onClick={eliminarProyecto}>Eliminar</button>
+                    </div>
                 </>
             ) : userInfo.role == 2 ? (
                 <>
-                    <p>Que intentas eh??</p>
+                    <div className="text-center">
+                        <p>Que intentas eh??</p>
+                    </div>
                 </>
             ) : (
                 <>
-                    <p>Que intentas eh??</p>
+                    <div className="text-center">
+                        <p>Que intentas eh??</p>
+                    </div>
                 </>
             )}
         </>
