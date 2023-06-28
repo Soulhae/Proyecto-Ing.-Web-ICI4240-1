@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-06-2023 a las 03:56:13
+-- Tiempo de generación: 28-06-2023 a las 06:50:44
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -114,7 +114,9 @@ INSERT INTO `proyectos` (`id`, `id_usuario`, `portada`, `titulo`, `categoria`, `
 (4, 13, 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1678296348', 'Grand Theft Auto V', 'Juegos', 'Acción', 'Abril 2025', 'Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.', 1000000, 0),
 (6, 15, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/header.jpg?t=1682117049', 'FIFA 23', 'Juegos', 'Deportes', 'Noviembre 2023', 'FIFA 23 nos acerca a The World\'s Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más. ', 100000, 0),
 (7, 12, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443', 'ELDEN RING', 'Juegos', 'Acción', 'Febrero 2022', 'EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias. ', 99999999, 0),
-(8, 16, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58', 'The Legend of Zelda™: Breath of the Wild', 'Juegos', 'Aventura', 'Enero 2024', 'Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.', 99999999, 0);
+(8, 16, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58', 'The Legend of Zelda™: Breath of the Wild', 'Juegos', 'Aventura', 'Enero 2024', 'Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.', 99999999, 0),
+(10, 11, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHS0dDuNXSdkoVfKbUunkAV7onN4hB1vC41vnK9EkX&s', 'Cangreburger', 'Comidas', 'Comidas', '27 de Febrero de 2024', 'Una Krabby Patty es una hamburguesa vegetariana vendida por el restaurante ficticio Krusty Krab en la serie de televisión animada SpongeBob SquarePants. El creador de la serie, Stephen Hillenburg, declaró expresamente que las empanadas no contienen carne.', 2450003, 0),
+(11, 11, 'https://es.vitejs.dev/nuxtlabs.svg', 'Rarawrawr', 'Musica', 'Deportes', '1564153 1asdadaw ad a', 'asdadsadasdasdasdsad', 2147483647, 0);
 
 -- --------------------------------------------------------
 
@@ -145,7 +147,7 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
+  `password` varchar(500) NOT NULL,
   `telefono` varchar(50) NOT NULL,
   `id_rol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -166,7 +168,16 @@ INSERT INTO `usuarios` (`id`, `email`, `username`, `password`, `telefono`, `id_r
 (14, 'cdprojeckt@gmail.com', 'CD PROJEKT RED', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', '', 2),
 (15, 'ea@gmail.com', 'Electronic Arts', '03df282d377263297a87ff559bc428c72d073e6a7a0495cd230f3b035a892ceee06db0ba099a1aa6aad42cac5f7b21ef2a8e', '', 2),
 (16, 'nintendo@gmail.com', 'Nintendo', 'd87c41df090f7ed7b71c6b5d9a13b2b1e1038f7d7fbaa917d433ca69e24938e056a6a9980ec6648ef81ebdf9e2a4fa9ab96c', '', 2),
-(19, 'test@test', 'test', '29bdd7d8bcc95ced03fe3334383faaec872e6425a1dcdd5a85ddd078473ccf6c9bf36048c7c7aeacbf55892cbe6392fe43ea', '234234324', 2);
+(19, 'test@test', 'test', '29bdd7d8bcc95ced03fe3334383faaec872e6425a1dcdd5a85ddd078473ccf6c9bf36048c7c7aeacbf55892cbe6392fe43ea', '234234324', 2),
+(20, 'pruebaCaptcha@asd.com', 'captcha', 'd6a32b129ed9245bfdf4090dd4dd3e736cf45ddd2fd014b39bafdd92e3e78e361381da8a60ad8ca6e4488758304f2761dd3f', '123456789', 2),
+(21, 'a@a', 'asdd', 'd6a32b129ed9245bfdf4090dd4dd3e736cf45ddd2fd014b39bafdd92e3e78e361381da8a60ad8ca6e4488758304f2761dd3f', '6545613', 2),
+(22, 'aa@test', 'asdad', 'd6a32b129ed9245bfdf4090dd4dd3e736cf45ddd2fd014b39bafdd92e3e78e361381da8a60ad8ca6e4488758304f2761dd3f', '65465132', 2),
+(23, 'pruebalogin@test.com', 'aaaa', 'd6a32b129ed9245bfdf4090dd4dd3e736cf45ddd2fd014b39bafdd92e3e78e361381da8a60ad8ca6e4488758304f2761dd3f', '123456789', 2),
+(24, 'testlargopass@asd', 'asdadas', '24f1c80a3415b7399557ba990835bc7c22a3c9c9ec377df00cf6cd8f6ddf57e5cbfa1d5c112229e95638177cf59e5e72553f', '651321597495', 2),
+(25, 'testpassnuevo@asd', 'asdad', '24f1c80a3415b7399557ba990835bc7c22a3c9c9ec377df00cf6cd8f6ddf57e5cbfa1d5c112229e95638177cf59e5e72553f3f32425069d44c93888eee4780a0', '561646548976', 2),
+(26, 'testing@asd', 'asdadad', 'f231f69f245d7e93bafd89ed532e42744e3164bbd7d6d7e72932b0731f0971cbdb8b553d51183c522d2f7e0374379a00ee20982bcbe30c5267f0e771ecea775a', '123', 2),
+(27, 'soyeladmin@nimabe.cl', 'adminpulento', '826e0aed17eb83bb9c30a2d996614d2e1319049d149d49efea4fe77eaa2b184ca9fd10065163ddb28249ef5f488e8a635e07cd645d75de82687dc6b38f031509', '123456789', 1),
+(28, 'soyunusuario@gmail.com', 'usuariogenerico', 'fafc6963cae9b608be28af048486fa78393ace89b5ba271eda3efe9d4ffbc00b403343a96a07bbd8da1e9eb409d4f6cd97001d6888ecb5f76f8a4bbe16eb08da', '66565485432', 2);
 
 --
 -- Índices para tablas volcadas
@@ -227,7 +238,7 @@ ALTER TABLE `patrocinio`
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -239,7 +250,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas
