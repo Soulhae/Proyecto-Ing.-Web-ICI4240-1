@@ -78,7 +78,7 @@ app.post("/nuevo_proyecto", (req, res) => {
             fecha,
             descripcion,
             objetivo,
-            monto
+            monto,
         ],
         function (error, results, fields) {
             if (error) throw error;
@@ -183,6 +183,42 @@ app.post("/busqueda", jsonParser, (req, res) => {
                 res.status(200).json(results);
                 // console.log(results);
             }
+        }
+    );
+});
+
+app.put("/patrocinio", (req, res) => {
+    const { monto, idUsuario, idProyecto } = req.body;
+
+    connection.query(
+        "INSERT INTO patrocinio (monto, id_usuario, id_proyecto) VALUES (?, ?, ?)",
+        [monto, idUsuario, idProyecto],
+        (error, results) => {
+            if (error) {
+                console.error(error);
+                return res
+                    .status(500)
+                    .json({ message: "Error al crear el patrocinio" });
+            }
+
+            connection.query(
+                "UPDATE proyectos SET monto = monto + ? WHERE id = ?",
+                [monto, idProyecto],
+                (error, results) => {
+                    if (error) {
+                        console.error(error);
+                        return res.status(500).json({
+                            message:
+                                "Error al actualizar el monto del proyecto",
+                        });
+                    }
+
+                    return res.status(200).json({
+                        message:
+                            "Patrocinio creado y monto del proyecto actualizado",
+                    });
+                }
+            );
         }
     );
 });
