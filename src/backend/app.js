@@ -253,41 +253,44 @@ app.put("/patrocinio", (req, res) => {
     );
 });
 
-app.get("/usuario/:id", (req, res) =>{
+app.get("/usuario/:id", (req, res) => {
     const { id } = req.params;
     //console.log(id);
 
     connection.query(
-        `SELECT * FROM usuarios WHERE id = ?`,[id],
+        `SELECT * FROM usuarios WHERE id = ?`,
+        [id],
         (error, results) => {
             if (error) {
                 console.error(error);
                 res.status(500).send("error en el server :c");
             } else {
-                res.status(200).json({ message: true, datos: results[0]});
+                res.status(200).json({ message: true, datos: results[0] });
             }
         }
     );
 });
 
-app.delete("/eliminarProyecto/:id", (req, res) =>{
+app.delete("/eliminarProyecto/:id", (req, res) => {
     const { id } = req.params;
 
-    connection.query(`DELETE FROM proyectos WHERE id = ?`,[id],
+    connection.query(
+        `DELETE FROM proyectos WHERE id = ?`,
+        [id],
         (error, results) => {
-            if(error){
-                console.error('Error con la consulta: ', error);
-                res.status(500).json({message: -1});
-            }else{
-                if(results.affectedRows === 0){
-                    res.status(404).json({message: 0});
-                }else{
-                    res.status(200).json({message: 1});
+            if (error) {
+                console.error("Error con la consulta: ", error);
+                res.status(500).json({ message: -1 });
+            } else {
+                if (results.affectedRows === 0) {
+                    res.status(404).json({ message: 0 });
+                } else {
+                    res.status(200).json({ message: 1 });
                 }
-            }   
+            }
         }
     );
-})
+});
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
