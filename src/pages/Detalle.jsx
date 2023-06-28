@@ -6,7 +6,7 @@ import gif from "../data/gif1.gif";
 
 import styles from "../styles/modules/Detalle.module.scss";
 
-import { Carousel, Container, Row, Col, Button } from "react-bootstrap";
+import { Carousel, Container, Row, Col, Button, Form } from "react-bootstrap";
 
 function VistaDetalle() {
     const params = useParams();
@@ -14,6 +14,46 @@ function VistaDetalle() {
     const location = useLocation();
     const handleVolver = () => {
         window.history.back();
+    };
+
+    const [aporte, setAporte] = useState("");
+
+    const inputHandler = (e) => {
+        var input = parseInt(e.target.value);
+        // console.log(input);
+        setAporte(input);
+    };
+
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            patrocinar();
+        }
+    };
+
+    const patrocinar = () => {
+        if (aporte != "") {
+            fetch("http://localhost:3000/patrocinio", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    monto: aporte,
+                    idUsuario: 11,
+                    idProyecto: proyecto[0].id,
+                }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Aquí puedes realizar acciones adicionales después de que se complete el patrocinio
+                    console.log(data);
+                })
+                .catch((error) => {
+                    // Manejar cualquier error de la solicitud
+                    console.error(error);
+                });
+        }
     };
 
     const [proyecto, setProyecto] = useState([]);
@@ -44,10 +84,33 @@ function VistaDetalle() {
         return (
             <Container
                 className={`${styles.main} d-flex flex-column `}
-                style={{ height: "88vh" }}
+                style={{ height: "88vh", maxWidth: "600px" }}
             >
-                <Row className="m-auto my-4">
-                    <h1 className="m-auto">No encontrado</h1>
+                <Row className="my-4">
+                    <Col className="col-10 ">
+                        <h1>No encontrado</h1>
+                    </Col>
+                    <Col className="col-2 d-flex justify-content-end">
+                        {location.state && location.state.from && (
+                            <Link to={location.state.from}>
+                                <Button
+                                    className={styles.boton}
+                                    variant="secondary"
+                                >
+                                    Volver
+                                </Button>
+                            </Link>
+                        )}
+                        {!location.state && (
+                            <Button
+                                className={styles.boton}
+                                variant="secondary"
+                                onClick={handleVolver}
+                            >
+                                Volver
+                            </Button>
+                        )}
+                    </Col>
                 </Row>
                 <Row>
                     <img
@@ -139,8 +202,8 @@ function VistaDetalle() {
                             <p>gracias a patrocinadores!</p>
                         </Row>
 
-                        <Row className="d-flex justify-content-center my-2">
-                            <Button
+                        <Row className={`my-2 `}>
+                            {/* <Button
                                 // variant="success"
                                 className="w-100"
                                 style={{
@@ -154,7 +217,32 @@ function VistaDetalle() {
                                 }}
                             >
                                 Conviertete en patrocinador!
-                            </Button>
+                            </Button> */}
+                            <Form className="d-flex">
+                                <Form.Control
+                                    type="number"
+                                    placeholder="Ingresa el monto a aportar"
+                                    className="me-2"
+                                    aria-label="Patrocinar"
+                                    onChange={inputHandler}
+                                    onKeyDown={handleKeyPress}
+                                />
+                                <Button
+                                    //variant="outline-success"
+                                    style={{
+                                        maxHeight: "60px",
+                                        minHeight: "50px",
+                                        minWidth: "120px",
+
+                                        backgroundColor: "darkslateblue",
+                                        border: "none",
+                                        // borderRadius: "0",
+                                    }}
+                                    onClick={patrocinar}
+                                >
+                                    Patrocinar
+                                </Button>
+                            </Form>
                         </Row>
                     </Row>
                 </Col>
