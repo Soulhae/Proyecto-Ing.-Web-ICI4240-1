@@ -1,10 +1,10 @@
 import styles from "../styles/modules/ImagesForm.module.scss";
 import { useFormik } from "formik";
 import { IFSchema } from "../schemas/indexIF";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Container, Button, Form, Row, Col } from "react-bootstrap";
-import React, { useState } from "react";
+import { Container, Button, Form, } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
 function ImagesForm() {
@@ -12,23 +12,36 @@ function ImagesForm() {
     console.log(params);
 
     const navigate = useNavigate();
+    const [isUrlEntered, setIsUrlEntered] = useState(false);
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
     const onSubmit = async (values, actions) => {
-        console.log(values);
-        //console.log(actions);
+        const newValues = {
+          ...values,
+          id: params.id,
+          url: values.imagen,
+        };
+      
         axios
-            .post("http://localhost:3000/imagen", values)
-            .then((response) => {
-                console.log(response.data);
-                alert("Imagen/es agregadas exitosamente!");
-            })
-            .catch((error) => {
-                console.error(error);
-                alert(`Imagen/es no fueron agregadas :( ${error.message}`);
-            });
+          .post("http://localhost:3000/imagen", newValues)
+          .then((response) => {
+            console.log(response.data);
+            alert("Imagen/es agregadas exitosamente!");
+            setIsFormSubmitted(true);
+          })
+          .catch((error) => {
+            console.error(error);
+            alert(`Imagen/es no fueron agregadas :( ${error.message}`);
+          });
+      
         await new Promise((resolve) => setTimeout(resolve, 1000));
         actions.resetForm();
-        navigate("/");
+      };
+
+    const handleImageChange = (event) => {
+        const { name, value } = event.target;
+        setIsUrlEntered(value.trim() !== "");
+        handleChange(event); 
     };
 
     const {
@@ -39,6 +52,7 @@ function ImagesForm() {
         handleBlur,
         handleChange,
         handleSubmit,
+        resetForm,
     } = useFormik({
         initialValues: {
             imagen: "",
@@ -50,6 +64,13 @@ function ImagesForm() {
         validationSchema: IFSchema,
         onSubmit,
     });
+
+    useEffect(() => {
+        if (isFormSubmitted) {
+            setIsFormSubmitted(false);
+            resetForm();
+        }
+    }, [isFormSubmitted, resetForm]);
 
     return (
         <Container>
@@ -71,14 +92,15 @@ function ImagesForm() {
                                 margin: "0.5rem 0 0.2rem",
                             }}
                         >
-                            Añada más imagenes del proyecto
+                            Añada más imágenes del proyecto
                         </Form.Label>
                         <Form.Control
                             id="imagen"
+                            name="imagen"
                             type="text"
                             placeholder="Ingrese el link de la imagen para la portada"
                             value={values.imagen}
-                            onChange={handleChange}
+                            onChange={handleImageChange}
                             onBlur={handleBlur}
                             className={
                                 errors.imagen && touched.imagen
@@ -91,135 +113,24 @@ function ImagesForm() {
                         <p className={`${styles.errorMsg}`}>{errors.imagen}</p>
                     )}
 
-                    <Form.Group type="text" className="mb-3">
-                        <Form.Label
-                            style={{
-                                fontsize: "2rem",
-                                fontweight: "bold",
-                                display: "block",
-                                textalign: "left",
-                                margin: "0.5rem 0 0.2rem",
-                            }}
-                        >
-                            Añada más imagenes del proyecto (*)
-                        </Form.Label>
-                        <Form.Control
-                            id="imagen2"
-                            type="text"
-                            placeholder="Ingrese el link de la imagen para la portada"
-                            value={values.imagen2}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            className={
-                                errors.imagen2 && touched.imagen2
-                                    ? `${styles.inputerror}`
-                                    : ""
-                            }
-                        />
-                    </Form.Group>
-                    {errors.imagen2 && touched.imagen2 && (
-                        <p className={`${styles.errorMsg}`}>{errors.imagen2}</p>
-                    )}
-
-                    <Form.Group type="text" className="mb-3">
-                        <Form.Label
-                            style={{
-                                fontsize: "2rem",
-                                fontweight: "bold",
-                                display: "block",
-                                textalign: "left",
-                                margin: "0.5rem 0 0.2rem",
-                            }}
-                        >
-                            Añada más imagenes del proyecto (*)
-                        </Form.Label>
-                        <Form.Control
-                            id="imagen3"
-                            type="text"
-                            placeholder="Ingrese el link de la imagen para la portada"
-                            value={values.imagen3}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            className={
-                                errors.imagen3 && touched.imagen3
-                                    ? `${styles.inputerror}`
-                                    : ""
-                            }
-                        />
-                    </Form.Group>
-                    {errors.imagen3 && touched.imagen3 && (
-                        <p className={`${styles.errorMsg}`}>{errors.imagen3}</p>
-                    )}
-
-                    <Form.Group type="text" className="mb-3">
-                        <Form.Label
-                            style={{
-                                fontsize: "2rem",
-                                fontweight: "bold",
-                                display: "block",
-                                textalign: "left",
-                                margin: "0.5rem 0 0.2rem",
-                            }}
-                        >
-                            Añada más imagenes del proyecto (*)
-                        </Form.Label>
-                        <Form.Control
-                            id="imagen4"
-                            type="text"
-                            placeholder="Ingrese el link de la imagen para la portada"
-                            value={values.imagen4}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            className={
-                                errors.imagen4 && touched.imagen4
-                                    ? `${styles.inputerror}`
-                                    : ""
-                            }
-                        />
-                    </Form.Group>
-                    {errors.imagen4 && touched.imagen4 && (
-                        <p className={`${styles.errorMsg}`}>{errors.imagen4}</p>
-                    )}
-
-                    <Form.Group type="text" className="mb-3">
-                        <Form.Label
-                            style={{
-                                fontsize: "2rem",
-                                fontweight: "bold",
-                                display: "block",
-                                textalign: "left",
-                                margin: "0.5rem 0 0.2rem",
-                            }}
-                        >
-                            Añada más imagenes del proyecto (*)
-                        </Form.Label>
-                        <Form.Control
-                            id="imagen5"
-                            type="text"
-                            placeholder="Ingrese el link de la imagen para la portada"
-                            value={values.imagen5}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            className={
-                                errors.imagen5 && touched.imagen5
-                                    ? `${styles.inputerror}`
-                                    : ""
-                            }
-                        />
-                    </Form.Group>
-                    {errors.imagen5 && touched.imagen5 && (
-                        <p className={`${styles.errorMsg}`}>{errors.imagen5}</p>
-                    )}
-
                     <div className="d-grid gap-2">
                         <Button
                             className={styles.BotonLogin}
                             size="lg"
                             active
-                            disabled={isSubmitting}
+                            disabled={isSubmitting || isFormSubmitted}
                             type="submit"
                         >
                             Crear
+                        </Button>
+                        <Button
+                            className={styles.BotonLogin}
+                            size="lg"
+                            active
+                            disabled={!isFormSubmitted}
+                            onClick={() => resetForm()}
+                        >
+                            Terminar
                         </Button>
                     </div>
                     <hr />
