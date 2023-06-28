@@ -51,6 +51,8 @@ function VistaDetalle() {
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);
+                    alert('Gracias por el aporte!!');
+                    window.location.reload();
                 })
                 .catch((error) => {
                     console.error(error);
