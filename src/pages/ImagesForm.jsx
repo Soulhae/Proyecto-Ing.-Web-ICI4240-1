@@ -121,7 +121,7 @@ function ImagesForm() {
                             disabled={isSubmitting || isFormSubmitted}
                             type="submit"
                         >
-                            Crear
+                            Agregar
                         </Button>
                         <Button
                             className={styles.BotonLogin}

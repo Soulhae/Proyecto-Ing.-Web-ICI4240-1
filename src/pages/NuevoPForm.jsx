@@ -5,11 +5,16 @@ import { Container, Button, Form, Row, Col } from "react-bootstrap";
 import Header from "../components/Header.jsx";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { AppContext } from "../components/AppContext";
 
 const NuevoPForm = () => {
     const navigate = useNavigate();
     const [id, setId] = useState("");
+
+    const { userInfo } = useContext(AppContext);
+
+    //console.log(userInfo.userId);
 
     useEffect(() => {
         if (id != "") {
@@ -18,6 +23,8 @@ const NuevoPForm = () => {
     }, [id, navigate]);
 
     const onSubmit = async (values, actions) => {
+        values.id_usuario = userInfo.userId;
+        console.log(values);
         try {
             await pSchema.validate(values);
             axios

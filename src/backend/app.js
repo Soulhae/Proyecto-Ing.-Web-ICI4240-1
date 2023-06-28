@@ -87,9 +87,8 @@ app.post("/registro", (req, res) => {
     );
 });
 
-app.post("/nuevo_proyecto", (req, res) => {
-    // let id_usuario = req.body.id_usuario;
-    let id_usuario = 11;
+app.post("/nuevo_proyecto/", (req, res) => {
+    let id_usuario = req.body.id_usuario;
     let titulo = req.body.titulo;
     let portada = req.body.portada;
     let categoria = req.body.categoria;
@@ -249,24 +248,6 @@ app.put("/patrocinio", (req, res) => {
                     });
                 }
             );
-        }
-    );
-});
-
-app.get("/usuario/:id", (req, res) => {
-    const { id } = req.params;
-    //console.log(id);
-
-    connection.query(
-        `SELECT * FROM usuarios WHERE id = ?`,
-        [id],
-        (error, results) => {
-            if (error) {
-                console.error(error);
-                res.status(500).send("error en el server :c");
-            } else {
-                res.status(200).json({ message: true, datos: results[0] });
-            }
         }
     );
 });

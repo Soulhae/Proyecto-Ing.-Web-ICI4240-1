@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-06-2023 a las 06:50:44
+-- Tiempo de generación: 28-06-2023 a las 18:11:37
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -54,17 +54,6 @@ INSERT INTO `imagenes` (`id`, `id_proyecto`, `imagen`) VALUES
 (19, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_0b862667df14a47392a8602a643b45fe836274e0.jpg?t=1682117049'),
 (20, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_a69d3435ce31da724e24d30af98b0196ff7e55fd.jpg?t=1682117049'),
 (21, 6, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/ss_a7952f00209d661a0f05899b6567a4ddc4c43deb.jpg?t=1682117049'),
-(22, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.jpg?t=1683618443'),
-(23, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_e87a3e84890ab19f8995566e62762d5f8ed39315.jpg?t=1683618443'),
-(24, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_75f25974c20b8704fe5ee246f74896b550088d3e.jpg?t=1683618443'),
-(25, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_3e556415d1bda00d749b2166ced264bec76f06ee.jpg?t=1683618443'),
-(26, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_abd681cde3402155a35edb82919b7602cc7ec338.jpg?t=1683618443'),
-(27, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_1e3dfe515c04f4071207f01d62b85a1d6b560ced.jpg?t=1683618443'),
-(28, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b87601dee58f4dbc36e40a8d803dc6a53ceefe07.jpg?t=1683618443'),
-(29, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_41e2e8f3b0ad631e929e0c2ec3d1f21de883e98c.jpg?t=1683618443'),
-(30, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b70e156adf9e40aed24c10fb352b7813586e7290.jpg?t=1683618443'),
-(31, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_8b58d96262fb0d62a482621b86c6ff85f4f57997.jpg?t=1683618443'),
-(32, 7, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_7523a8fc7775ae65cabd94d092ebecbd963258b6.jpg?t=1683618443'),
 (34, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/37559b8fa80cf0708c8dcef23ef4fea9af26d997a7c6f981565bc50eeaa3cc0f'),
 (35, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/b478fce889ed0237b252978f046884121f6be959f5b4b62e4fc03970bd617647'),
 (36, 8, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/68f832d604ad2a85fa3dda00ae5345232fe271e01df40a48bb1fb2ed291f92f4'),
@@ -83,6 +72,18 @@ CREATE TABLE `patrocinio` (
   `id_proyecto` int(11) NOT NULL,
   `monto` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `patrocinio`
+--
+
+INSERT INTO `patrocinio` (`id`, `id_usuario`, `id_proyecto`, `monto`) VALUES
+(1, 11, 3, 562354),
+(2, 11, 3, 1235),
+(3, 11, 3, 1235),
+(4, 11, 3, 1235),
+(5, 11, 3, 564564654),
+(6, 11, 3, 523123);
 
 -- --------------------------------------------------------
 
@@ -110,13 +111,10 @@ CREATE TABLE `proyectos` (
 INSERT INTO `proyectos` (`id`, `id_usuario`, `portada`, `titulo`, `categoria`, `subcategoria`, `fecha_lanzamiento`, `descripcion`, `objetivo`, `monto`) VALUES
 (1, 12, 'https://i.blogs.es/591b5a/280518-darksouls-review/1366_2000.jpg', 'DARK SOULS™: REMASTERED', 'Juegos', 'Acción', 'Enero 2024', 'Entonces llegó el Fuego. Vuelve a disfrutar del aclamado juego que definió el género con el que empezó todo. Gracias a una magnífica remasterización, podrás regresar a Lordran con unos impresionantes detalles en alta definición y a 60 fps. ', 10000000, 0),
 (2, 13, 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1671485009', 'Red Dead Redemption 2', 'Juegos', 'Aventura', 'Junio 2025', 'Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador compartido de Red Dead Online. ', 25000000, 0),
-(3, 14, 'https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1680026109', 'Cyberpunk 2077', 'Juegos', 'Rol', 'Junio 2025', 'Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.', 10000000, 0),
+(3, 14, 'https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1680026109', 'Cyberpunk 2077', 'Juegos', 'Rol', 'Junio 2025', 'Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.', 10000000, 565653836),
 (4, 13, 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1678296348', 'Grand Theft Auto V', 'Juegos', 'Acción', 'Abril 2025', 'Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.', 1000000, 0),
 (6, 15, 'https://cdn.akamai.steamstatic.com/steam/apps/1811260/header.jpg?t=1682117049', 'FIFA 23', 'Juegos', 'Deportes', 'Noviembre 2023', 'FIFA 23 nos acerca a The World\'s Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más. ', 100000, 0),
-(7, 12, 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443', 'ELDEN RING', 'Juegos', 'Acción', 'Febrero 2022', 'EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias. ', 99999999, 0),
-(8, 16, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58', 'The Legend of Zelda™: Breath of the Wild', 'Juegos', 'Aventura', 'Enero 2024', 'Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.', 99999999, 0),
-(10, 11, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHS0dDuNXSdkoVfKbUunkAV7onN4hB1vC41vnK9EkX&s', 'Cangreburger', 'Comidas', 'Comidas', '27 de Febrero de 2024', 'Una Krabby Patty es una hamburguesa vegetariana vendida por el restaurante ficticio Krusty Krab en la serie de televisión animada SpongeBob SquarePants. El creador de la serie, Stephen Hillenburg, declaró expresamente que las empanadas no contienen carne.', 2450003, 0),
-(11, 11, 'https://es.vitejs.dev/nuxtlabs.svg', 'Rarawrawr', 'Musica', 'Deportes', '1564153 1asdadaw ad a', 'asdadsadasdasdasdsad', 2147483647, 0);
+(8, 16, 'https://assets.nintendo.com/image/upload/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58', 'The Legend of Zelda™: Breath of the Wild', 'Juegos', 'Aventura', 'Enero 2024', 'Olvida todo lo que sabes acerca de los juegos de la serie The Legend of Zelda. Explora y descubre un mundo lleno de aventuras en The Legend of Zelda: Breath of the Wild, una nueva saga que rompe los esquemas de la aclamada serie. Viaja a través de praderas y bosques, y alcanza cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule en esta emocionante aventura al aire libre. Ahora con Nintendo Switch, tu aventura será más libre y extensa que nunca. Lleva tu consola y vive una gran aventura como Link de la manera que más te guste.', 99999999, 0);
 
 -- --------------------------------------------------------
 
@@ -226,19 +224,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT de la tabla `patrocinio`
 --
 ALTER TABLE `patrocinio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
