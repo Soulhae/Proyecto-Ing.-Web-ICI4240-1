@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
 import styles from "../styles/modules/NuevoProyecto.module.scss";
 import { Container, Button, Col, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header.jsx";
+import { AppContext } from "../components/AppContext";
 
 function NuevoProyecto() {
+
+    const { userInfo } = useContext(AppContext);
+
+    const ola = () =>{
+        alert('Debes estar logeado para crear un proyecto');
+    }
+
     return (
         <>
         <Header />
@@ -39,15 +47,43 @@ function NuevoProyecto() {
                                 quisquam nam aperiam, quas possimus soluta iure
                                 alias quidem quia distinctio deserunt voluptas!
                             </h3>
-                            <Link to="/nuevopform">
-                                <Button
-                                    className={`${styles.boton1} m-auto my-3`}
-                                    active
-                                    type="submit"
-                                >
-                                    Comencemos!
-                                </Button>
-                            </Link>
+                            {userInfo.role == 1 ? (
+                                <>
+                                    <Link to="/nuevopform">
+                                        <Button
+                                            className={`${styles.boton1} m-auto my-3`}
+                                            active
+                                            type="submit"
+                                        >
+                                            Comencemos!
+                                        </Button>
+                                    </Link>
+                                </>
+                            ) : userInfo.role == 2 ? (
+                                <>
+                                    <Link to="/nuevopform">
+                                        <Button
+                                            className={`${styles.boton1} m-auto my-3`}
+                                            active
+                                            type="submit"
+                                        >
+                                            Comencemos!
+                                        </Button>
+                                    </Link>
+                                </>
+                            ) : (
+                                <>
+                                    <Link to="/login">
+                                        <Button
+                                            className={`${styles.boton1} m-auto my-3`}
+                                            active
+                                            onClick={ola}
+                                        >
+                                            Comencemos!
+                                        </Button>
+                                    </Link>
+                                </>
+                            )}
                         </Row>
                     </Col>
                 </Row>
