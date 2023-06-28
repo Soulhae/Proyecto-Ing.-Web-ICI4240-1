@@ -37,7 +37,8 @@ function App() {
                     <Route path="/nuevopform" element={<NuevoPForm />} />
                     <Route path="/funcionadmin" element={<BorrarProyecto />} />
                     <Route path="/perfilusuario" element={<PerfilUsuario />} />
-                    <Route path="/imagesform" element={<ImagesForm />} />
+                    <Route path="/imagesform/" element={<ImagesForm />} />
+                    <Route path="/imagesform/:id" element={<ImagesForm />} />
                 </Route>
             </Routes>
         </div>
