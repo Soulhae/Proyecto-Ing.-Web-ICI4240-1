@@ -172,7 +172,7 @@ app.post("/busqueda", jsonParser, (req, res) => {
     // console.log(buscado);
 
     connection.query(
-        `SELECT * from proyectos where titulo LIKE '%${buscado}%'`,
+        `SELECT * from proyectos where titulo LIKE '%${buscado}%' or categoria LIKE '%${buscado}%' or subcategoria LIKE '%${buscado}%'`,
         (error, results) => {
             if (error) {
                 console.error(error);

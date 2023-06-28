@@ -25,9 +25,9 @@
     .caja2 {
         // background-color: rgb(62, 55, 107);
 
-        p {
-            // color: white;
-        }
+        // p {
+        //     // color: white;
+        // }
 
         h2 {
             color: rgb(51, 38, 133);
@@ -39,6 +39,7 @@
     background-color: rgb(84, 75, 139);
     color: white;
     border: none;
+    max-height: 42px;
 
     &:hover {
         background-color: rgb(84, 75, 139);

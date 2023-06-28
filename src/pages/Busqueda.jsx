@@ -1,14 +1,14 @@
-import { Container, Table } from "react-bootstrap";
+import { Container, Table, Row } from "react-bootstrap";
 import styles from "../styles/modules/Busqueda.module.scss";
+import gif from "../data/gif1.gif";
 
 import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Busqueda() {
     const params = useParams();
     // console.log(params);
-    // const buscado = params.buscado;
-    // console.log(buscado);
 
     const [buscados, setBuscados] = useState([]);
 
@@ -31,33 +31,61 @@ function Busqueda() {
         // console.log(buscados);
     }, []);
 
-    if (buscados.length === 0) {
-        return <div>error en la busqueda</div>;
-    }
+    // if (buscados.length === 0) {
+    //     return (
+    //         <Container
+    //             className={`${styles.main} d-flex flex-column `}
+    //             style={{ height: "88vh" }}
+    //         >
+    //             <Row className="m-auto my-4">
+    //                 <h1 className="m-auto">No encontrado</h1>
+    //             </Row>
+    //             <Row>
+    //                 <img
+    //                     src={gif}
+    //                     alt=""
+    //                     style={{ width: "700px", margin: "auto" }}
+    //                 />
+    //             </Row>
+    //         </Container>
+    //     );
+    // }
     return (
         <Container className="p-4 py-5">
             <h1 className={`p-4 ${styles.titulo2}`}>
-                Resultados de la busqueda
+                Resultados de la busqueda para: {params.buscado}
             </h1>
-            <Table>
+            <Table
+                responsive="md"
+                style={{ fontFamily: "Roboto", fontSize: "bold" }}
+            >
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        {/* <th scope="col">{buscado}</th> */}
+                        <th scope="col">Título</th>
                         <th scope="col">Categoría</th>
+                        <th scope="col">Subategoría</th>
                         <th scope="col">Monto recaudado</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            <a href="/">Proyecto de Ejemplo 1</a>
-                        </td>
-                        <td>Juegos</td>
-                        <td>$ 9999</td>
-                    </tr>
-                </tbody>
+                {buscados.map((proyecto, index) => (
+                    <tbody key={proyecto.id}>
+                        <tr>
+                            <th scope="row">{index + 1}</th>
+                            <td>
+                                <Link
+                                    to={`../detalle/${proyecto.id}`}
+                                    style={{ textDecoration: "none" }}
+                                >
+                                    {proyecto.titulo}
+                                </Link>
+                            </td>
+                            <td>{proyecto.categoria}</td>
+                            <td>{proyecto.subcategoria}</td>
+                            <td>$ {proyecto.monto}</td>
+                        </tr>
+                    </tbody>
+                ))}
             </Table>
         </Container>
     );

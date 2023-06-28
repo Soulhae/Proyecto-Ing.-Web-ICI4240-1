@@ -11,10 +11,16 @@ function NavigationBar() {
         setInput(buscado);
     };
 
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            handleBusqueda();
+        }
+    };
+
     const handleBusqueda = () => {
         if (input != "") {
             navigate(`/busqueda/${input}`);
-            // Recarga la página actual para volver a realizar la búsqueda
             window.location.reload();
         }
     };
@@ -50,6 +56,7 @@ function NavigationBar() {
                             className="me-2"
                             aria-label="Search"
                             onChange={inputHandler}
+                            onKeyDown={handleKeyPress}
                         />
                         <Button
                             variant="outline-success"
